@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Polideportivo" Height="557.987" Width="783.307" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="background.jpg"/>
+    </Window.Background>
+    <Grid Margin="0,0,19,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="46*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="190.466"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="87.37"/>
+            <ColumnDefinition Width="314.63"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txt_fondo" Grid.Column="3" HorizontalAlignment="Left" Height="386" Margin="71,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Grid.ColumnSpan="4" Background="#FF232222" Opacity="0.3" IsEnabled="False" Grid.RowSpan="2"/>
+
+        <Button x:Name="btn_login" Content="Log in" HorizontalAlignment="Left" Margin="90,265,0,0" VerticalAlignment="Top" Width="224" Grid.ColumnSpan="4" Height="39" Background="#FF2C7DCF" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="14" Grid.Column="3" Cursor="Hand" Click="btn_login_Click" Grid.RowSpan="2"/>
+        <Label x:Name="lbl_olvidopassword" Content="¿Olvidó su contraseña?" HorizontalAlignment="Left" Margin="90,22,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="149" FontSize="9" Grid.Column="3" Foreground="#FFF5F0F0" Cursor="Hand" Grid.Row="1"/>
+        <Label x:Name="lbl_polideportivo" Content="Polideportivo" HorizontalAlignment="Left" Margin="3,127,0,0" VerticalAlignment="Top" Height="39" Width="143" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FFFDF1F1" Grid.Column="5" Grid.ColumnSpan="2"/>
+        <Label x:Name="lbl_registrarse" Content="Registrarse&#xA;" Grid.Column="6" HorizontalAlignment="Left" Margin="3,22,0,0" VerticalAlignment="Top" FontSize="9" Height="21" Width="56" Foreground="#FFF5F2F2" Cursor="Hand" Grid.Row="1"/>
+        <Label Content="Logo" Grid.Column="3" HorizontalAlignment="Left" Margin="90,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.145,0.783" Height="62" Width="103" Foreground="#FFF1E4E4" FontSize="36" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txt_username" Grid.Column="3" HorizontalAlignment="Left" Height="39" Margin="90,177,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="224" Grid.ColumnSpan="4" VerticalContentAlignment="Center" Background="#FF363636" Foreground="#FF9C9797" MaxLines="1"/>
+        <Label x:Name="lbl_ayuda" Content="Ayuda&#xA;" Grid.Column="5" HorizontalAlignment="Left" Margin="15,71,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" MouseEnter="lbl_ayuda_MouseEnter" MouseLeave="lbl_ayuda_MouseLeave" Grid.Row="1"/>
+        <Label x:Name="lbl_informacion" Content="Información" Grid.Column="5" HorizontalAlignment="Left" Margin="0,97,0,0" VerticalAlignment="Top" Foreground="#FFF3E4E4" RenderTransformOrigin="0.025,0.54" Cursor="Hand" MouseEnter="lbl_informacion_MouseEnter" MouseLeave="lbl_informacion_MouseLeave" Grid.Row="1" Width="86"/>
+        <Label x:Name="lbl_contacto" Content="Contacto" Grid.Column="5" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Foreground="#FFF5E9E9" Cursor="Hand" MouseEnter="lbl_contacto_MouseEnter" MouseLeave="lbl_contacto_MouseLeave" Grid.Row="1"/>
+        <PasswordBox x:Name="passbx_password" Grid.Column="3" HorizontalAlignment="Left" Margin="90,221,0,0" Grid.ColumnSpan="4" Height="39" Width="224" Background="#FF363636" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+        <Button x:Name="btn_cerrar" Content="x" Grid.Column="2" HorizontalAlignment="Left" Margin="8.466,20,0,0" VerticalAlignment="Top" Width="18" Height="18" Click="Button_Click" Background="#FFFB0606" RenderTransformOrigin="-2.733,0.578"/>
+        <Button x:Name="btn_minimizar" Content="_" Grid.Column="2" HorizontalAlignment="Left" Margin="31.466,20,0,0" VerticalAlignment="Top" Width="18" Height="18" Background="#FF20B811"/>
+
+    </Grid>
+</Window>
