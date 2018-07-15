@@ -1,4 +1,4 @@
-# Polideportivo ![CI status](https://img.shields.io/badge/build-passing-brightgreen-svg)
+# Polideportivo 
 
 Sistema de campeonato para diferentes tipos de deportes. Este 
 sistema servirá para consultar de forma constante los servicios
