@@ -36,8 +36,9 @@
         <Label x:Name="lbl_informacion" Content="Información" Grid.Column="5" HorizontalAlignment="Left" Margin="0,97,0,0" VerticalAlignment="Top" Foreground="#FFF3E4E4" RenderTransformOrigin="0.025,0.54" Cursor="Hand" MouseEnter="lbl_informacion_MouseEnter" MouseLeave="lbl_informacion_MouseLeave" Grid.Row="1" Width="86"/>
         <Label x:Name="lbl_contacto" Content="Contacto" Grid.Column="5" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Foreground="#FFF5E9E9" Cursor="Hand" MouseEnter="lbl_contacto_MouseEnter" MouseLeave="lbl_contacto_MouseLeave" Grid.Row="1"/>
         <PasswordBox x:Name="passbx_password" Grid.Column="3" HorizontalAlignment="Left" Margin="90,221,0,0" Grid.ColumnSpan="4" Height="39" Width="224" Background="#FF363636" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
-        <Button x:Name="btn_cerrar" Content="x" Grid.Column="2" HorizontalAlignment="Left" Margin="8.466,20,0,0" VerticalAlignment="Top" Width="18" Height="18" Click="Button_Click" Background="#FFFB0606" RenderTransformOrigin="-2.733,0.578"/>
-        <Button x:Name="btn_minimizar" Content="_" Grid.Column="2" HorizontalAlignment="Left" Margin="31.466,20,0,0" VerticalAlignment="Top" Width="18" Height="18" Background="#FF20B811"/>
+        <Ellipse x:Name="ellipse_cerrar" Grid.ColumnSpan="3" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="20,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" MouseEnter="ellipse_cerrar_MouseEnter" MouseLeave="ellipse_cerrar_MouseLeave" Cursor="Hand"/>
+        <Ellipse x:Name="ellipse_minimizar" Grid.ColumnSpan="3" Fill="#FFB89315" HorizontalAlignment="Left" Height="14" Margin="39,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" MouseEnter="ellipse_cerrar_MouseEnter" MouseLeave="ellipse_cerrar_MouseLeave" Cursor="Hand"/>
+        <Ellipse x:Name="ellipse_maximizar" Grid.ColumnSpan="3" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="58,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" MouseEnter="ellipse_cerrar_MouseEnter" MouseLeave="ellipse_cerrar_MouseLeave" Cursor="Hand"/>
 
     </Grid>
 </Window>

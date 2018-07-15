@@ -60,11 +60,21 @@ namespace WpfApp1
         {
             MenuWindow my_menu = new MenuWindow();
             my_menu.Show();
-            this.Hide();
+            this.Close();
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ellipse_cerrar_MouseEnter(object sender, MouseEventArgs e)
+        {
+        
+        }
+
+        private void ellipse_cerrar_MouseLeave(object sender, MouseEventArgs e)
         {
 
         }
