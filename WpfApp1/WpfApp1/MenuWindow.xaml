@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Gestor de Campeonatos" Height="675.069" Width="1069.255" ResizeMode="CanMinimize" WindowStyle="None">
     <Window.Background>
-        <ImageBrush ImageSource="menu_background.png"/>
+        <ImageBrush ImageSource="background.jpg"/>
     </Window.Background>
     <Grid Margin="10,0,0,10">
         <Grid.RowDefinitions>
@@ -21,5 +21,47 @@
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_minimizar" Fill="#FFB89315" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="48,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Button x:Name="btn_torneos" Content="Torneos" HorizontalAlignment="Left" Margin="54,187,0,0" VerticalAlignment="Top" Width="462" Height="95" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="24" Cursor="Hand">
+            <Button.Background>
+                <SolidColorBrush Color="#FFB00D15" Opacity="0.4"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_calendarios" Content="Calendarios" HorizontalAlignment="Left" Margin="54,287,0,0" VerticalAlignment="Top" Width="462" Height="95" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="24" Cursor="Hand">
+            <Button.Background>
+                <SolidColorBrush Color="#FFCFCF2C" Opacity="0.4"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_equipos" Content="Equipos" HorizontalAlignment="Left" Margin="521,187,0,0" VerticalAlignment="Top" Width="462" Height="95" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="24" Cursor="Hand">
+            <Button.Background>
+                <SolidColorBrush Color="#FF5DA6F0" Opacity="0.4"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_ajustes" Content="Ajustes" HorizontalAlignment="Left" Margin="521,287,0,0" VerticalAlignment="Top" Width="462" Height="95" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="24" Cursor="Hand">
+            <Button.Background>
+                <SolidColorBrush Color="#FF5D5D5D" Opacity="0.4"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_estadisticas" Content="Estadísticas" HorizontalAlignment="Left" Margin="292,387,0,0" VerticalAlignment="Top" Width="224" Height="104" Cursor="Hand" FontSize="24">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.4"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_deportes" Content="Deportes" HorizontalAlignment="Left" Margin="54,387,0,0" VerticalAlignment="Top" Width="234" Height="104" Cursor="Hand" FontSize="24">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.4"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_informacion" Content="Información" HorizontalAlignment="Left" Margin="521,387,0,0" VerticalAlignment="Top" Width="230" Height="104" Cursor="Hand" FontSize="24">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.4"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_ayuda_Copy1" Content="Ayuda" HorizontalAlignment="Left" Margin="756,387,0,0" VerticalAlignment="Top" Width="227" Height="104" Cursor="Hand" FontSize="24">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.4"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lbl_polideportivo" Content="Polideportivo" HorizontalAlignment="Left" Margin="145,71,0,0" VerticalAlignment="Top" Height="39" Width="143" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FFFDF1F1"/>
+        <Label Content="Logo" HorizontalAlignment="Left" Margin="54,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.145,0.783" Height="62" Width="103" Foreground="#FFF1E4E4" FontSize="36"/>
     </Grid>
 </Window>
