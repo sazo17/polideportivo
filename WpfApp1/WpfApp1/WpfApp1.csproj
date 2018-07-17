@@ -54,6 +54,58 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AjustesWindow.xaml.cs">
+      <DependentUpon>AjustesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AyudaWindow.xaml.cs">
+      <DependentUpon>AyudaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CalendariosWindow.xaml.cs">
+      <DependentUpon>CalendariosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeportesWindow.xaml.cs">
+      <DependentUpon>DeportesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquiposWindow.xaml.cs">
+      <DependentUpon>EquiposWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EstadisticasWindow.xaml.cs">
+      <DependentUpon>EstadisticasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InformacionWindow.xaml.cs">
+      <DependentUpon>InformacionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TorneosWindow.xaml.cs">
+      <DependentUpon>TorneosWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AjustesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AyudaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CalendariosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeportesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquiposWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EstadisticasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InformacionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +119,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TorneosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="menu_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="menu_background1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
