@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\App.xaml
-10363988786
+1329774833
 
-18310142298
+21-1032988213
 131569487696
-AjustesWindow.xaml;AyudaWindow.xaml;CalendariosWindow.xaml;DeportesWindow.xaml;EquiposWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;MainWindow.xaml;MenuWindow.xaml;TorneosWindow.xaml;
+AjustesWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;DeportesWindow.xaml;EquiposWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;MainWindow.xaml;MenuWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerEquipoWindow.xaml;
 
 True
 

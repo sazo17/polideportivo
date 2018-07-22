@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="Polideportivo" Height="600.209" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" Width="800.222">
     <Window.Background>
-        <ImageBrush ImageSource="background.jpg"/>
+        <ImageBrush ImageSource="polideportivo_images/login/login.jpg"/>
     </Window.Background>
     <Grid Margin="0,0,19,0">
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="9*"/>
@@ -38,7 +41,7 @@
         <Label x:Name="lbl_informacion" Content="Información" Grid.Column="4" HorizontalAlignment="Left" Margin="176,111,0,0" VerticalAlignment="Top" Foreground="#FFF3E4E4" RenderTransformOrigin="0.025,0.54" Cursor="Hand" MouseEnter="lbl_informacion_MouseEnter" MouseLeave="lbl_informacion_MouseLeave" Grid.Row="3" Width="100" Grid.ColumnSpan="2"/>
         <Label x:Name="lbl_contacto" Content="Contacto" Grid.Column="4" HorizontalAlignment="Left" Margin="181,137,0,0" VerticalAlignment="Top" Foreground="#FFF5E9E9" Cursor="Hand" MouseEnter="lbl_contacto_MouseEnter" MouseLeave="lbl_contacto_MouseLeave" Grid.Row="3" Grid.ColumnSpan="2"/>
         <PasswordBox x:Name="passbx_password" Grid.Column="3" HorizontalAlignment="Left" Margin="90,235,0,0" Grid.ColumnSpan="4" Height="39" Width="224" Background="#FF363636" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Row="2"/>
-        <Ellipse x:Name="ellipse_cerrar" Grid.ColumnSpan="3" Fill="#FFE62310" HorizontalAlignment="Left" Margin="20,0,0,279" Stroke="Black" Width="14" RenderTransformOrigin="1.01,1.058" MouseEnter="ellipse_cerrar_MouseEnter" MouseLeave="ellipse_cerrar_MouseLeave" Cursor="Hand" Grid.Row="1" Grid.RowSpan="2" Height="14" VerticalAlignment="Bottom" GotTouchCapture="ellipse_cerrar_GotTouchCapture"/>
+        <Ellipse x:Name="ellipse_cerrar" Grid.ColumnSpan="3" Fill="#FFE62310" HorizontalAlignment="Left" Margin="20,0,0,279" Stroke="Black" Width="14" RenderTransformOrigin="1.01,1.058" MouseEnter="ellipse_cerrar_MouseEnter" MouseLeave="ellipse_cerrar_MouseLeave" Cursor="Hand" Grid.Row="1" Grid.RowSpan="2" Height="14" VerticalAlignment="Bottom" GotTouchCapture="ellipse_cerrar_GotTouchCapture" TouchEnter="ellipse_cerrar_TouchEnter" GotFocus="ellipse_cerrar_GotFocus"/>
         <Ellipse x:Name="ellipse_minimizar" Grid.ColumnSpan="3" Fill="#FFB89315" HorizontalAlignment="Left" Height="14" Margin="39,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" MouseEnter="ellipse_cerrar_MouseEnter" MouseLeave="ellipse_cerrar_MouseLeave" Cursor="Hand" Grid.Row="1" Grid.RowSpan="2"/>
         <Ellipse x:Name="ellipse_maximizar" Grid.ColumnSpan="3" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="58,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" MouseEnter="ellipse_cerrar_MouseEnter" MouseLeave="ellipse_cerrar_MouseLeave" Cursor="Hand" Grid.Row="1" Grid.RowSpan="2"/>
 

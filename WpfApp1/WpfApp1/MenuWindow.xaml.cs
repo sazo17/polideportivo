@@ -47,8 +47,8 @@ namespace WpfApp1
 
         private void btn_calendarios_Click(object sender, RoutedEventArgs e)
         {
-            CalendariosWindow calendarios = new CalendariosWindow();
-            calendarios.Show();
+            TablaPosicionesWindow tabla_posiciones = new TablaPosicionesWindow();
+            tabla_posiciones.Show();
            
         }
 
@@ -59,12 +59,7 @@ namespace WpfApp1
           
         }
 
-        private void btn_deportes_Click(object sender, RoutedEventArgs e)
-        {
-            DeportesWindow deportes = new DeportesWindow();
-            deportes.Show();
-        }
-
+    
         private void btn_estadisticas_Click(object sender, RoutedEventArgs e)
         {
             EstadisticasWindow estadisticas = new EstadisticasWindow();
@@ -81,6 +76,12 @@ namespace WpfApp1
         {
             AyudaWindow ayuda = new AyudaWindow();
             ayuda.Show();
+        }
+
+        private void btn_buscar_jugadores_Click(object sender, RoutedEventArgs e)
+        {
+            BuscarJugadoresWindow buscar_jugadores = new BuscarJugadoresWindow();
+            buscar_jugadores.Show();
         }
     }
 }

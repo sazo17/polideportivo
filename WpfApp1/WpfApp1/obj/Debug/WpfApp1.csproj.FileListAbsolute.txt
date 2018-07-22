@@ -1,39 +1,6 @@
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\App.g.cs
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\MenuWindow.g.cs
-C:\Users\vic\source\repos\WpfApp1\WpfApp1\obj\Debug\MenuWindow.baml
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MenuWindow.g.cs
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\App.g.cs
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MenuWindow.baml
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
-<<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\AjustesWindow.g.cs
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\AyudaWindow.g.cs
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\CalendariosWindow.g.cs
@@ -41,7 +8,12 @@ C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\DeportesWi
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\EquiposWindow.g.cs
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\EstadisticasWindow.g.cs
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\InformacionWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MenuWindow.g.cs
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\TorneosWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\AjustesWindow.baml
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\AyudaWindow.baml
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\CalendariosWindow.baml
@@ -49,28 +21,19 @@ C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\DeportesWi
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\EquiposWindow.baml
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\EstadisticasWindow.baml
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\InformacionWindow.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MenuWindow.baml
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\TorneosWindow.baml
-=======
-=======
->>>>>>> 1ce9bb874e11e4b39c3c5048b2d88a63a779acba
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MenuWindow.g.cs
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\App.g.cs
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\MenuWindow.baml
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
-C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
-<<<<<<< HEAD
->>>>>>> 1ce9bb874e11e4b39c3c5048b2d88a63a779acba
-=======
->>>>>>> 1ce9bb874e11e4b39c3c5048b2d88a63a779acba
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\BuscarJugadoresWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\BuscarJugadoresWindow.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEquipoWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEquipoWindow.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPosicionesWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPosicionesWindow.baml

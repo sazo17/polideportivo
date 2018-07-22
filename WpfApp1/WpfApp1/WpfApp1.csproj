@@ -60,6 +60,9 @@
     <Compile Include="AyudaWindow.xaml.cs">
       <DependentUpon>AyudaWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BuscarJugadoresWindow.xaml.cs">
+      <DependentUpon>BuscarJugadoresWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CalendariosWindow.xaml.cs">
       <DependentUpon>CalendariosWindow.xaml</DependentUpon>
     </Compile>
@@ -75,14 +78,24 @@
     <Compile Include="InformacionWindow.xaml.cs">
       <DependentUpon>InformacionWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TablaPosicionesWindow.xaml.cs">
+      <DependentUpon>TablaPosicionesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TorneosWindow.xaml.cs">
       <DependentUpon>TorneosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerEquipoWindow.xaml.cs">
+      <DependentUpon>VerEquipoWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AjustesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AyudaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BuscarJugadoresWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,7 +135,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TablaPosicionesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TorneosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerEquipoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,13 +178,53 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="background.jpg" />
+    <Resource Include="polideportivo_images\login\login.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="menu_background.png" />
+    <Resource Include="polideportivo_images\campeonatos\eliminatorias.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="menu_background1.jpg" />
+    <Resource Include="polideportivo_images\campeonatos\liga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\campeonatos\ligaeliminatorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\menu\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\campeonatos\trofeo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\campeonatos\trofeo2.png" />
+    <Resource Include="polideportivo_images\campeonatos\trofeo3.png" />
+    <Resource Include="polideportivo_images\campeonatos\trofeo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\menu\torneos1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\menu\equipos1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\menu\buscarjugadores.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\menu\ayuda1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\menu\menu_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\Equipos\equipo_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\Equipos\ejemplo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\Equipos\ejemplo1.png" />
+    <Resource Include="polideportivo_images\Equipos\equipo_background1.jpg" />
+    <Resource Include="polideportivo_images\Equipos\equipo_background3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

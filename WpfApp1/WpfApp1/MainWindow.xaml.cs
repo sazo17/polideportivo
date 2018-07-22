@@ -58,12 +58,10 @@ namespace WpfApp1
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            if (txt_username.Text == "admin")
-            {
-                MenuWindow my_menu = new MenuWindow();
-                my_menu.Show();
-                this.Close();
-            }
+          
+            MenuWindow my_menu = new MenuWindow();
+            my_menu.Show();
+            this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -83,6 +81,16 @@ namespace WpfApp1
         private void ellipse_cerrar_GotTouchCapture(object sender, TouchEventArgs e)
         {
       
+        }
+
+        private void ellipse_cerrar_TouchEnter(object sender, TouchEventArgs e)
+        {
+          
+        }
+
+        private void ellipse_cerrar_GotFocus(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
