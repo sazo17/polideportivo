@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp1.Registro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Registro" Height="395.447" Width="494.395">
+    <Window.Background>
+        <ImageBrush ImageSource="polideportivo_images/forms/beis.jpg"/>
+    </Window.Background>
+    <Grid Margin="10,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="148*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <TextBox x:Name="txt_Nombre" HorizontalAlignment="Left" Height="24" Margin="167,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" VerticalContentAlignment="Center" Background="#FF363636" Foreground="#FF9C9797" MaxLines="1"/>
+        <Label x:Name="lbl_Nombre" Content="Nombre" HorizontalAlignment="Left" Margin="36,78,0,0" VerticalAlignment="Top" Foreground="#FFFF" Height="26" RenderTransformOrigin="0.96,0.769" Width="54"/>
+        <TextBox x:Name="txt_Apellido" HorizontalAlignment="Left" Height="24" Margin="167,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" VerticalContentAlignment="Center" Background="#FF363636" Foreground="#FF9C9797" MaxLines="1"/>
+        <Label x:Name="lbl_Apellido" Content="Apellido" HorizontalAlignment="Left" Margin="36,107,0,0" VerticalAlignment="Top" Foreground="#FFFF" Height="26" RenderTransformOrigin="0.96,0.769" Width="54"/>
+        <TextBox x:Name="txt_usuario" HorizontalAlignment="Left" Height="24" Margin="167,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" VerticalContentAlignment="Center" Background="#FF363636" Foreground="#FF9C9797" MaxLines="1"/>
+        <Label x:Name="lbl_usuario" Content="Usuario" HorizontalAlignment="Left" Margin="40,136,0,0" VerticalAlignment="Top" Foreground="#FFFF" Height="26" RenderTransformOrigin="0.96,0.769" Width="50"/>
+        <TextBox x:Name="txt_contraseña" HorizontalAlignment="Left" Height="24" Margin="167,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" VerticalContentAlignment="Center" Background="#FF363636" Foreground="#FF9C9797" MaxLines="1"/>
+        <Label x:Name="lbl_contraseña" Content="Contraseña" HorizontalAlignment="Left" Margin="36,165,0,0" VerticalAlignment="Top" Foreground="#FFFF" Height="26" RenderTransformOrigin="0.96,0.769" Width="70"/>
+        <TextBox x:Name="txt_ccontraseña" HorizontalAlignment="Left" Height="24" Margin="167,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" VerticalContentAlignment="Center" Background="#FF363636" Foreground="#FF9C9797" MaxLines="1"/>
+        <Label x:Name="lbl_ccontraseña" Content="Confirmar Contraseña" HorizontalAlignment="Left" Margin="36,194,0,0" VerticalAlignment="Top" Foreground="#FFFF" Height="26" RenderTransformOrigin="0.96,0.769" Width="126"/>
+        <TextBox x:Name="txt_correo" HorizontalAlignment="Left" Height="24" Margin="167,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" VerticalContentAlignment="Center" Background="#FF363636" Foreground="#FF9C9797" MaxLines="1"/>
+        <Label x:Name="lbl_correo" Content="Correo Electronico" HorizontalAlignment="Left" Margin="36,223,0,0" VerticalAlignment="Top" Foreground="#FFFF" Height="26" RenderTransformOrigin="0.96,0.769" Width="108"/>
+        <Button x:Name="btn_Enviar" Content="Enviar" HorizontalAlignment="Left" Margin="237,30,0,0" VerticalAlignment="Top" Width="122" Height="39" Background="#FF2C7DCF" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="14" Cursor="Hand" Click="btn_Enviar_Registro" Grid.Row="1"/>
+        <Button x:Name="btn_Regresar" Content="Regresar" HorizontalAlignment="Left" Margin="80,30,0,0" VerticalAlignment="Top" Width="122" Height="39" Background="#FF2C7DCF" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="14" Cursor="Hand" Click="btn_Regresar_Registro" Grid.Row="1"/>
+    </Grid>
+</Window>

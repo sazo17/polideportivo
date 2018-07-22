@@ -30,6 +30,18 @@ namespace WpfApp1
             lbl_ayuda.Content = "Ayuda <-";
         }
 
+        private void lbl_Registro(object sender, MouseEventArgs e)
+        {
+            Registro my_menu = new Registro();
+            my_menu.Show();
+        }
+
+        private void lbl_olvidopassword_click(object sender, MouseEventArgs e)
+        {
+            Contraseña my_menu = new Contraseña();
+            my_menu.Show();
+        }
+
         private void lbl_ayuda_MouseLeave(object sender, MouseEventArgs e)
         {
             lbl_ayuda.Content = "Ayuda";

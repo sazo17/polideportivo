@@ -66,6 +66,9 @@
     <Compile Include="CalendariosWindow.xaml.cs">
       <DependentUpon>CalendariosWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Contraseña.xaml.cs">
+      <DependentUpon>Contraseña.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DeportesWindow.xaml.cs">
       <DependentUpon>DeportesWindow.xaml</DependentUpon>
     </Compile>
@@ -86,6 +89,9 @@
     </Compile>
     <Compile Include="LigaWindow.xaml.cs">
       <DependentUpon>LigaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registro.xaml.cs">
+      <DependentUpon>Registro.xaml</DependentUpon>
     </Compile>
     <Compile Include="TablaPosicionesWindow.xaml.cs">
       <DependentUpon>TablaPosicionesWindow.xaml</DependentUpon>
@@ -109,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CalendariosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contraseña.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,6 +163,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,6 +267,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="polideportivo_images\jugadores\buscarjugadores.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\forms\beis.jpg" />
+    <Resource Include="polideportivo_images\forms\fondo_beis.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
