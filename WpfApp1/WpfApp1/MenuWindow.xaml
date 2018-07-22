@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Gestor de Campeonatos" Height="600.624" Width="800.367" ResizeMode="CanMinimize" WindowStyle="None">
     <Window.Background>
-        <ImageBrush ImageSource="polideportivo_images/menu/menu.png" TileMode="FlipX"/>
+        <ImageBrush ImageSource="polideportivo_images/menu/menu.png"/>
     </Window.Background>
     <Grid Margin="10,0,0,10">
         <Grid.RowDefinitions>

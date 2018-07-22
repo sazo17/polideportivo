@@ -37,3 +37,9 @@ C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEquipoW
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEquipoWindow.baml
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPosicionesWindow.g.cs
 C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPosicionesWindow.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\LigaWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\LigaWindow.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\EliminatoriasWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\LigaConEliminatoriasWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\EliminatoriasWindow.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\LigaConEliminatoriasWindow.baml

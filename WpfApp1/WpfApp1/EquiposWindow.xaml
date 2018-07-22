@@ -34,8 +34,8 @@
         <Label x:Name="lbl_siguiente" Content="&gt;&#xA;" Grid.Column="1" HorizontalAlignment="Left" Margin="453,262,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="51" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36"/>
         <Label x:Name="lbl_anterior" Content="&lt;" Grid.Column="1" HorizontalAlignment="Left" Margin="276,262,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="51" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36"/>
         <Label x:Name="lbl_nombre_equipo" Content="N/A" Grid.Column="1" HorizontalAlignment="Left" Margin="321,362,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center"/>
-        <Button x:Name="btn_ver" Content="Ver" Grid.Column="1" HorizontalAlignment="Left" Margin="321,409,0,0" VerticalAlignment="Top" Width="132" Click="Button_Click" Background="#FF6ACB54"/>
-        <Button x:Name="btn_eliminar" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" Margin="321,434,0,0" VerticalAlignment="Top" Width="132" Background="#FF6ACB54"/>
+        <Button x:Name="btn_ver" Content="Ver" Grid.Column="1" HorizontalAlignment="Left" Margin="321,409,0,0" VerticalAlignment="Top" Width="132" Click="Button_Click" Background="#FFEEF3EC"/>
+        <Button x:Name="btn_eliminar" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" Margin="321,434,0,0" VerticalAlignment="Top" Width="132" Background="#FFDBE0DA"/>
         <Button x:Name="btn_regresar" Content="Regresar" Grid.Column="1" HorizontalAlignment="Left" Margin="321,527,0,0" VerticalAlignment="Top" Width="132" Height="31"/>
 
     </Grid>

@@ -23,5 +23,23 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void btn_liga_Click(object sender, RoutedEventArgs e)
+        {
+            LigaWindow liga = new LigaWindow();
+            liga.Show();
+        }
+
+        private void btn_liga_con_eliminatorias_Click(object sender, RoutedEventArgs e)
+        {
+            LigaConEliminatoriasWindow liga_con_eliminatorias = new LigaConEliminatoriasWindow();
+            liga_con_eliminatorias.Show();
+        }
+
+        private void btn_eliminatorias_Click(object sender, RoutedEventArgs e)
+        {
+            EliminatoriasWindow eliminatorias = new EliminatoriasWindow();
+            eliminatorias.Show();
+        }
     }
 }
