@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\
+C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\App.xaml
+C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\App.xaml
 18-311840384
 
-26-2105994146
+261108344836
 131569487696
 AjustesWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EquiposWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;OlvideContraseniaWindow.xaml;RegistroWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerEquipoWindow.xaml;
 
-False
+True
 

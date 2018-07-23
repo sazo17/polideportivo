@@ -269,8 +269,13 @@
     <Resource Include="polideportivo_images\jugadores\buscarjugadores.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="polideportivo_images\login\contrasenia\" />
-    <Folder Include="polideportivo_images\login\registro\" />
+    <Resource Include="polideportivo_images\login\contrasenia\fondo_contrasenia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\login\contrasenia\fondo_contraseña.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\login\registro\fondo_registro.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
