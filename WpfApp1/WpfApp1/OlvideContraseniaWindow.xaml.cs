@@ -15,24 +15,18 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Lógica de interacción para Registro.xaml
+    /// Interaction logic for OlvideContraseniaWindow.xaml
     /// </summary>
-    public partial class Registro : Window
+    public partial class OlvideContraseniaWindow : Window
     {
-        public Registro()
+        public OlvideContraseniaWindow()
         {
             InitializeComponent();
         }
 
-        private void btn_Regresar_Registro(object sender, RoutedEventArgs e)
+        private void btn_email_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
-        private void btn_Enviar_Registro(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
     }
 }

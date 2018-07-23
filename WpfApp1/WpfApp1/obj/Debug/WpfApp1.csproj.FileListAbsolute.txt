@@ -92,3 +92,7 @@ C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.e
 C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
 C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\Contraseña.g.cs
 C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\Contraseña.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\OlvideContraseniaWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\RegistroWindow.g.cs
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\OlvideContraseniaWindow.baml
+C:\Users\vic\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\RegistroWindow.baml

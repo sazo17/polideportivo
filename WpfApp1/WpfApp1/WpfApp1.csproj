@@ -66,9 +66,6 @@
     <Compile Include="CalendariosWindow.xaml.cs">
       <DependentUpon>CalendariosWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Contraseña.xaml.cs">
-      <DependentUpon>Contraseña.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DeportesWindow.xaml.cs">
       <DependentUpon>DeportesWindow.xaml</DependentUpon>
     </Compile>
@@ -90,8 +87,11 @@
     <Compile Include="LigaWindow.xaml.cs">
       <DependentUpon>LigaWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Registro.xaml.cs">
-      <DependentUpon>Registro.xaml</DependentUpon>
+    <Compile Include="OlvideContraseniaWindow.xaml.cs">
+      <DependentUpon>OlvideContraseniaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroWindow.xaml.cs">
+      <DependentUpon>RegistroWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TablaPosicionesWindow.xaml.cs">
       <DependentUpon>TablaPosicionesWindow.xaml</DependentUpon>
@@ -115,10 +115,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CalendariosWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Contraseña.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,7 +162,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Registro.xaml">
+    <Page Include="OlvideContraseniaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegistroWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -269,8 +269,8 @@
     <Resource Include="polideportivo_images\jugadores\buscarjugadores.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="polideportivo_images\forms\beis.jpg" />
-    <Resource Include="polideportivo_images\forms\fondo_beis.jpg" />
+    <Folder Include="polideportivo_images\login\contrasenia\" />
+    <Folder Include="polideportivo_images\login\registro\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

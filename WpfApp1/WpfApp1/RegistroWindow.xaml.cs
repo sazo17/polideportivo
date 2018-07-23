@@ -15,18 +15,22 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Lógica de interacción para Contraseña.xaml
+    /// Interaction logic for RegistroWindow.xaml
     /// </summary>
-    public partial class Contraseña : Window
+    public partial class RegistroWindow : Window
     {
-        public Contraseña()
+        public RegistroWindow()
         {
             InitializeComponent();
         }
 
-        private void btn_Enviar_Contraseña(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            MessageBox.Show("Hemos enviado un correo electronico para que pueda restablecer su contraseña");
+
+        }
+
+        private void btn_registrar_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }

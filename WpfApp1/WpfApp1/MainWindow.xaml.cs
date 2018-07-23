@@ -30,18 +30,6 @@ namespace WpfApp1
             lbl_ayuda.Content = "Ayuda <-";
         }
 
-        private void lbl_Registro(object sender, MouseEventArgs e)
-        {
-            Registro my_menu = new Registro();
-            my_menu.Show();
-        }
-
-        private void lbl_olvidopassword_click(object sender, MouseEventArgs e)
-        {
-            Contraseña my_menu = new Contraseña();
-            my_menu.Show();
-        }
-
         private void lbl_ayuda_MouseLeave(object sender, MouseEventArgs e)
         {
             lbl_ayuda.Content = "Ayuda";
@@ -103,6 +91,18 @@ namespace WpfApp1
         private void ellipse_cerrar_GotFocus(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void lbl_registrarse_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            RegistroWindow registro = new RegistroWindow();
+            registro.Show();
+        }
+
+        private void lbl_olvidopassword_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            OlvideContraseniaWindow olvidecontrasenia = new OlvideContraseniaWindow();
+            olvidecontrasenia.Show();
         }
     }
 }
