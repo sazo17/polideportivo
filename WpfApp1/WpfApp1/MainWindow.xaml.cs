@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+using MySql.Data.MySqlClient;
+
 namespace WpfApp1
 {
     /// <summary>
@@ -20,14 +23,22 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        conexion_mysql cnm = new conexion_mysql();
+
         public MainWindow()
         {
             InitializeComponent();
+            conexion_mysql.inicia_bd();             // importante para iniciar la conexion a base de datos.
+
         }
 
         private void lbl_ayuda_MouseEnter(object sender, MouseEventArgs e)
         {
             lbl_ayuda.Content = "Ayuda <-";
+
+           
+            
         }
 
         private void lbl_ayuda_MouseLeave(object sender, MouseEventArgs e)
@@ -58,7 +69,20 @@ namespace WpfApp1
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-          
+            try
+            {
+
+                string a = "Este camp0";
+                int b = 1;
+                cnm.prueba(a,b);
+                cnm.terminal_bd();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error");
+            }
+
+
             MenuWindow my_menu = new MenuWindow();
             my_menu.Show();
             this.Close();

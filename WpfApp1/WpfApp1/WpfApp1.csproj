@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\conectores\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -66,6 +70,7 @@
     <Compile Include="CalendariosWindow.xaml.cs">
       <DependentUpon>CalendariosWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="conexion_mysql.cs" />
     <Compile Include="DeportesWindow.xaml.cs">
       <DependentUpon>DeportesWindow.xaml</DependentUpon>
     </Compile>
