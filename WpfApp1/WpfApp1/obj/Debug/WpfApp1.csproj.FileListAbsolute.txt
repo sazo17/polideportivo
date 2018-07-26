@@ -199,3 +199,8 @@ C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEntrenadorWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEntrenadorWindow.baml
+C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\MySql.Data.dll
+C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\Google.Protobuf.dll
+C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEntrenadorWindow.g.cs
+C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEntrenadorWindow.baml
+C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete

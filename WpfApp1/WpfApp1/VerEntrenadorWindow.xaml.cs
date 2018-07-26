@@ -53,5 +53,10 @@ namespace WpfApp1
         {
             btn_minimizar.Content = "";
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

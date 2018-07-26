@@ -32,7 +32,7 @@ namespace WpfApp1
 
         private void btn_regresar_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)

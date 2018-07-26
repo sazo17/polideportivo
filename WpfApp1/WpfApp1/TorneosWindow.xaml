@@ -27,7 +27,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_campeonatos" Content="Campeonatos" Grid.Column="1" HorizontalAlignment="Left" Margin="219,32,0,0" VerticalAlignment="Top" Height="65" Width="287" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="299,548,0,0" VerticalAlignment="Top" Width="146" RenderTransformOrigin="-1.652,8.9" Grid.Column="1" Height="33"/>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="299,548,0,0" VerticalAlignment="Top" Width="146" RenderTransformOrigin="-1.652,8.9" Grid.Column="1" Height="33" Click="btn_regresar_Click"/>
         <Label x:Name="lbl_ayuda" Content="Liga&#xA;" HorizontalAlignment="Left" Margin="73,284,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="158" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold"/>
         <Label x:Name="lbl_eliminatorias" Content="Eliminatorias&#xA;" HorizontalAlignment="Left" Margin="502,284,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="158" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold"/>
         <Label x:Name="lbl_liga_con_eliminatorias" Content="Liga con Eliminatorias&#xA;" HorizontalAlignment="Left" Margin="287,284,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="158" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold"/>

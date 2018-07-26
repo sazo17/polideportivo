@@ -29,6 +29,11 @@ namespace WpfApp1
 
         }
 
+        private void Cancelarl(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
         {
             btn_cerrar.Content = "x";
@@ -57,6 +62,11 @@ namespace WpfApp1
         private void btn_minimizar_MouseLeave(object sender, MouseEventArgs e)
         {
             btn_minimizar.Content = "";
+        }
+
+        private void Cancelar(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

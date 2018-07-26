@@ -16,6 +16,7 @@
         <Label x:Name="lbl_numero_equipos" Content="Número de equipos:" HorizontalAlignment="Left" Margin="276,359,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="118" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385"/>
         <TextBox x:Name="txt_numero_equipos" HorizontalAlignment="Left" Height="23" Margin="490,359,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="50"/>
         <Label x:Name="lbl_partidos_ida_vuelta" Content="Partidos de ida y vuelta en eliminatorias:" HorizontalAlignment="Left" Margin="276,385,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="135" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385"/>
+        <Button x:Name="Cancelar2" Content="Cancelar" HorizontalAlignment="Left" Margin="276,460,0,0" VerticalAlignment="Top" Width="261" Height="26" Click="Cancelarl"/>
         <RadioButton Content="Sí" HorizontalAlignment="Left" Margin="417,391,0,0" VerticalAlignment="Top" Foreground="#FFFBFAFA"/>
         <RadioButton Content="No" HorizontalAlignment="Left" Margin="461,391,0,0" VerticalAlignment="Top" Foreground="#FFFBFAFA" RenderTransformOrigin="1.286,0.467"/>
         <Label x:Name="lbl_nombre_liga" Content="Nombre de liga:" HorizontalAlignment="Left" Margin="276,328,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="97" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385">

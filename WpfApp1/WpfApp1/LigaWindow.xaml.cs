@@ -58,5 +58,11 @@ namespace WpfApp1
         {
             btn_minimizar.Content = "";
         }
+
+
+        private void Cancelar1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

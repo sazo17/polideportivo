@@ -23,7 +23,7 @@
         <Button x:Name="btn_ver" Content="Ver" HorizontalAlignment="Left" Margin="29,549,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="-1.652,8.9"/>
         <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="166,549,0,0" VerticalAlignment="Top" Width="132" Click="btn_modificar_Click"/>
         <Button x:Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="303,549,0,0" VerticalAlignment="Top" Width="132"/>
-        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="440,549,0,0" VerticalAlignment="Top" Width="330"/>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="440,549,0,0" VerticalAlignment="Top" Width="330" Click="btn_regresar_Click"/>
         <Button x:Name="btn_buscar" Content="&gt;" HorizontalAlignment="Left" Margin="745,114,0,0" VerticalAlignment="Top" Width="25" Height="20"/>
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
