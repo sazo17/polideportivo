@@ -7,9 +7,6 @@
         mc:Ignorable="d"
         Title="VerEquipoWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434">
     <Grid>
-        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" Height="14" Margin="10,10,776,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
-        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" Height="14" Margin="48,10,738,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
-        <Ellipse x:Name="ellipse_minimizar" Fill="#FFB89315" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Rectangle x:Name="rectangle_equipo" HorizontalAlignment="Left" Height="123" Margin="81,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="polideportivo_images/Equipos/ejemplo1.png"/>
@@ -33,6 +30,18 @@
         <Button x:Name="btn_siguiente" Content="&gt;" HorizontalAlignment="Left" Margin="627,213,0,0" VerticalAlignment="Top" Width="126" RenderTransformOrigin="1.743,0.6"/>
         <Label x:Name="lbl_equipo" Content="Equipo" HorizontalAlignment="Left" Margin="321,10,0,0" VerticalAlignment="Top" Height="65" Width="159" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="621,557,0,0" VerticalAlignment="Top" Width="132" Height="19" RenderTransformOrigin="0.53,-0.053"/>
-        <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="81,556,0,0" VerticalAlignment="Top" Width="67"/>
+        <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="81,556,0,0" VerticalAlignment="Top" Width="67" Click="btn_modificar_Click"/>
+        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Button x:Name="btn_cerrar" Content="" Margin="10,10,776,0" VerticalAlignment="Top" Height="14" BorderThickness="0" Click="btn_cerrar_Click" MouseEnter="btn_cerrar_MouseEnter" MouseLeave="btn_cerrar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_minimizar" Content="" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top" Width="14" Height="14" BorderThickness="0" Click="btn_minimizar_Click" MouseEnter="btn_minimizar_MouseEnter" MouseLeave="btn_minimizar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold" RenderTransformOrigin="-0.663,0.471" VerticalContentAlignment="Top">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

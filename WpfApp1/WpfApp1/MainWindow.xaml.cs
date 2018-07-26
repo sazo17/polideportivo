@@ -128,5 +128,55 @@ namespace WpfApp1
             OlvideContraseniaWindow olvidecontrasenia = new OlvideContraseniaWindow();
             olvidecontrasenia.Show();
         }
+
+        private void txt_username_GotFocus(object sender, RoutedEventArgs e)
+        {
+            string watermark = "Username";
+            if (txt_username.Text == watermark)
+            {
+                txt_username.Text = "";
+            }
+
+
+        }
+
+        private void txt_username_LostFocus(object sender, RoutedEventArgs e)
+        {
+            string watermark = "Username";
+            if (txt_username.Text == "")
+            {
+                txt_username.Text = watermark;
+            }
+        }
+
+        private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btn_cerrar.Content = "x";
+        }
+
+        private void btn_cerrar_MouseLeave(object sender, MouseEventArgs e)
+        {
+            btn_cerrar.Content = "";
+        }
+
+        private void btn_cerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_minimizar_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btn_minimizar_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btn_minimizar.Content = "_";
+        }
+
+        private void btn_minimizar_MouseLeave(object sender, MouseEventArgs e)
+        {
+            btn_minimizar.Content = "";
+        }
     }
 }

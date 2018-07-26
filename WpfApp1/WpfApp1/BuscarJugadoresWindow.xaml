@@ -10,9 +10,6 @@
         <ImageBrush ImageSource="polideportivo_images/jugadores/buscarjugadores.jpg"/>
     </Window.Background>
     <Grid Background="#FF343434">
-        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" Height="14" Margin="10,10,776,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
-        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Right" Height="14" Margin="0,10,738,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
-        <Ellipse x:Name="ellipse_minimizar" Fill="#FFB89315" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Label x:Name="lbl_buscar_jugadores" Content="Buscar Jugadores" HorizontalAlignment="Left" Margin="267,43,0,0" VerticalAlignment="Top" Height="42" Width="287" Foreground="#FFFBF8F8" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_deporte" Content="Deporte:" HorizontalAlignment="Left" Margin="29,108,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" Width="63" RenderTransformOrigin="0.635,0.308"/>
         <ComboBox x:Name="cmbx_deporte" HorizontalAlignment="Left" Margin="92,112,0,0" VerticalAlignment="Top" Width="120"/>
@@ -24,10 +21,22 @@
         <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="601,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <DataGrid HorizontalAlignment="Left" Height="383" Margin="29,161,0,0" VerticalAlignment="Top" Width="741"/>
         <Button x:Name="btn_ver" Content="Ver" HorizontalAlignment="Left" Margin="29,549,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="-1.652,8.9"/>
-        <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="166,549,0,0" VerticalAlignment="Top" Width="132"/>
+        <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="166,549,0,0" VerticalAlignment="Top" Width="132" Click="btn_modificar_Click"/>
         <Button x:Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="303,549,0,0" VerticalAlignment="Top" Width="132"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="440,549,0,0" VerticalAlignment="Top" Width="330"/>
         <Button x:Name="btn_buscar" Content="&gt;" HorizontalAlignment="Left" Margin="745,114,0,0" VerticalAlignment="Top" Width="25" Height="20"/>
+        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Button x:Name="btn_cerrar" Content="" Margin="10,10,776,0" VerticalAlignment="Top" Height="14" BorderThickness="0" Click="btn_cerrar_Click" MouseEnter="btn_cerrar_MouseEnter" MouseLeave="btn_cerrar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_minimizar" Content="" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top" Width="14" Height="14" BorderThickness="0" Click="btn_minimizar_Click" MouseEnter="btn_minimizar_MouseEnter" MouseLeave="btn_minimizar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold" RenderTransformOrigin="-0.663,0.471" VerticalContentAlignment="Top">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

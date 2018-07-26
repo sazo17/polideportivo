@@ -7,9 +7,6 @@
         mc:Ignorable="d"
         Title="LigaWindow" Height="600" Width="800" Background="#FF343434" WindowStyle="None" ResizeMode="CanMinimize">
     <Grid>
-        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
-        <Ellipse x:Name="ellipse_minimizar" Fill="#FFB89315" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
-        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="48,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Label x:Name="lbl_numero_equipos" Content="Número de equipos:" HorizontalAlignment="Left" Margin="276,359,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="118" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385"/>
         <TextBox x:Name="txt_numero_equipos" HorizontalAlignment="Left" Height="23" Margin="490,359,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="50"/>
         <Label x:Name="lbl_partidos_ida_vuelta" Content="Partidos de ida y vuelta:" HorizontalAlignment="Left" Margin="276,385,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="135" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385"/>
@@ -32,9 +29,21 @@
             </Label.RenderTransform>
         </Label>
         <TextBox x:Name="txt_nombre_liga" HorizontalAlignment="Left" Height="23" Margin="415,328,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="125"/>
-        <Button x:Name="btn_nueva_liga" Content="Nueva liga" HorizontalAlignment="Left" Margin="276,429,0,0" VerticalAlignment="Top" Width="261" Height="26"/>
+        <Button x:Name="btn_nueva_liga" Content="Nueva liga" HorizontalAlignment="Left" Margin="276,429,0,0" VerticalAlignment="Top" Width="261" Height="26" Click="btn_nueva_liga_Click"/>
         <Button x:Name="btn_restar" Content="&lt;" HorizontalAlignment="Left" Margin="415,359,0,0" VerticalAlignment="Top" Width="33" Height="23"/>
         <Button x:Name="btn_sumar" Content="&gt;" HorizontalAlignment="Left" Margin="452,359,0,0" VerticalAlignment="Top" Width="33" Height="23"/>
+        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Button x:Name="btn_cerrar" Content="" Margin="10,10,776,0" VerticalAlignment="Top" Height="14" BorderThickness="0" Click="btn_cerrar_Click" MouseEnter="btn_cerrar_MouseEnter" MouseLeave="btn_cerrar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_minimizar" Content="" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top" Width="14" Height="14" BorderThickness="0" Click="btn_minimizar_Click" MouseEnter="btn_minimizar_MouseEnter" MouseLeave="btn_minimizar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold" RenderTransformOrigin="-0.663,0.471" VerticalContentAlignment="Top">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

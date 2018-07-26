@@ -28,5 +28,35 @@ namespace WpfApp1
         {
             this.Close();
         }
+
+        private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btn_cerrar.Content = "x";
+        }
+
+        private void btn_cerrar_MouseLeave(object sender, MouseEventArgs e)
+        {
+            btn_cerrar.Content = "";
+        }
+
+        private void btn_cerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_minimizar_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btn_minimizar_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btn_minimizar.Content = "_";
+        }
+
+        private void btn_minimizar_MouseLeave(object sender, MouseEventArgs e)
+        {
+            btn_minimizar.Content = "";
+        }
     }
 }
