@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfApp1.VerEntrenadorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="VerEntrenadorWindow" Height="600" Width="800" Background="#FF343434" ResizeMode="CanMinimize" WindowStyle="None">
+    <Grid>
+        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Button x:Name="btn_cerrar" Content="" Margin="10,10,776,0" VerticalAlignment="Top" Height="14" BorderThickness="0" Click="btn_cerrar_Click" MouseEnter="btn_cerrar_MouseEnter" MouseLeave="btn_cerrar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_minimizar" Content="" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top" Width="14" Height="14" BorderThickness="0" Click="btn_minimizar_Click" MouseEnter="btn_minimizar_MouseEnter" MouseLeave="btn_minimizar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold" RenderTransformOrigin="-0.663,0.471" VerticalContentAlignment="Top">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lbl_entrenador" Content="Entrenador" HorizontalAlignment="Left" Margin="280,20,0,0" VerticalAlignment="Top" Height="65" Width="228" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="208,190,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <Rectangle x:Name="rectangle_equipo" HorizontalAlignment="Left" Height="123" Margin="61,130,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22"/>
+        <Label x:Name="lbl_nombre_Copy" Content="Foto entrenador" HorizontalAlignment="Left" Margin="61,258,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="366,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_nombre_Copy1" Content="Apellido:" HorizontalAlignment="Left" Margin="208,221,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="366,224,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_nombre_Copy2" Content="Fecha de nacimiento:" HorizontalAlignment="Left" Margin="219,252,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="122" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="366,256,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_nombre_Copy3" Content="Edad:" HorizontalAlignment="Left" Margin="220,284,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="366,290,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_nombre_Copy4" Content="Equipos Anteriores" HorizontalAlignment="Left" Margin="546,159,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="218" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <ListBox HorizontalAlignment="Left" Height="123" Margin="546,190,0,0" VerticalAlignment="Top" Width="218">
+            <ListBoxItem Content="Equipo1"/>
+            <ListBoxItem Content="Equipo2"/>
+            <ListBoxItem Content="Equipo3"/>
+        </ListBox>
+        <Label x:Name="lbl_nombre_Copy5" Content="-------------------------Información Entrenador----------------------" HorizontalAlignment="Left" Margin="220,115,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="558" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lbl_nombre_Copy6" Content="Equipo actual:" HorizontalAlignment="Left" Margin="369,387,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
+        <Rectangle x:Name="rectangle_equipo_Copy" HorizontalAlignment="Left" Height="123" Margin="219,387,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="polideportivo_images/Equipos/ejemplo1.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="493,391,0,0" TextWrapping="Wrap" Text="FC Barcelona" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="lbl_nombre_Copy8" Content="Fecha inicio:" HorizontalAlignment="Left" Margin="369,418,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="493,421,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_nombre_Copy7" Content="---------------------------Información Equipo------------------------" HorizontalAlignment="Left" Margin="219,338,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="558" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lbl_nombre_Copy9" Content="Fecha final:" HorizontalAlignment="Left" Margin="369,449,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="493,452,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_nombre_Copy10" Content="Deporte" HorizontalAlignment="Left" Margin="369,480,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
+        <ComboBox x:Name="cmbx_deportes" HorizontalAlignment="Left" Margin="493,484,0,0" VerticalAlignment="Top" Width="152">
+            <ComboBoxItem Content="Futbol"/>
+            <ComboBoxItem Content="Baloncesto"/>
+            <ComboBoxItem Content="Voleibol"/>
+            <ComboBoxItem Content="Beisbol"/>
+        </ComboBox>
+        <Button Content="Modificar" HorizontalAlignment="Left" Margin="219,547,0,0" VerticalAlignment="Top" Width="106" Height="31"/>
+        <Button Content="Regresar" HorizontalAlignment="Left" Margin="441,547,0,0" VerticalAlignment="Top" Width="323" Height="31"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="330,547,0,0" VerticalAlignment="Top" Width="106" Height="31"/>
+
+    </Grid>
+</Window>

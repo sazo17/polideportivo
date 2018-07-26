@@ -58,5 +58,16 @@ namespace WpfApp1
         {
             btn_minimizar.Content = "";
         }
+
+        private void btn_regresar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_ver_entrenador_Click(object sender, RoutedEventArgs e)
+        {
+            VerEntrenadorWindow ver_entrenador = new VerEntrenadorWindow();
+            ver_entrenador.Show();
+        }
     }
 }

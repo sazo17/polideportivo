@@ -58,5 +58,25 @@ namespace WpfApp1
         {
             btn_minimizar.Content = "";
         }
+
+        private void txt_email_GotFocus(object sender, RoutedEventArgs e)
+        {
+            string watermark = "Correo Electronico";
+            if (txt_email.Text == watermark)
+            {
+                txt_email.Foreground = Brushes.Black;
+                txt_email.Text = "";
+            }
+        }
+
+        private void txt_email_LostFocus(object sender, RoutedEventArgs e)
+        {
+            string watermark = "Correo Electronico";
+            if (txt_email.Text == "")
+            {
+                txt_email.Foreground = Brushes.Gray;
+                txt_email.Text = watermark;
+            }
+        }
     }
 }

@@ -104,6 +104,9 @@
     <Compile Include="TorneosWindow.xaml.cs">
       <DependentUpon>TorneosWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VerEntrenadorWindow.xaml.cs">
+      <DependentUpon>VerEntrenadorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VerEquipoWindow.xaml.cs">
       <DependentUpon>VerEquipoWindow.xaml</DependentUpon>
     </Compile>
@@ -180,6 +183,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TorneosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerEntrenadorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

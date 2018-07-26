@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\srjefers\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\srjefers\Documents\polideportivo\WpfApp1\WpfApp1\App.xaml
-18-311840384
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\App.xaml
+19-983000045
 
-271332260293
-14-1037646366
-AjustesWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EquiposWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;OlvideContraseniaWindow.xaml;RegistroWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerEquipoWindow.xaml;
+28-541767047
+14594615103
+AjustesWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EquiposWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;OlvideContraseniaWindow.xaml;RegistroWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerEntrenadorWindow.xaml;VerEquipoWindow.xaml;
 
-False
+True
 

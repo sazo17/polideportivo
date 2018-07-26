@@ -197,3 +197,5 @@ C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.Ge
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEntrenadorWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEntrenadorWindow.baml
