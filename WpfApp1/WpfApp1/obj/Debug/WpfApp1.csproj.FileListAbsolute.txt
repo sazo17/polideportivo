@@ -204,3 +204,9 @@ C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\Google.Pr
 C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEntrenadorWindow.g.cs
 C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEntrenadorWindow.baml
 C:\Users\Sazo\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\CamposWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\CamposWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarJugadorWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerJugadorWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarJugadorWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerJugadorWindow.baml

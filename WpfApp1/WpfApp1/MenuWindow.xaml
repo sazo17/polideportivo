@@ -41,7 +41,7 @@
                 <ImageBrush ImageSource="polideportivo_images/menu/buscarjugadores.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_ayuda" Content="Ayuda" HorizontalAlignment="Left" Margin="76,400,0,0" VerticalAlignment="Top" Width="197" Height="106" Cursor="Hand" FontSize="20" Click="btn_ayuda_Copy1_Click" Opacity="0.8" Foreground="#FFFDF9F9" FontWeight="Bold">
+        <Button x:Name="btn_ayuda" Content="Ayuda" HorizontalAlignment="Left" Margin="76,397,0,0" VerticalAlignment="Top" Width="166" Height="90" Cursor="Hand" FontSize="20" Click="btn_ayuda_Copy1_Click" Opacity="0.8" Foreground="#FFFDF9F9" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush ImageSource="polideportivo_images/menu/ayuda1.jpg"/>
             </Button.Background>
@@ -59,6 +59,24 @@
         <Button x:Name="btn_minimizar" Content="" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top" Width="14" Height="14" BorderThickness="0" Click="btn_minimizar_Click" MouseEnter="btn_minimizar_MouseEnter" MouseLeave="btn_minimizar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold" RenderTransformOrigin="-0.663,0.471" VerticalContentAlignment="Top">
             <Button.Background>
                 <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_campos" Content="Campos" HorizontalAlignment="Left" Margin="399,302,0,0" VerticalAlignment="Top" Width="318" Height="90" Foreground="#FFFDF6F6" FontSize="20" Cursor="Hand" Opacity="0.8" FontWeight="Bold" Click="btn_campos_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="polideportivo_images/Equipos/equipo_background1.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_registro" Content="Registro" HorizontalAlignment="Left" Margin="251,396,0,0" VerticalAlignment="Top" Width="465" Height="94" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Foreground="White" FontWeight="Bold" Click="btn_balon_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.135"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.553"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="polideportivo_images/jugadores/buscarjugadores.jpg"/>
             </Button.Background>
         </Button>
     </Grid>

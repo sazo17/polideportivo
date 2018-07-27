@@ -69,5 +69,17 @@ namespace WpfApp1
             VerEntrenadorWindow ver_entrenador = new VerEntrenadorWindow();
             ver_entrenador.Show();
         }
+
+        private void btn_agregar_jugador_Click(object sender, RoutedEventArgs e)
+        {
+            AgregarJugadorWindow agregar_jugador = new AgregarJugadorWindow();
+            agregar_jugador.Show();
+        }
+
+        private void btn_ver_jugador_Click(object sender, RoutedEventArgs e)
+        {
+            VerJugadorWindow ver_jugador = new VerJugadorWindow();
+            ver_jugador.Show();
+        }
     }
 }

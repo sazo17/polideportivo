@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AgregarJugadorWindow.xaml.cs">
+      <DependentUpon>AgregarJugadorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AjustesWindow.xaml.cs">
       <DependentUpon>AjustesWindow.xaml</DependentUpon>
     </Compile>
@@ -69,6 +72,9 @@
     </Compile>
     <Compile Include="CalendariosWindow.xaml.cs">
       <DependentUpon>CalendariosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CamposWindow.xaml.cs">
+      <DependentUpon>CamposWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="conexion_mysql.cs" />
     <Compile Include="DeportesWindow.xaml.cs">
@@ -110,6 +116,13 @@
     <Compile Include="VerEquipoWindow.xaml.cs">
       <DependentUpon>VerEquipoWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VerJugadorWindow.xaml.cs">
+      <DependentUpon>VerJugadorWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AgregarJugadorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AjustesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CalendariosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CamposWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VerEquipoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerJugadorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -113,5 +113,17 @@ namespace WpfApp1
             BuscarJugadoresWindow buscar_jugadores = new BuscarJugadoresWindow();
             buscar_jugadores.Show();
         }
+
+        private void btn_campos_Click(object sender, RoutedEventArgs e)
+        {
+            CamposWindow campos = new CamposWindow();
+            campos.Show();
+        }
+
+        private void btn_balon_Click(object sender, RoutedEventArgs e)
+        {
+            RegistroWindow registro = new RegistroWindow();
+            registro.Show();
+        }
     }
 }

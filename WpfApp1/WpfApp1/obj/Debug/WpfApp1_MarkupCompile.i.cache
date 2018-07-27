@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\App.xaml
-19-983000045
+22-822552456
 
-28-541767047
+311266094736
 14594615103
-AjustesWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EquiposWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;OlvideContraseniaWindow.xaml;RegistroWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerEntrenadorWindow.xaml;VerEquipoWindow.xaml;
+AgregarJugadorWindow.xaml;AjustesWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;CamposWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EquiposWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;OlvideContraseniaWindow.xaml;RegistroWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerEntrenadorWindow.xaml;VerEquipoWindow.xaml;VerJugadorWindow.xaml;
 
 True
 
