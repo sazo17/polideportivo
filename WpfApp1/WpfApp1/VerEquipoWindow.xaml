@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.VerEquipoWindow"
+﻿<Window x:Name="equipo" x:Class="WpfApp1.VerEquipoWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="VerEquipoWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434">
-    <Grid>
+    <Grid x:Name="grid_equipo">
         <Rectangle x:Name="rectangle_equipo" HorizontalAlignment="Left" Height="123" Margin="81,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="polideportivo_images/Equipos/ejemplo1.png"/>
@@ -18,13 +18,13 @@
         <Label x:Name="lbl_entrenador" Content="Entrenador:" HorizontalAlignment="Left" Margin="221,138,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
         <TextBox x:Name="txt_entrenador" HorizontalAlignment="Left" Height="23" Margin="298,142,0,0" TextWrapping="Wrap" Text="Esduardo Del Aguila" VerticalAlignment="Top" Width="154"/>
         <Label x:Name="lbl_plantilla" Content="Plantilla&#xD;&#xA;" HorizontalAlignment="Left" Margin="81,273,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="54" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <DataGrid HorizontalAlignment="Left" Height="238" Margin="81,299,0,0" VerticalAlignment="Top" Width="672"/>
+        <DataGrid x:Name="dg_plantilla" HorizontalAlignment="Left" Height="238" Margin="81,299,0,0" VerticalAlignment="Top" Width="672"/>
         <Rectangle x:Name="rectangle_pantaloneta" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="73" Margin="588,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.167,0.22"/>
         <Rectangle x:Name="rectangle_jersey" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="73" Margin="496,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.167,0.22"/>
         <Rectangle x:Name="rectangle_medias" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="73" Margin="679,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.167,0.22"/>
         <Label x:Name="lbl_uniforme" Content="Uniforme (local/visitante/alternativo)" HorizontalAlignment="Left" Margin="496,97,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="257" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <Label x:Name="lbl_ayuda_Copy6" Content="Jersey" HorizontalAlignment="Left" Margin="496,156,0,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" Height="26" Cursor="Hand" Width="74" HorizontalContentAlignment="Center"/>
-        <Label x:Name="lbl_ayuda_Copy7" Content="Pantaloneta" HorizontalAlignment="Left" Margin="588,156,0,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" Height="26" Cursor="Hand" Width="74" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbl_jersey" Content="Jersey" HorizontalAlignment="Left" Margin="496,156,0,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" Height="26" Cursor="Hand" Width="74" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbl_pantaloneta" Content="Pantaloneta" HorizontalAlignment="Left" Margin="588,156,0,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" Height="26" Cursor="Hand" Width="74" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_ayuda_Copy8" Content="Medias" HorizontalAlignment="Left" Margin="679,156,0,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" Height="26" Cursor="Hand" Width="74" HorizontalContentAlignment="Center"/>
         <Button x:Name="btn_anterior" Content="&lt;" HorizontalAlignment="Left" Margin="496,213,0,0" VerticalAlignment="Top" Width="127"/>
         <Button x:Name="btn_siguiente" Content="&gt;" HorizontalAlignment="Left" Margin="627,213,0,0" VerticalAlignment="Top" Width="126" RenderTransformOrigin="1.743,0.6"/>

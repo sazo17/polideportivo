@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.OlvideContraseniaWindow"
+﻿<Window x:Name="olvido_contrasenia" x:Class="WpfApp1.OlvideContraseniaWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="OlvideContraseniaWindow" Height="200" Width="500" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434">
-    <Grid>
+    <Grid x:Name="grid_olvido_contrasenia">
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>

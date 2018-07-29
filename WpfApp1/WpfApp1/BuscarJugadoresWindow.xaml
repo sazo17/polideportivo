@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.BuscarJugadoresWindow"
+﻿<Window x:Name="buscar_jugadores" x:Class="WpfApp1.BuscarJugadoresWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,17 +9,17 @@
     <Window.Background>
         <ImageBrush ImageSource="polideportivo_images/jugadores/buscarjugadores.jpg"/>
     </Window.Background>
-    <Grid Background="#FF343434">
+    <Grid x:Name="grid_buscar_jugadores" Background="#FF343434">
         <Label x:Name="lbl_buscar_jugadores" Content="Buscar Jugadores" HorizontalAlignment="Left" Margin="267,43,0,0" VerticalAlignment="Top" Height="42" Width="287" Foreground="#FFFBF8F8" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_deporte" Content="Deporte:" HorizontalAlignment="Left" Margin="29,108,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" Width="63" RenderTransformOrigin="0.635,0.308"/>
-        <ComboBox x:Name="cmbx_deporte" HorizontalAlignment="Left" Margin="92,112,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbo_deporte" HorizontalAlignment="Left" Margin="92,112,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="lbl_equipo" Content="Equipo:" HorizontalAlignment="Left" Margin="222,109,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" Width="50" RenderTransformOrigin="0.7,0.615"/>
-        <ComboBox x:Name="cmbx_equipo" HorizontalAlignment="Left" Margin="277,113,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbo_equipo" HorizontalAlignment="Left" Margin="277,113,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="lbl_edad" Content="Edad:" HorizontalAlignment="Left" Margin="412,110,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" Width="50" RenderTransformOrigin="0.7,0.615"/>
-        <ComboBox x:Name="cmbx_edad" HorizontalAlignment="Left" Margin="453,114,0,0" VerticalAlignment="Top" Width="74"/>
+        <ComboBox x:Name="cbo_edad" HorizontalAlignment="Left" Margin="453,114,0,0" VerticalAlignment="Top" Width="74"/>
         <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="542,109,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" Width="69"/>
         <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="601,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <DataGrid HorizontalAlignment="Left" Height="383" Margin="29,161,0,0" VerticalAlignment="Top" Width="741"/>
+        <DataGrid x:Name="dg_clientes" HorizontalAlignment="Left" Height="383" Margin="29,161,0,0" VerticalAlignment="Top" Width="741"/>
         <Button x:Name="btn_ver" Content="Ver" HorizontalAlignment="Left" Margin="29,549,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="-1.652,8.9"/>
         <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="166,549,0,0" VerticalAlignment="Top" Width="132" Click="btn_modificar_Click"/>
         <Button x:Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="303,549,0,0" VerticalAlignment="Top" Width="132"/>

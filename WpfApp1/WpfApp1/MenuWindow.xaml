@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.MenuWindow"
+﻿<Window x:Name="menu" x:Class="WpfApp1.MenuWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,7 +9,7 @@
     <Window.Background>
         <ImageBrush ImageSource="polideportivo_images/menu/menu.png"/>
     </Window.Background>
-    <Grid Margin="10,0,0,10">
+    <Grid x:Name="grid_menu" Margin="10,0,0,10">
         <Grid.RowDefinitions>
             <RowDefinition Height="642*"/>
             <RowDefinition Height="13*"/>

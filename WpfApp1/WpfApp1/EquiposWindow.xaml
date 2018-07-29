@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.EquiposWindow"
+﻿<Window x:Name="btn_equipo" x:Class="WpfApp1.EquiposWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,7 +9,7 @@
     <Window.Background>
         <ImageBrush ImageSource="polideportivo_images/Equipos/equipo_background3.jpg"/>
     </Window.Background>
-    <Grid>
+    <Grid x:Name="grid_equipo">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="357*"/>
@@ -17,13 +17,13 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="lbl_equipo" Content="Equipo" Grid.Column="1" HorizontalAlignment="Left" Margin="309,49,0,0" VerticalAlignment="Top" Height="65" Width="159" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_seleccionar_deporte" Content="Seleccione el deporte:&#xA;" Grid.Column="1" HorizontalAlignment="Left" Margin="321,165,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center"/>
-        <ComboBox x:Name="cmbx_deportes" Grid.Column="1" HorizontalAlignment="Left" Margin="321,196,0,0" VerticalAlignment="Top" Width="132">
+        <ComboBox x:Name="cbo_deporte" Grid.Column="1" HorizontalAlignment="Left" Margin="321,196,0,0" VerticalAlignment="Top" Width="132">
             <ComboBoxItem Content="Futbol"/>
             <ComboBoxItem Content="Baloncesto"/>
             <ComboBoxItem Content="Voleibol"/>
             <ComboBoxItem Content="Beisbol"/>
         </ComboBox>
-        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="123" Margin="321,234,0,0" Stroke="Black" VerticalAlignment="Top" Width="132">
+        <Rectangle x:Name="rectangle_equipo" Grid.Column="1" HorizontalAlignment="Left" Height="123" Margin="321,234,0,0" Stroke="Black" VerticalAlignment="Top" Width="132">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="polideportivo_images/Equipos/ejemplo1.png"/>
             </Rectangle.Fill>

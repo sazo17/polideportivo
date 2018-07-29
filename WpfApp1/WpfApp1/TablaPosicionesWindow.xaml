@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.TablaPosicionesWindow"
+﻿<Window x:Name="tabla_de_posiciones" x:Class="WpfApp1.TablaPosicionesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,17 +6,26 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="TablaPosicionesWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434">
-    <Grid>
-        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" Height="14" Margin="10,10,776,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
-        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" Height="14" Margin="48,10,738,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
-        <Ellipse x:Name="ellipse_minimizar" Fill="#FFB89315" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+    <Grid x:Name="grid_tabla_de_posiciones">
         <Label x:Name="lbl_tabla_posiciones" Content="Tabla de Posiciones" HorizontalAlignment="Left" Margin="217,28,0,0" VerticalAlignment="Top" Height="65" Width="351" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <DataGrid HorizontalAlignment="Left" Height="381" Margin="48,158,0,0" VerticalAlignment="Top" Width="707"/>
+        <DataGrid x:Name="dg_tabla_de_posiciones" HorizontalAlignment="Left" Height="381" Margin="48,158,0,0" VerticalAlignment="Top" Width="707"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="680,559,0,0" VerticalAlignment="Top" Width="75" Click="btn_regresar_Click"/>
         <Label x:Name="lbl_seleccione_deporte" Content="Seleccione el deporte:&#xA;" HorizontalAlignment="Left" Margin="48,117,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385"/>
-        <ComboBox x:Name="cmbx_deportes" HorizontalAlignment="Left" Margin="180,121,0,0" VerticalAlignment="Top" Width="132"/>
+        <ComboBox x:Name="cbo_deportes" HorizontalAlignment="Left" Margin="180,121,0,0" VerticalAlignment="Top" Width="132"/>
         <Label x:Name="lbl_campeonatos_activos" Content="Campeonatos activos:&#xA;" HorizontalAlignment="Left" Margin="322,117,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385"/>
-        <ComboBox x:Name="cmbx_campeonatos_activos" HorizontalAlignment="Left" Margin="454,121,0,0" VerticalAlignment="Top" Width="132"/>
+        <ComboBox x:Name="cbo_campeonatos_activos" HorizontalAlignment="Left" Margin="454,121,0,0" VerticalAlignment="Top" Width="132"/>
+        <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
+        <Button x:Name="btn_cerrar" Content="" Margin="10,10,776,0" VerticalAlignment="Top" Height="14" BorderThickness="0" Click="btn_cerrar_Click" MouseEnter="btn_cerrar_MouseEnter" MouseLeave="btn_cerrar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_minimizar" Content="" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top" Width="14" Height="14" BorderThickness="0" Click="btn_minimizar_Click" MouseEnter="btn_minimizar_MouseEnter" MouseLeave="btn_minimizar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold" RenderTransformOrigin="-0.663,0.471" VerticalContentAlignment="Top">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

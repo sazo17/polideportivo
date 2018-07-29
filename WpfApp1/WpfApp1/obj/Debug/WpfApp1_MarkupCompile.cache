@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\App.xaml
-22-822552456
+35-175264070
 
-27-763601656
+40-487738604
 14594615103
-AgregarJugadorWindow.xaml;AjustesWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;CamposWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EquiposWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;OlvideContraseniaWindow.xaml;RegistroWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerEntrenadorWindow.xaml;VerEquipoWindow.xaml;VerJugadorWindow.xaml;
+AgregarFaltaFutbolWindow.xaml;AgregarFaltaWindow.xaml;AgregarGolFutbolWindow.xaml;AgregarJugadorWindow.xaml;AjustesWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;CamposWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EquiposWindow.xaml;EstadisticasBaseballWindow.xaml;EstadisticasBasketballWindow.xaml;EstadisticasFutbolWindow.xaml;EstadisticasVolleyballWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;JornadasWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;OlvideContraseniaWindow.xaml;QuitarFaltaWindow.xaml;QuitarGolFutbolWindow.xaml;RegistroWindow.xaml;TablaGoleadoresFutbolWindow.xaml;TablaPorteroMenosVencidoFutbolWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerCampeonatoWindow.xaml;VerEntrenadorWindow.xaml;VerEquipoWindow.xaml;VerJugadorWindow.xaml;
 
 False
 

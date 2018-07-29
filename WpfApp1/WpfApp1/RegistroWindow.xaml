@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.RegistroWindow"
+﻿<Window x:Name="registro" x:Class="WpfApp1.RegistroWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="RegistroWindow" Height="320" Width="350" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434">
-    <Grid>
+    <Grid x:Name="grid_registro">
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>

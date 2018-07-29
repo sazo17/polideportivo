@@ -76,5 +76,38 @@ namespace WpfApp1
         {
             this.Close();
         }
+
+        private void btn_estadisticas_liga_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void btn_estadisticas_liga_con_eliminatorias_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btn_estadisticas_eliminatorias_Click(object sender, RoutedEventArgs e)
+        {
+     
+        }
+
+        private void btn_ver_liga_Click(object sender, RoutedEventArgs e)
+        {
+            VerCampeonatoWindow ver_campeonato = new VerCampeonatoWindow();
+            ver_campeonato.Show();
+        }
+
+        private void btn_ver_liga_con_eliminatorias_Click(object sender, RoutedEventArgs e)
+        {
+            VerCampeonatoWindow ver_campeonato = new VerCampeonatoWindow();
+            ver_campeonato.Show();
+        }
+
+        private void btn_ver_eliminatorias_Click(object sender, RoutedEventArgs e)
+        {
+            VerCampeonatoWindow ver_campeonato = new VerCampeonatoWindow();
+            ver_campeonato.Show();
+        }
     }
 }

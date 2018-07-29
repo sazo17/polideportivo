@@ -58,6 +58,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AgregarFaltaFutbolWindow.xaml.cs">
+      <DependentUpon>AgregarFaltaFutbolWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarFaltaWindow.xaml.cs">
+      <DependentUpon>AgregarFaltaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarGolFutbolWindow.xaml.cs">
+      <DependentUpon>AgregarGolFutbolWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AgregarJugadorWindow.xaml.cs">
       <DependentUpon>AgregarJugadorWindow.xaml</DependentUpon>
     </Compile>
@@ -86,11 +95,26 @@
     <Compile Include="EquiposWindow.xaml.cs">
       <DependentUpon>EquiposWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EstadisticasBaseballWindow.xaml.cs">
+      <DependentUpon>EstadisticasBaseballWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EstadisticasBasketballWindow.xaml.cs">
+      <DependentUpon>EstadisticasBasketballWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EstadisticasFutbolWindow.xaml.cs">
+      <DependentUpon>EstadisticasFutbolWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EstadisticasVolleyballWindow.xaml.cs">
+      <DependentUpon>EstadisticasVolleyballWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EstadisticasWindow.xaml.cs">
       <DependentUpon>EstadisticasWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="InformacionWindow.xaml.cs">
       <DependentUpon>InformacionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JornadasWindow.xaml.cs">
+      <DependentUpon>JornadasWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="LigaConEliminatoriasWindow.xaml.cs">
       <DependentUpon>LigaConEliminatoriasWindow.xaml</DependentUpon>
@@ -101,14 +125,29 @@
     <Compile Include="OlvideContraseniaWindow.xaml.cs">
       <DependentUpon>OlvideContraseniaWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="QuitarFaltaWindow.xaml.cs">
+      <DependentUpon>QuitarFaltaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuitarGolFutbolWindow.xaml.cs">
+      <DependentUpon>QuitarGolFutbolWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistroWindow.xaml.cs">
       <DependentUpon>RegistroWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TablaGoleadoresFutbolWindow.xaml.cs">
+      <DependentUpon>TablaGoleadoresFutbolWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TablaPorteroMenosVencidoFutbolWindow.xaml.cs">
+      <DependentUpon>TablaPorteroMenosVencidoFutbolWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TablaPosicionesWindow.xaml.cs">
       <DependentUpon>TablaPosicionesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TorneosWindow.xaml.cs">
       <DependentUpon>TorneosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerCampeonatoWindow.xaml.cs">
+      <DependentUpon>VerCampeonatoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="VerEntrenadorWindow.xaml.cs">
       <DependentUpon>VerEntrenadorWindow.xaml</DependentUpon>
@@ -119,6 +158,18 @@
     <Compile Include="VerJugadorWindow.xaml.cs">
       <DependentUpon>VerJugadorWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AgregarFaltaFutbolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgregarFaltaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgregarGolFutbolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AgregarJugadorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,11 +206,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EstadisticasBaseballWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EstadisticasBasketballWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EstadisticasFutbolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EstadisticasVolleyballWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EstadisticasWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="InformacionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JornadasWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,7 +262,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="QuitarFaltaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuitarGolFutbolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegistroWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TablaGoleadoresFutbolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TablaPorteroMenosVencidoFutbolWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -200,6 +287,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TorneosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerCampeonatoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
