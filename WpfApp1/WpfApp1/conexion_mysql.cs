@@ -34,11 +34,10 @@ namespace WpfApp1
                 constructor.SslMode = MySqlSslMode.None;                    // evitar la conexion por medio de SSL
                 String conexion_estable = constructor.ToString();           // se obtiene el contenido del constructor a una cadena
                 constructor = null;                                         // se limpia el constructor
-                // Console.WriteLine(conexion_estable);
                 con_mysql = new MySqlConnection(conexion_estable);          // Se realiza una conexion estable con la base de datos.
 
                 con_mysql.Open();
-                Console.Write("Conexion realizada Exitosamente");
+                Console.Write("Conexion realizada Exitosamente");           //Conexion a la base de datos realizada
             }
             catch (Exception ex) {
 
@@ -52,15 +51,6 @@ namespace WpfApp1
         public void terminal_bd()
         {
             con_mysql.Close();      // cierra la conexion a la base de datos.
-        }
-        public void prueba(string a, int b)
-        {
-            // prueba unicamente con fines de test de la conexion. Puede ser borrada
-            string query = "insert into campos (campo, idTipos_Deporte) values ('" + a + "', '" + b + "')";
-
-            MySqlCommand cmd = new MySqlCommand(query, con_mysql);
-            cmd.ExecuteNonQuery();
-            Console.WriteLine("listo");
         }
     }
 }
