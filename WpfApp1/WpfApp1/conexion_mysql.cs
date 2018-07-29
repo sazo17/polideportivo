@@ -15,9 +15,9 @@ namespace WpfApp1
     {
         public static MySqlConnection con_mysql = null;       // variable de conexion
         public const String servidor = "localhost";    // ubicacion|ip del servidor
-        public const String base_datos = "prueba";     // id|nombre de la base de datos
+        public const String base_datos = "p_polideportivo";     // id|nombre de la base de datos
         public const String usuario = "root";              // usuario dentro de la base de datos
-        public const String pass = "toor";                 // contrasenia del usuario
+        public const String pass = "";                 // contrasenia del usuario
 
 
 
@@ -31,17 +31,18 @@ namespace WpfApp1
                 constructor.UserID = usuario;
                 constructor.Password = pass;
                 constructor.Database = base_datos;
+                constructor.SslMode = MySqlSslMode.None;                    // evitar la conexion por medio de SSL
                 String conexion_estable = constructor.ToString();           // se obtiene el contenido del constructor a una cadena
                 constructor = null;                                         // se limpia el constructor
                 // Console.WriteLine(conexion_estable);
                 con_mysql = new MySqlConnection(conexion_estable);          // Se realiza una conexion estable con la base de datos.
 
-                //Console.WriteLine("salida");
                 con_mysql.Open();
+                Console.Write("Conexion realizada Exitosamente");
             }
             catch (Exception ex) {
 
-                Console.WriteLine("error");
+                Console.WriteLine(ex);
             }
         }
         public void start_bd()

@@ -69,23 +69,24 @@ namespace WpfApp1
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            String user = txt_username.Text;
+            String pass = passbx_password.Password.ToString();
+            MenuWindow MenuPrincipal = new MenuWindow();
 
-                string a = "Este camp0";
-                int b = 1;
-                cnm.prueba(a,b);
-                cnm.terminal_bd();
+            if (user=="" || user == "Username"){
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error");
+            }else{
+                if (pass == ""){
+                    MessageBox.Show("Usuario o contraseña incorrectos", "Error");
+                }else{
+                    /*HACER AQUI LA VALIDACION DE USUARIOS CON LA BD*/
+                    MenuPrincipal.Show();
+                    this.Close();
+
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error");
-            }
 
-
-            MenuWindow my_menu = new MenuWindow();
-            my_menu.Show();
-            this.Close();
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
