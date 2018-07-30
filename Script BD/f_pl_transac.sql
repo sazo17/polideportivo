@@ -1,5 +1,7 @@
 USE p_polideportivo;
 -- DROP PROCEDURE p_campeonato;
+
+-- Procedimiento para campeonato
 DELIMITER //
 CREATE PROCEDURE p_campeonato(IN nombre VARCHAR(50),
 IN fecha_ini DATE, IN fecha_fin DATE, IN cantidad INT,
@@ -40,3 +42,41 @@ DELIMITER ;
 
 -- CALL p_campeonato('campeonato12', '2018-08-09', '2017-08-19', 25, 35, 'tipo_c11', 'tipo1',@a);
 -- SELECT @a;
+
+-- Procedimiento registro_jugadores
+DELIMITER //
+CREATE PROCEDURE p_jug_registro(IN fecha_ini DATE, IN fecha_fin DATE,
+IN desc_jugreg VARCHAR(50), IN equipo VARCHAR(35), IN id_jugador INT,
+IN posjug INT, OUT bit INT(1))
+BEGIN
+	DECLARE t_equipo INT;
+	DECLARE t_posjug INT;
+	
+	SELECT idEquipos INTO t_equipo
+	FROM EQUIPOS 
+	WHERE nombre_equipo = equipo;
+	-- -----
+	SELECT id_pogjug INTO t_posjug
+	FROM POSICION_JUGADOR
+	WHERE posicion_posicionjugador = posjug;
+	
+	IF t_equipo IS NOT NULL AND t_posjug IS NOT NULL THEN
+		INSERT INTO JUGADORES_REGISTRO 
+		(fecha_ini_jugadores_registro, fecha_fin_jugadores_registro, 
+		descripcion_jugadoresregistro, idEquipos, idJugadores,
+		idpogjug) 
+		VALUES (fecha_ini, fecha_fin, desc_jugreg, t_equipo, id_jugador,
+			t_posjug);
+		SET bit = 1;
+		COMMIT;
+	ELSE 
+		SET bit = 0;
+		ROLLBACK;
+	END IF;
+END//
+DELIMITER ;
+
+
+-- DROP PROCEDURE p_jug_registro;
+-- CALL p_jug_registro('2018-01-05', '2019-12-02', '884 94 AKIW', 'Jabbercube', 159, @a);
+-- SELECT @a; 
