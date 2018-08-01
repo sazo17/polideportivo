@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="VerEquipoWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434">
+        Title="VerEquipoWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_equipo">
         <Rectangle x:Name="rectangle_equipo" HorizontalAlignment="Left" Height="123" Margin="81,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22">
             <Rectangle.Fill>

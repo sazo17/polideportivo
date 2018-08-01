@@ -117,12 +117,7 @@ namespace WpfApp1
         {
             
         }
-
-        private void lbl_registrarse_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            RegistroWindow registro = new RegistroWindow();
-            registro.Show();
-        }
+        
 
         private void lbl_olvidopassword_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {

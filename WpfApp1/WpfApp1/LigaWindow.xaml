@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="LigaWindow" Height="600" Width="800" Background="#FF343434" WindowStyle="None" ResizeMode="CanMinimize">
+        Title="LigaWindow" Height="600" Width="800" Background="#FF343434" WindowStyle="None" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_liga">
         <Label x:Name="lbl_numero_equipos" Content="Número de equipos:" HorizontalAlignment="Left" Margin="276,359,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="118" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385"/>
         <TextBox x:Name="txt_numero_equipos" HorizontalAlignment="Left" Height="23" Margin="490,359,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="50"/>

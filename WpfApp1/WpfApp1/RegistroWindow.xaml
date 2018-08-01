@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="RegistroWindow" Height="320" Width="350" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434">
+        Title="RegistroWindow" Height="320" Width="350" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_registro">
         <Grid.Background>
             <ImageBrush/>

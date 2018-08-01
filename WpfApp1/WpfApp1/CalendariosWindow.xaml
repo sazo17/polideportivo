@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="CalendariosWindow" Height="600" Width="800" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434">
+        Title="CalendariosWindow" Height="600" Width="800" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_calendario">
         <Calendar x:Name="cal_calendario" HorizontalAlignment="Left" Margin="312,158,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_seleccionar_deporte" Content="Seleccionar deporte:" HorizontalAlignment="Left" Margin="151,105,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" Width="149"/>
