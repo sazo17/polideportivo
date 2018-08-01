@@ -1,6 +1,166 @@
-USE p_polideportivo;
--- DROP PROCEDURE p_campeonato;
+-- Es necesario realizar esta modificacion en el campo de la tabla
+-- Workbench por si solo no permitia definir el tipo de dato `TIMESTAMP`
+ALTER TABLE BITACORA_LOGIN MODIFY fecha_bitacora TIMESTAMP;
 
+-- Codigo PL/MySQL 
+DELIMITER //
+-- Definicion de cada uno de los parametros IN parametros que recibe
+-- OUT salidas a la aplicacion.
+CREATE PROCEDURE p_login(IN user VARCHAR(16)
+, IN pass VARCHAR(30)
+, OUT o_tipo_usuarios VARCHAR(1) 
+, OUT o_estado_usuarios VARCHAR(1)
+, OUT o_idUsuarios INT(11)
+) 
+BEGIN
+	-- Declaracion de variables
+	DECLARE s_tipo,  s_estado VARCHAR(1);
+	DECLARE s_id INT(11);
+    	-- Declaracion de Exception
+	DECLARE CONTINUE HANDLER FOR SQLEXCEPTION 
+	SET o_tipo_usuarios = 0, o_estado_usuarios = 0, o_idUsuarios = 0;
+        
+	-- Busqueda de usuario y contrasenia.
+	-- Se asigna en una variable cuando se encuentra.
+	SELECT Tipo_usuarios, estado_usuarios, idUsuarios
+	INTO s_tipo, s_estado, s_id
+	FROM USUARIOS
+	WHERE 
+		user_usuarios = user AND
+		pass_usuarios = pass;
+        
+	-- Validacion de `s_id` si no es NULL puede proceder
+	IF s_id IS NOT NULL THEN
+		-- Asignacion de los valores recibidos en las variables
+		-- de salida.
+		SET o_tipo_usuarios = s_tipo;
+		SET o_estado_usuarios = s_estado;
+		SET o_idUsuarios = s_id;
+        	-- Inserta datos en la `bitacora_login` 
+		-- inserta la fecha actual + hora y el host = hostname@puerto
+		INSERT INTO BITACORA_LOGIN (usuario_bitacora, 
+		fecha_bitacora, host_bitacora) 
+		VALUES (s_id, SYSDATE(), USER());
+		COMMIT;
+	ELSE 
+		-- Retonra valores asignados en variables cuando `s_id`es NULL
+		SET o_tipo_usuarios = 'N';
+		SET o_estado_usuarios = 'N';
+		SET o_idUsuarios = 0;				  
+    END IF;
+END//
+DELIMITER ;
+
+-- Ejecutando PL/MySQL para pruebas
+CALL p_login('usuario1', '1234', @a, @b, @c);
+-- Salida en pantalla de los parametros de `p_login`
+SELECT @a, @b, @c;
+-- Verificando tabla `Bitacora_Login`
+SELECT * FROM BITACORA_LOGIN;
+
+
+
+-- -------------------------------
+-- Procedimiento para campeonato
+-- Insertando datos en tabla transaccional `p_campeonato`
+DELIMITER //
+-- Definiendo parametros en `p_campeonato`
+CREATE PROCEDURE p_campeonato(IN nombre VARCHAR(50),
+IN fecha_ini DATE, IN fecha_fin DATE, IN cantidad INT,
+IN id_empleado INT, IN tipo_camp VARCHAR(30), IN deporte VARCHAR(35),
+OUT bit INT(1))
+BEGIN
+	-- Declaracion de variables
+	DECLARE t_tipo_camp INT;
+	DECLARE t_deporte INT;
+	DECLARE deporte_id INT;
+	
+	-- Se asignan los valores encontrados a las variables
+	SELECT idTipo_campeonato INTO t_tipo_camp 
+	FROM TIPO_CAMPEONATO
+	WHERE Tipo_Tipo_campeonato = tipo_camp;
+	-- ----------
+	SELECT idTipo_Deporte INTO t_deporte
+	FROM TIPOS_DEPORTE
+	WHERE tipo_Tipo_Deporte = deporte;
+	--
+	SELECT idDeporte INTO deporte_id
+	FROM DEPORTE
+	WHERE idTipo_Deporte = t_deporte;
+
+	-- Validacion de las variables 
+	IF deporte_id IS NOT NULL AND t_tipo_camp IS NOT NULL THEN
+		INSERT INTO CAMPEONATO
+		(nombre_campeonato, fecha_inicio_campenato,
+		fecha_finalización_campeonato, cantidad_equipos_campeonato,
+		idEmpleados, idTipo_campeonato, idDeporte, idTipo_Deporte)
+		VALUES (
+			nombre, fecha_ini, fecha_fin, cantidad, id_empleado,
+			t_tipo_camp, deporte_id, t_deporte);
+		-- Retorna 1 si el procedimiento se desarrollo normalmente.
+		SET bit = 1;
+        COMMIT;
+	ELSE 
+		-- Retorna 0 si las variables estaban NULL
+		SET BIT = 0;
+        ROLLBACK;
+	END IF;
+END//
+DELIMITER ;
+
+-- Solo para pruebas
+-- CALL p_campeonato('campeonato12', '2018-08-09', '2017-08-19', 25, 35, 'tipo_c11', 'tipo1',@a);
+-- SELECT @a;
+
+
+
+-- Procedimiento registro_jugadores
+DELIMITER //
+-- Definicion de parametros en `p_jug_registro`
+CREATE PROCEDURE p_jug_registro(IN fecha_ini DATE, IN fecha_fin DATE,
+IN desc_jugreg VARCHAR(50), IN equipo VARCHAR(35), IN id_jugador INT,
+IN posjug INT, OUT bit INT(1))
+BEGIN
+	-- Declaracion de variables
+	DECLARE t_equipo INT;
+	DECLARE t_posjug INT;
+	
+	-- Asignacion de valores encontrados
+	SELECT idEquipos INTO t_equipo
+	FROM EQUIPOS 
+	WHERE nombre_equipo = equipo;
+	-- -----
+	SELECT id_pogjug INTO t_posjug
+	FROM POSICION_JUGADOR
+	WHERE posicion_posicionjugador = posjug;
+	
+	-- Validacion de variables != NULL
+	IF t_equipo IS NOT NULL AND t_posjug IS NOT NULL THEN
+		INSERT INTO JUGADORES_REGISTRO 
+		(fecha_ini_jugadores_registro, fecha_fin_jugadores_registro, 
+		descripcion_jugadoresregistro, idEquipos, idJugadores,
+		idpogjug) 
+		VALUES (fecha_ini, fecha_fin, desc_jugreg, t_equipo, id_jugador,
+			t_posjug);
+		
+		-- Retorna 1 si todo se realizo correctamente
+		SET bit = 1;
+		COMMIT;
+	ELSE 
+		
+		-- Retorna 0 si no se realizo correctamente
+		SET bit = 0;
+		ROLLBACK;
+	END IF;
+END//
+DELIMITER ;
+
+-- CALL p_jug_registro('2018-01-05', '2019-12-02', '884 94 AKIW', 'Jabbercube', 159, @a);
+-- SELECT @a; 
+
+
+
+-- AUN EN DESARROLLO Y PRUEBAS 
 -- Procedimiento para campeonato
 DELIMITER //
 CREATE PROCEDURE p_campeonato(IN nombre VARCHAR(50),
@@ -247,6 +407,7 @@ BEGIN
 	END IF;
 END//
 DELIMITER ;
+
 
 
 
