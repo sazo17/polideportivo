@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="EmpleadosWindow" Height="600" Width="800" Background="#FF343434" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="EmpleadosWindow" Height="600" Width="800" Background="#FF343434" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid x:Name="grid_empleados">
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
@@ -19,6 +19,12 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
+        <Label x:Name="lbl_empleados" Content="Empleados" HorizontalAlignment="Left" Margin="280,21,0,0" VerticalAlignment="Top" Height="65" Width="207" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <DataGrid x:Name="dg_empleados" HorizontalAlignment="Left" Height="383" Margin="48,155,0,0" VerticalAlignment="Top" Width="692"/>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="48,552,0,0" VerticalAlignment="Top" Width="692" Click="btn_regresar_Click"/>
+        <Button x:Name="btn_agregar_empleados" Content="Agregar empleados" HorizontalAlignment="Left" Margin="45,120,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button x:Name="btn_modificar_empleados" Content="Modificar empleados" HorizontalAlignment="Left" Margin="158,120,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button x:Name="btn_eliminar_empleados" Content="Eliminar empleados" HorizontalAlignment="Left" Margin="271,120,0,0" VerticalAlignment="Top" Width="108"/>
 
     </Grid>
 </Window>

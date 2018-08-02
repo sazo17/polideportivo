@@ -53,6 +53,8 @@
         <CheckBox x:Name="chk_aceptar_terminos" Content="Aceptar terminos y condiciones" HorizontalAlignment="Left" Margin="508,328,0,0" VerticalAlignment="Top" Foreground="#FFFFF9F9" Width="194" Height="17"/>
         <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="581,248,0,0" VerticalAlignment="Top" Width="158" Height="26"/>
         <PasswordBox x:Name="passbx_confirmar_password" HorizontalAlignment="Left" Margin="581,283,0,0" VerticalAlignment="Top" Width="158" Height="26"/>
+        <Label x:Name="lbl_deporte" Content="Deporte:" HorizontalAlignment="Left" Margin="196,323,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <ComboBox x:Name="cbo_deporte" HorizontalAlignment="Left" Margin="278,323,0,0" VerticalAlignment="Top" Width="152" RenderTransformOrigin="-0.079,0.455"/>
 
     </Grid>
 </Window>

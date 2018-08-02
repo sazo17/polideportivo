@@ -5,34 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Gestor de Campeonatos" Height="600.624" Width="800.367" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Window.Background>
-        <ImageBrush ImageSource="polideportivo_images/menu/menu.png"/>
-    </Window.Background>
+        Title="Gestor de Campeonatos" Height="600.624" Width="800.367" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF343434">
     <Grid x:Name="grid_menu" Margin="10,0,0,10">
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="642*"/>
             <RowDefinition Height="13*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid.Background>
-            <ImageBrush/>
-        </Grid.Background>
-        <Button x:Name="btn_torneos" Content="Torneos" HorizontalAlignment="Left" Margin="76,198,0,0" VerticalAlignment="Top" Width="318" Height="99" Foreground="#FFFDF6F6" FontSize="20" Cursor="Hand" Click="btn_torneos_Click" Opacity="0.8" FontWeight="Bold">
+        <Button x:Name="btn_torneos" Content="Torneos" HorizontalAlignment="Left" Margin="245,274,0,0" VerticalAlignment="Top" Width="235" Height="83" Foreground="#FFFDF6F6" FontSize="20" Cursor="Hand" Click="btn_torneos_Click" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush ImageSource="polideportivo_images/menu/torneos1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_equipos" Content="Equipos" HorizontalAlignment="Left" Margin="399,198,0,0" VerticalAlignment="Top" Width="318" Height="99" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="20" Cursor="Hand" Click="btn_equipos_Click" Opacity="0.8">
+        <Button x:Name="btn_equipos" Content="Equipos" HorizontalAlignment="Left" Margin="76,191,0,0" VerticalAlignment="Top" Width="163" Height="78" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="20" Cursor="Hand" Click="btn_equipos_Click">
             <Button.Background>
                 <ImageBrush ImageSource="polideportivo_images/menu/equipos1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_buscar_jugadores" Content="Buscar Jugadores" HorizontalAlignment="Left" Margin="75,300,0,0" VerticalAlignment="Top" Width="319" Height="94" Cursor="Hand" FontSize="20" Click="btn_buscar_jugadores_Click" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Foreground="White" FontWeight="Bold">
+        <Button x:Name="btn_buscar_jugadores" Content="Buscar Jugadores" HorizontalAlignment="Left" Margin="78,371,0,0" VerticalAlignment="Top" Width="319" Height="75" Cursor="Hand" FontSize="20" Click="btn_buscar_jugadores_Click" RenderTransformOrigin="0.5,0.5" Foreground="White" FontWeight="Bold">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform AngleY="-0.135"/>
+                    <SkewTransform AngleY="-0.108"/>
                     <RotateTransform/>
                     <TranslateTransform Y="-0.553"/>
                 </TransformGroup>
@@ -41,13 +38,13 @@
                 <ImageBrush ImageSource="polideportivo_images/menu/buscarjugadores.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_ayuda" Content="Ayuda" HorizontalAlignment="Left" Margin="399,397,0,0" VerticalAlignment="Top" Width="154" Height="91" Cursor="Hand" FontSize="20" Click="btn_ayuda_Copy1_Click" Opacity="0.8" Foreground="#FFFDF9F9" FontWeight="Bold" RenderTransformOrigin="-0.279,0.522">
+        <Button x:Name="btn_ayuda" Content="Ayuda" HorizontalAlignment="Left" Margin="410,373,0,0" VerticalAlignment="Top" Width="154" Height="70" Cursor="Hand" FontSize="20" Click="btn_ayuda_Copy1_Click" Foreground="#FFFDF9F9" FontWeight="Bold" RenderTransformOrigin="-0.279,0.522">
             <Button.Background>
                 <ImageBrush ImageSource="polideportivo_images/menu/ayuda1.jpg"/>
             </Button.Background>
         </Button>
-        <Label x:Name="lbl_polideportivo" Content="Polideportivo" HorizontalAlignment="Left" Margin="166,148,0,0" VerticalAlignment="Top" Height="39" Width="143" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FFF3EDED"/>
-        <Label x:Name="lbl_logo" Content="Logo" HorizontalAlignment="Left" Margin="76,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.145,0.783" Height="62" Width="103" Foreground="#FFF1E4E4" FontSize="36"/>
+        <Label x:Name="lbl_polideportivo" Content="Polideportivo" HorizontalAlignment="Left" Margin="166,59,0,0" VerticalAlignment="Top" Height="39" Width="143" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FFF3EDED"/>
+        <Label x:Name="lbl_logo" Content="Logo" HorizontalAlignment="Left" Margin="76,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.145,0.783" Height="62" Width="103" Foreground="#FFF1E4E4" FontSize="36"/>
         <Button x:Name="btn_log_out" Content="Log out" HorizontalAlignment="Left" Margin="713,5,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.213,-0.628" Height="27" Background="{x:Null}" Foreground="#FFF7F4F4" BorderBrush="{x:Null}" Cursor="Hand" Click="Button_Click"/>
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
@@ -61,12 +58,12 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_campos" Content="Campos" HorizontalAlignment="Left" Margin="399,302,0,0" VerticalAlignment="Top" Width="318" Height="90" Foreground="#FFFDF6F6" FontSize="20" Cursor="Hand" Opacity="0.8" FontWeight="Bold" Click="btn_campos_Click">
+        <Button x:Name="btn_campos" Content="Campos" HorizontalAlignment="Left" Margin="487,274,0,0" VerticalAlignment="Top" Width="235" Height="83" Foreground="#FFFDF6F6" FontSize="20" Cursor="Hand" FontWeight="Bold" Click="btn_campos_Click">
             <Button.Background>
                 <ImageBrush ImageSource="polideportivo_images/Equipos/equipo_background1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_empledos" Content="Empleados" HorizontalAlignment="Left" Margin="76,401,0,0" VerticalAlignment="Top" Width="155" Height="89" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Foreground="White" FontWeight="Bold" Click="btn_empledos_Click">
+        <Button x:Name="btn_empledos" Content="Empleados" HorizontalAlignment="Left" Margin="566,188,0,0" VerticalAlignment="Top" Width="155" Height="79" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="White" FontWeight="Bold" Click="btn_empledos_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -76,10 +73,10 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Background>
-                <ImageBrush ImageSource="polideportivo_images/coach/coach1.jpg"/>
+                <ImageBrush ImageSource="polideportivo_images/coach/coach.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_arbitros" Content="Árbitros" HorizontalAlignment="Left" Margin="236,400,0,0" VerticalAlignment="Top" Width="155" Height="89" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Foreground="White" FontWeight="Bold" Click="btn_arbitros_Click">
+        <Button x:Name="btn_arbitros" Content="Árbitros" HorizontalAlignment="Left" Margin="403,191,0,0" VerticalAlignment="Top" Width="155" Height="79" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="White" FontWeight="Bold" Click="btn_arbitros_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -90,6 +87,32 @@
             </Button.RenderTransform>
             <Button.Background>
                 <ImageBrush ImageSource="polideportivo_images/menu/menu_background.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_jugadores" Content="Jugadores" HorizontalAlignment="Left" Margin="244,189,0,0" VerticalAlignment="Top" Width="154" Height="80" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="White" FontWeight="Bold" Click="btn_jugadores_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.146"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.553"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="polideportivo_images/jugadores/buscarjugadores.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_entrenadores" Content="Entrenadores" HorizontalAlignment="Left" Margin="78,279,0,0" VerticalAlignment="Top" Width="159" Height="79" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="White" FontWeight="Bold" Click="btn_entrenadores_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.146"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.553"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="polideportivo_images/coach/coach1.jpg"/>
             </Button.Background>
         </Button>
     </Grid>

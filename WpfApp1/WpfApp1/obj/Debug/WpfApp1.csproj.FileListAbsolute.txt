@@ -322,3 +322,17 @@ C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\ArbitrosWindow.g.
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\EmpleadosWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\ArbitrosWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\EmpleadosWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\JugadoresWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\JugadoresWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarEntrenadoresWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarJugadoresWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarEntrenadoresWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarJugadoresWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarArbitrosWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarEmpleadoWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarArbitrosWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarEmpleadoWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\EntrenadorWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\EntrenadorWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEntrenadorWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEntrenadorWindow.baml

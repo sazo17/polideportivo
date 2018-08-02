@@ -53,6 +53,13 @@ namespace WpfApp1
         {
             WindowState = WindowState.Minimized;
         }
+
+  
+
+        private void btn_regresar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

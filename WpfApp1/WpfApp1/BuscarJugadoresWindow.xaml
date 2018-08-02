@@ -5,11 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="BuscarJugadoresWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Window.Background>
-        <ImageBrush ImageSource="polideportivo_images/jugadores/buscarjugadores.jpg"/>
-    </Window.Background>
-    <Grid x:Name="grid_buscar_jugadores" Background="#FF343434">
+        Title="BuscarJugadoresWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF343434">
+    <Grid x:Name="grid_buscar_jugadores">
         <Label x:Name="lbl_buscar_jugadores" Content="Buscar Jugadores" HorizontalAlignment="Left" Margin="267,43,0,0" VerticalAlignment="Top" Height="42" Width="287" Foreground="#FFFBF8F8" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_deporte" Content="Deporte:" HorizontalAlignment="Left" Margin="29,108,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" Width="63" RenderTransformOrigin="0.635,0.308"/>
         <ComboBox x:Name="cbo_deporte" HorizontalAlignment="Left" Margin="92,112,0,0" VerticalAlignment="Top" Width="120"/>
