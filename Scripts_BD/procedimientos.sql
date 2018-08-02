@@ -59,7 +59,7 @@ SELECT @a, @b, @c;
 SELECT * FROM BITACORA_LOGIN;
 
 
--- ------------------------------------
+-- --------------------------------------------------------------------------------------------
 -- Procedimiento para campeonato
 -- Insertando datos en tabla transaccional `p_campeonato`
 DELIMITER //									-- Fase BETA
@@ -115,7 +115,7 @@ DELIMITER ;
 -- SELECT @a;
 
 
--- ---------------------------------
+-- ----------------------------------------------------------------------------------------------
 -- Procedimiento registro_jugadores
 DELIMITER //										-- Fase BETA
 -- Definicion de parametros en `p_jug_registro`
@@ -161,10 +161,238 @@ DELIMITER ;
 -- SELECT @a; 
 
 
+-- ------------------------------------------------------------------------------------------------
+-- Dependencia de procedimiento `p_jugadores`
+ALTER TABLE USUARIOS ADD CONSTRAINT cu_user UNIQUE(user_usuarios);
+
+-- Procedimiento jugadores/usuarios
+DELIMITER //												-- Fase BETA
+-- Declaracion de parametros In/Out
+CREATE PROCEDURE p_jugadores( IN i_nombre VARCHAR(45), 	IN i_apellidos VARCHAR(45), 
+IN i_edad INT(11), 			IN i_direccion VARCHAR(45),	IN i_telefono VARCHAR(12), 
+IN i_mail VARCHAR(45), 		IN i_genero VARCHAR(1), 	IN i_fotografia VARCHAR(45), 
+IN i_user VARCHAR(16), 		IN i_pass VARCHAR(30), 		IN i_estado VARCHAR(1),
+OUT o_bit INT(1))
+BEGIN
+	-- Declaracion de variable 
+	DECLARE t_iuser, p_iuser INT;
+    
+    -- Verifica que el usuario no exista.
+    SELECT idUsuarios INTO p_iuser
+	FROM USUARIOS
+	WHERE 
+		 user_usuarios = i_user AND pass_usuarios = i_pass;
+         
+	IF p_iuser IS NULL THEN
+		-- Inserccion de usuario
+		INSERT INTO USUARIOS (user_usuarios, pass_usuarios, Tipo_usuarios, estado_usuarios)
+			VALUES (i_user, i_pass, 'R',i_estado);
+		-- Obtiene el id del usuario ingresado
+		SELECT idUsuarios INTO t_iuser
+		FROM USUARIOS
+		WHERE 
+			user_usuarios = i_user;
+            
+		-- Valida si el usuario fue ingresado
+		IF i_user IS NOT NULL THEN
+			-- Inserccion de datos del Jugador
+			INSERT INTO JUGADORES (nombre_jugadores, apellido_jugadores,
+			edad_jugadores, dirección_jugadores, telefono_jugadores, email_jugadores,
+			genero_jugadores, fotografia_jugadores, idUsuarios)
+				VALUES (i_nombre, i_apellidos, i_edad, i_direccion, i_telefono, i_mail,
+				i_genero, i_fotografia, t_iuser);
+			-- Si todo va bien la salida es 1|commit
+			SET o_bit = 1;
+			COMMIT;
+		ELSE
+			-- Si el usuario no fue ingresado la salida es 0
+			SET o_bit = 0;
+			ROLLBACK;
+		END IF;
+    ELSE
+		SET o_bit = 0;
+    END IF;
+END//
+DELIMITER ;
+
+-- Ejecutando PL/MySQL para pruebas
+-- CALL p_jugadores('hey', 'mundo', 15, 'guatemala', 505050, 'correojef', 'M', 'fotografia', 'usuario5', 1246, 1,@a);
+-- SELECT @a; 
+
+-- -----------------------------------------------------------------------------------------------------
+-- Procedimiento entrenadores/usuarios
+DELIMITER //												-- Fase BETA
+-- Declaracion de parametros In/Out
+CREATE PROCEDURE p_entrenadores(
+IN i_nombre VARCHAR(45),	IN i_apellidos VARCHAR(45), 
+IN i_edad INT(11), 			IN i_direccion VARCHAR(45), 
+IN i_telefono VARCHAR(12), 	IN i_mail VARCHAR(45), 
+IN i_deporte INT, 			IN i_user VARCHAR(16), 
+IN i_pass VARCHAR(30), 		IN i_estado VARCHAR(1),
+OUT o_bit INT(1))
+BEGIN
+	-- Declaracion de variable 
+	DECLARE t_iuser, p_iuser INT;
+    
+    	-- Verifica que el usuario no exista.
+    	SELECT idUsuarios INTO p_iuser
+	FROM USUARIOS
+	WHERE 
+		 user_usuarios = i_user AND pass_usuarios = i_pass;
+	IF p_iuser IS NULL THEN
+		INSERT INTO USUARIOS (user_usuarios, pass_usuarios, Tipo_usuarios, estado_usuarios)
+			VALUES (i_user, i_pass, 'E',i_estado);
+		-- Obtiene el id del usuario ingresado
+		SELECT idUsuarios INTO t_iuser
+		FROM USUARIOS
+		WHERE 
+			user_usuarios = i_user;
+		-- Valida si el usuario fue ingresado
+		IF i_user IS NOT NULL THEN
+			INSERT INTO ENTRENADORES (nombre_entrenadores, apellido_entrenadores, 
+			edad_entrenadores, dirección_entrenadores, telefono_entrenadores, email_entrenadores,
+			idDeporte, USUARIOS_idUsuarios)
+				VALUES (i_nombre, i_apellidos, i_edad, i_direccion, i_telefono, 
+				i_mail, i_deporte, t_iuser);
+			SET o_bit = 1;
+        ELSE
+			SET o_bit = 0;
+			ROLLBACK;
+        END IF;
+	ELSE
+		SET o_bit = 3;
+    END IF; 
+END//
+DELIMITER ;
+
+-- Ejecutando PL/MySQL para pruebas
+-- CALL p_entrenadores('hey', 'mundo', 15, 'guatemala', 505050, 'correojef', 1, 'usuario6', 1248, 1,@a);
+-- SELECT @a;
+
+
+-- --------------------------------------------------------------------------------------------
+-- Procedimiento arbitros/usuarios
+DELIMITER //												-- Fase BETA
+-- Declaracion de parametros In/Out
+CREATE PROCEDURE p_arbitros(
+IN i_nombre VARCHAR(45),	IN i_apellidos VARCHAR(45),
+IN i_edad INT(11), 			IN i_direccion VARCHAR(45), 
+IN i_telefono VARCHAR(12), 	IN i_mail VARCHAR(45), 
+IN i_tipoa VARCHAR(25),		IN i_deporte INT,
+IN i_user VARCHAR(16), 		IN i_pass VARCHAR(30), 		
+IN i_estado VARCHAR(1),		IN i_tipo VARCHAR(1),
+OUT o_bit INT(1))
+BEGIN
+	-- Declaracion de variable 
+	DECLARE t_iuser, p_iuser, t_tipo, t_tiopa INT;
+    
+    -- Verifica que el usuario no exista.
+    SELECT idUsuarios INTO p_iuser
+	FROM USUARIOS
+	WHERE 
+		 user_usuarios = i_user AND pass_usuarios = i_pass;
+	
+    IF p_iuser IS NULL THEN
+		INSERT INTO USUARIOS (user_usuarios, pass_usuarios, Tipo_usuarios, estado_usuarios)
+			VALUES (i_user, i_pass, i_tipo, i_estado);
+			-- Obtiene el id del usuario ingresado
+		SELECT idUsuarios INTO t_iuser
+		FROM USUARIOS
+		WHERE 
+			user_usuarios = i_user;
+		--
+        SELECT idTipo_Deporte INTO t_tipo
+        FROM DEPORTE
+        WHERE idDeporte = i_deporte;
+        SELECT idTipo_Arbitro INTO t_tiopa
+        FROM TIPO_ARBITRO
+        WHERE tipo_tipo_arbitro = i_tipoa;
+        
+		IF t_iuser IS NOT NULL 
+			AND t_tipo IS NOT NULL 
+            AND t_tiopa IS NOT NULL THEN
+			INSERT INTO ARBITRO (nombre_arbitro, apellido_arbitro, edad_arbitro,
+            direccion_arbitro, telefono_arbitro, email_arbitro, idTipo_Arbitro, 
+            idUsuarios, idDeporte, idTipo_Deporte)
+				VALUES (i_nombre, i_apellidos, i_edad, i_direccion, i_telefono, i_mail, t_tiopa,
+                t_iuser, i_deporte, t_tipo);
+			SET o_bit = 1;
+		ELSE
+			SET o_bit = 3;
+        END IF;
+	ELSE
+		SET o_bit = 0;
+    END IF;
+END//
+DELIMITER ;
+
+
+-- Ejecutando PL/MySQL para pruebas
+-- CALL p_arbitros('hey', 'mundo', 15, 'guatemala', 505050, 'correojef', 'tipoa2', 2, 'usuario8', 1248, 1, 'R',@a);
+-- SELECT @a;
 
 
 
 
+-- ---------------------------------------------------------------------------------------
+-- Procedimiento empleados/usuarios
+DELIMITER //												-- Fase BETA
+-- Declaracion de parametros In/Out
+CREATE PROCEDURE p_empleados(
+IN i_nombre VARCHAR(50),	IN i_apellidos VARCHAR(50),
+IN i_edad INT(11), 		IN i_direccion VARCHAR(55), 
+IN i_telefono VARCHAR(12), 	IN i_mail VARCHAR(45), 
+IN i_area VARCHAR(25),		IN i_puesto VARCHAR(35),
+IN i_user VARCHAR(16), 		IN i_pass VARCHAR(30), 		
+IN i_estado VARCHAR(1),		IN i_tipo VARCHAR(1),
+OUT o_bit INT(1))
+BEGIN 
+	-- Declaracion de variable 
+	DECLARE t_iuser, p_iuser, t_area, t_puesto INT;
+	-- Verifica que el usuario no exista.
+    	SELECT idUsuarios INTO p_iuser
+	FROM USUARIOS
+	WHERE 
+		 user_usuarios = i_user AND pass_usuarios = i_pass;
+	IF p_iuser IS NULL THEN
+		INSERT INTO USUARIOS (user_usuarios, pass_usuarios, Tipo_usuarios, estado_usuarios)
+			VALUES (i_user, i_pass, i_tipo, i_estado);
+			-- Obtiene el id del usuario ingresado
+		SELECT idUsuarios INTO t_iuser
+		FROM USUARIOS
+		WHERE 
+			user_usuarios = i_user;
+		--
+        SELECT idPuesto INTO t_puesto
+        FROM PUESTO
+        WHERE 
+			Nombrepuesto_Puesto = i_puesto;
+        SELECT idArea INTO t_area
+        FROM AREA
+        WHERE 
+			nombrearea_area = i_area;
+		IF t_iuser IS NOT NULL 
+			AND t_puesto IS NOT NULL
+            AND t_area IS NOT NULL THEN
+			INSERT INTO EMPLEADOS (nombre_empleados, apellido_empleados,
+            edad_empleados, dirección_empleados, telefono_empleados, 
+            email_empleados, idArea, idPuesto, idUsuarios)
+            VALUES (i_nombre, i_apellidos, i_edad, i_direccion, 
+            i_telefono, i_mail, t_area, t_puesto, t_iuser);
+			SET o_bit = 1;
+		ELSE
+			SET o_bit = 0;
+        END IF;
+    ELSE
+		SET o_bit = 3;
+	END IF;
+END//
+DELIMITER ;
+
+
+-- Ejecutando PL/MySQL para pruebas
+-- CALL p_empleados('hey', 'mundo', 15, 'guatemala', 505050, 'correojef', 'area2', 'puesto2', 'usuario9', 1248, 1, 'R',@a);
+-- SELECT @a;
 
 
 
@@ -188,82 +416,6 @@ DELIMITER ;
 
 
 -- AUN EN DESARROLLO Y PRUEBAS 
-ALTER TABLE USUARIOS ADD CONSTRAINT cu_user UNIQUE(user_usuarios);
-
-DELIMITER //																						-- Fase ALFA
-CREATE PROCEDURE p_jugadores(IN i_nombre VARCHAR(45), IN i_apellidos VARCHAR(45), 
-IN i_edad INT(11), IN i_direccion VARCHAR(45), IN i_telefono VARCHAR(12), 
-IN i_mail VARCHAR(45), IN i_genero VARCHAR(1), IN i_fotografia VARCHAR(45), 
-IN i_user VARCHAR(16), IN i_pass VARCHAR(30), IN i_estado VARCHAR(1),
-OUT o_bit INT(1))
-BEGIN
-	DECLARE t_iuser INT;
-    INSERT INTO USUARIOS (user_usuarios, pass_usuarios, Tipo_usuarios, estado_usuarios)
-		VALUES (i_user, i_pass, 'R',i_estado);
-	--
-    SELECT idUsuarios INTO t_iuser
-	FROM USUARIOS
-	WHERE 
-		user_usuarios = i_user;
-	
-    IF i_user IS NOT NULL THEN
-		INSERT INTO JUGADORES (nombre_jugadores, apellido_jugadores,
-        edad_jugadores, dirección_jugadores, telefono_jugadores, email_jugadores,
-        genero_jugadores, fotografia_jugadores, idUsuarios)
-			VALUES (i_nombre, i_apellidos, i_edad, i_direccion, i_telefono, i_mail,
-            i_genero, i_fotografia, t_iuser);
-		SET o_bit = 1;
-        COMMIT;
-	ELSE
-		SET o_bit = 0;
-        ROLLBACK;
-    END IF;
-END //
-DELIMITER ; 
-
-
-
-DELIMITER //																						-- Fase ALFA
-CREATE PROCEDURE p_entrenadores(IN i_nombre VARCHAR(45), IN i_apellidos VARCHAR(45), 
-IN i_edad INT(11), IN i_direccion VARCHAR(45), IN i_telefono VARCHAR(12), 
-IN i_mail VARCHAR(45), IN i_deporte INT, 
-IN i_user VARCHAR(16), IN i_pass VARCHAR(30), IN i_estado VARCHAR(1),
-OUT o_bit INT(1))
-BEGIN
-	DECLARE t_iuser INT;
-    INSERT INTO USUARIOS (user_usuarios, pass_usuarios, Tipo_usuarios, estado_usuarios)
-		VALUES (i_user, i_pass, 'E',i_estado);
-	--
-    SELECT idUsuarios INTO t_iuser
-	FROM USUARIOS
-	WHERE 
-		user_usuarios = i_user;   
-	IF i_user IS NOT NULL THEN
-		INSERT INTO ENTRENADORES (nombre_entrenadores, apellido_entrenadores, 
-        edad_entrenadores, dirección_entrenadores, telefono_entrenadores, email_entrenadores,
-		idDeporte, USUARIOS_idUsuarios)
-			VALUES (i_nombre, i_apellidos, i_edad, i_direccion, i_telefono, 
-            i_mail, i_deporte, t_iuser);
-		SET o_bit = 1;
-        COMMIT;
-	ELSE
-		SET o_bit = 0;
-		ROLLBACK;
-    END IF;
-END//
-DELIMITER ;
-
-
-
-
-
-
-
-
-
-
-
-
 DROP PROCEDURE p_jornada;
 USE p_polideportivo;
 SELECT * FROM JORNADAS;
