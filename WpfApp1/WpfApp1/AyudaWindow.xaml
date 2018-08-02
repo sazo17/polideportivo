@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AyudaWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="polideportivo_images/coach/coach.jpg"/>
+        <ImageBrush ImageSource="polideportivo_images/ayuda/ayuda-background.jpg"/>
     </Window.Background>
     <Grid x:Name="grid_ayuda">
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>

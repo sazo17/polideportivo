@@ -58,6 +58,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AgregarArbitroWindow.xaml.cs">
+      <DependentUpon>AgregarArbitroWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEmpleadoWindow.xaml.cs">
+      <DependentUpon>AgregarEmpleadoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AgregarEntrenadorWindow.xaml.cs">
       <DependentUpon>AgregarEntrenadorWindow.xaml</DependentUpon>
     </Compile>
@@ -182,6 +188,14 @@
     <Compile Include="VerJugadorWindow.xaml.cs">
       <DependentUpon>VerJugadorWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AgregarArbitroWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgregarEmpleadoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AgregarEntrenadorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -393,9 +407,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="polideportivo_images\login\login.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="polideportivo_images\campeonatos\eliminatorias.png" />
   </ItemGroup>
   <ItemGroup>
@@ -405,30 +416,12 @@
     <Resource Include="polideportivo_images\campeonatos\ligaeliminatorias.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="polideportivo_images\menu\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="polideportivo_images\campeonatos\trofeo1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="polideportivo_images\campeonatos\trofeo2.png" />
     <Resource Include="polideportivo_images\campeonatos\trofeo3.png" />
     <Resource Include="polideportivo_images\campeonatos\trofeo4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\torneos1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\equipos1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\buscarjugadores.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\ayuda1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\menu_background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="polideportivo_images\Equipos\equipo_background.jpg" />
@@ -442,13 +435,6 @@
     <Resource Include="polideportivo_images\Equipos\equipo_background3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="polideportivo_images\coach\coach.jpg" />
-    <Resource Include="polideportivo_images\coach\coach1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\jugadores\buscarjugadores.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="polideportivo_images\login\contrasenia\fondo_contrasenia.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -456,6 +442,39 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="polideportivo_images\login\registro\fondo_registro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\menu\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\login\login-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\jugadores\jugadores-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\empleado\empleado-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\empleado\empleado-background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\coach\entrenador-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\arbitro\arbitro-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\arbitro\arbitro-background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\campeonatos\torneos-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\campos\campos-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\ayuda\ayuda-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

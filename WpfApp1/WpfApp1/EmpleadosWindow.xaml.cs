@@ -59,6 +59,12 @@ namespace WpfApp1
         {
             this.Close();
         }
+
+        private void btn_agregar_empleados_Click(object sender, RoutedEventArgs e)
+        {
+            AgregarEmpleadoWindow agregar_empleado = new AgregarEmpleadoWindow();
+            agregar_empleado.Show();
+        }
     }
 }
 

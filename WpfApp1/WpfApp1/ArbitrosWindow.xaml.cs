@@ -60,6 +60,12 @@ namespace WpfApp1
         {
             this.Close();
         }
+
+        private void btn_agregar_arbitro_Click(object sender, RoutedEventArgs e)
+        {
+            AgregarArbitroWindow agregar_arbitro = new AgregarArbitroWindow();
+            agregar_arbitro.Show();
+        }
     }
 }
 
