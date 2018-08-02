@@ -117,7 +117,7 @@ DELIMITER ;
 
 -- ---------------------------------
 -- Procedimiento registro_jugadores
-DELIMITER //																	-- Fase BETA
+DELIMITER //										-- Fase BETA
 -- Definicion de parametros en `p_jug_registro`
 CREATE PROCEDURE p_jug_registro(IN i_fecha_ini DATE, IN i_fecha_fin DATE,
 IN i_desc_jugreg VARCHAR(50), IN i_equipo VARCHAR(35), IN i_id_jugador INT,
@@ -188,6 +188,80 @@ DELIMITER ;
 
 
 -- AUN EN DESARROLLO Y PRUEBAS 
+ALTER TABLE USUARIOS ADD CONSTRAINT cu_user UNIQUE(user_usuarios);
+
+DELIMITER //																						-- Fase ALFA
+CREATE PROCEDURE p_jugadores(IN i_nombre VARCHAR(45), IN i_apellidos VARCHAR(45), 
+IN i_edad INT(11), IN i_direccion VARCHAR(45), IN i_telefono VARCHAR(12), 
+IN i_mail VARCHAR(45), IN i_genero VARCHAR(1), IN i_fotografia VARCHAR(45), 
+IN i_user VARCHAR(16), IN i_pass VARCHAR(30), IN i_estado VARCHAR(1),
+OUT o_bit INT(1))
+BEGIN
+	DECLARE t_iuser INT;
+    INSERT INTO USUARIOS (user_usuarios, pass_usuarios, Tipo_usuarios, estado_usuarios)
+		VALUES (i_user, i_pass, 'R',i_estado);
+	--
+    SELECT idUsuarios INTO t_iuser
+	FROM USUARIOS
+	WHERE 
+		user_usuarios = i_user;
+	
+    IF i_user IS NOT NULL THEN
+		INSERT INTO JUGADORES (nombre_jugadores, apellido_jugadores,
+        edad_jugadores, dirección_jugadores, telefono_jugadores, email_jugadores,
+        genero_jugadores, fotografia_jugadores, idUsuarios)
+			VALUES (i_nombre, i_apellidos, i_edad, i_direccion, i_telefono, i_mail,
+            i_genero, i_fotografia, t_iuser);
+		SET o_bit = 1;
+        COMMIT;
+	ELSE
+		SET o_bit = 0;
+        ROLLBACK;
+    END IF;
+END //
+DELIMITER ; 
+
+
+
+DELIMITER //																						-- Fase ALFA
+CREATE PROCEDURE p_entrenadores(IN i_nombre VARCHAR(45), IN i_apellidos VARCHAR(45), 
+IN i_edad INT(11), IN i_direccion VARCHAR(45), IN i_telefono VARCHAR(12), 
+IN i_mail VARCHAR(45), IN i_deporte INT, 
+IN i_user VARCHAR(16), IN i_pass VARCHAR(30), IN i_estado VARCHAR(1),
+OUT o_bit INT(1))
+BEGIN
+	DECLARE t_iuser INT;
+    INSERT INTO USUARIOS (user_usuarios, pass_usuarios, Tipo_usuarios, estado_usuarios)
+		VALUES (i_user, i_pass, 'E',i_estado);
+	--
+    SELECT idUsuarios INTO t_iuser
+	FROM USUARIOS
+	WHERE 
+		user_usuarios = i_user;   
+	IF i_user IS NOT NULL THEN
+		INSERT INTO ENTRENADORES (nombre_entrenadores, apellido_entrenadores, 
+        edad_entrenadores, dirección_entrenadores, telefono_entrenadores, email_entrenadores,
+		idDeporte, USUARIOS_idUsuarios)
+			VALUES (i_nombre, i_apellidos, i_edad, i_direccion, i_telefono, 
+            i_mail, i_deporte, t_iuser);
+		SET o_bit = 1;
+        COMMIT;
+	ELSE
+		SET o_bit = 0;
+		ROLLBACK;
+    END IF;
+END//
+DELIMITER ;
+
+
+
+
+
+
+
+
+
+
 
 
 DROP PROCEDURE p_jornada;
