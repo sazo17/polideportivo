@@ -166,7 +166,6 @@ C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\LigaWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MenuWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\OlvideContraseniaWindow.g.cs
-C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\RegistroWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPosicionesWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\TorneosWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEquipoWindow.g.cs
@@ -187,7 +186,6 @@ C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\LigaWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\MenuWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\OlvideContraseniaWindow.baml
-C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\RegistroWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPosicionesWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\TorneosWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEquipoWindow.baml
@@ -320,3 +318,7 @@ C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-De
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\ArbitrosWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\EmpleadosWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\ArbitrosWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\EmpleadosWindow.baml

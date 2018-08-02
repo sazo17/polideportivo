@@ -73,6 +73,9 @@
     <Compile Include="AjustesWindow.xaml.cs">
       <DependentUpon>AjustesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ArbitrosWindow.xaml.cs">
+      <DependentUpon>ArbitrosWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AyudaWindow.xaml.cs">
       <DependentUpon>AyudaWindow.xaml</DependentUpon>
     </Compile>
@@ -91,6 +94,9 @@
     </Compile>
     <Compile Include="EliminatoriasWindow.xaml.cs">
       <DependentUpon>EliminatoriasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadosWindow.xaml.cs">
+      <DependentUpon>EmpleadosWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="EquiposWindow.xaml.cs">
       <DependentUpon>EquiposWindow.xaml</DependentUpon>
@@ -130,9 +136,6 @@
     </Compile>
     <Compile Include="QuitarGolFutbolWindow.xaml.cs">
       <DependentUpon>QuitarGolFutbolWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="RegistroWindow.xaml.cs">
-      <DependentUpon>RegistroWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TablaGoleadoresFutbolWindow.xaml.cs">
       <DependentUpon>TablaGoleadoresFutbolWindow.xaml</DependentUpon>
@@ -178,6 +181,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ArbitrosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AyudaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -199,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EliminatoriasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmpleadosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -267,10 +278,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="QuitarGolFutbolWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="RegistroWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

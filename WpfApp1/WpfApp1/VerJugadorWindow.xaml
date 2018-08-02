@@ -20,18 +20,16 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_jugador" Content="Jugador" HorizontalAlignment="Left" Margin="321,10,0,0" VerticalAlignment="Top" Height="65" Width="159" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <Rectangle x:Name="rectangle_foto_jugador" HorizontalAlignment="Left" Height="123" Margin="44,159,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22"/>
-        <Label x:Name="lbl_foto_jugador" Content="Foto Jugador" HorizontalAlignment="Left" Margin="44,287,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="207,155,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_nombre1" HorizontalAlignment="Left" Height="23" Margin="365,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_apellido" Content="Apellido:" HorizontalAlignment="Left" Margin="207,186,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_apellido" HorizontalAlignment="Left" Height="23" Margin="365,189,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_fecha_de_nacimiento" Content="Fecha de nacimiento:" HorizontalAlignment="Left" Margin="218,217,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="122" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_fecha_de_nacimiento" HorizontalAlignment="Left" Height="23" Margin="365,221,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_edad" Content="Edad:" HorizontalAlignment="Left" Margin="219,249,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_edad" HorizontalAlignment="Left" Height="23" Margin="365,255,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_equipos_anteriores" Content="Equipos Anteriores" HorizontalAlignment="Left" Margin="545,124,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="218" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <ListBox x:Name="lst_equipos_anteriores" HorizontalAlignment="Left" Height="44" Margin="545,155,0,0" VerticalAlignment="Top" Width="218">
+        <Rectangle x:Name="rectangle_foto_jugador" HorizontalAlignment="Left" Height="123" Margin="44,141,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22"/>
+        <Label x:Name="lbl_foto_jugador" Content="Foto Jugador" HorizontalAlignment="Left" Margin="44,269,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="207,137,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_nombre1" HorizontalAlignment="Left" Height="23" Margin="365,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_apellido" Content="Apellido:" HorizontalAlignment="Left" Margin="207,168,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_apellido" HorizontalAlignment="Left" Height="23" Margin="365,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_edad" Content="Edad:" HorizontalAlignment="Left" Margin="219,202,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_edad" HorizontalAlignment="Left" Height="23" Margin="365,208,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_equipos_anteriores" Content="Equipos Anteriores" HorizontalAlignment="Left" Margin="545,106,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="218" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <ListBox x:Name="lst_equipos_anteriores" HorizontalAlignment="Left" Height="44" Margin="541,141,0,0" VerticalAlignment="Top" Width="213">
             <ListBoxItem Content="Equipo1"/>
             <ListBoxItem Content="Equipo2"/>
             <ListBoxItem Content="Equipo3"/>
@@ -48,31 +46,24 @@
         <Label x:Name="lbl_fecha_final" Content="Fecha final:" HorizontalAlignment="Left" Margin="241,450,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
         <TextBox x:Name="txt_fecha_final" HorizontalAlignment="Left" Height="23" Margin="365,453,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
         <Label x:Name="lbl_deporte" Content="Deporte" HorizontalAlignment="Left" Margin="241,481,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
-        <ComboBox x:Name="cmbx_deportes" HorizontalAlignment="Left" Margin="365,485,0,0" VerticalAlignment="Top" Width="152">
-            <ComboBoxItem Content="Futbol"/>
-            <ComboBoxItem Content="Baloncesto"/>
-            <ComboBoxItem Content="Voleibol"/>
-            <ComboBoxItem Content="Beisbol"/>
-        </ComboBox>
         <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="35,546,0,0" VerticalAlignment="Top" Width="106" Height="31"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="267,546,0,0" VerticalAlignment="Top" Width="488" Height="31" Click="btn_regresar_Click_1"/>
         <Button x:Name="btn_guardar" Content="Guardar" HorizontalAlignment="Left" Margin="146,546,0,0" VerticalAlignment="Top" Width="106" Height="31"/>
-        <Label x:Name="lbl_estatura" Content="Estatura" HorizontalAlignment="Left" Margin="219,287,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_estatura" HorizontalAlignment="Left" Height="23" Margin="365,293,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_edad_Copy1" Content="Peso:" HorizontalAlignment="Left" Margin="546,252,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="37" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_peso" HorizontalAlignment="Left" Height="23" Margin="611,255,0,0" TextWrapping="Wrap" Text="Peso" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_sexo" Content="Sexo:" HorizontalAlignment="Left" Margin="545,218,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <ComboBox x:Name="cbo_sexo" HorizontalAlignment="Left" Margin="611,222,0,0" VerticalAlignment="Top" Width="152"/>
-        <Label x:Name="lbl_posicion" Content="Posición" HorizontalAlignment="Left" Margin="545,289,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_posicion" HorizontalAlignment="Left" Height="23" Margin="611,293,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_informacion_jugador" Content="--------------------------------------Información Jugador-------------------------------------" HorizontalAlignment="Left" Margin="29,84,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="749" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold"/>
-        <Label x:Name="lbl_informacion_equipo" Content="----------------------Información Equipo---------------------" HorizontalAlignment="Left" Margin="29,335,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="488" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold"/>
-        <Label x:Name="lbl_telefono" Content="Tel 1:" HorizontalAlignment="Left" Margin="549,336,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_telefono1" HorizontalAlignment="Left" Height="23" Margin="611,335,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_telefono_2" Content="Tel 2: " HorizontalAlignment="Left" Margin="550,372,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_telefono2" HorizontalAlignment="Left" Height="23" Margin="611,374,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_direccion" Content="Dirección Jugador" HorizontalAlignment="Left" Margin="549,406,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="25" Cursor="Hand" Width="215" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_direccion" HorizontalAlignment="Left" Height="71" Margin="546,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_sexo" Content="Sexo:" HorizontalAlignment="Left" Margin="221,242,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <ComboBox x:Name="cbo_sexo" HorizontalAlignment="Left" Margin="365,246,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="lbl_posicion" Content="Posición" HorizontalAlignment="Left" Margin="536,198,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <Label x:Name="lbl_informacion_jugador" Content="--------------------------------------Información Jugador-------------------------------------" HorizontalAlignment="Left" Margin="29,66,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="749" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lbl_informacion_equipo" Content="----------------------Información Equipo---------------------" HorizontalAlignment="Left" Margin="29,347,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="488" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lbl_telefono" Content="Tel 1:" HorizontalAlignment="Left" Margin="536,232,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_telefono1" HorizontalAlignment="Left" Height="23" Margin="603,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_direccion" Content="Dirección Jugador" HorizontalAlignment="Left" Margin="544,261,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="25" Cursor="Hand" Width="215" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_direccion" HorizontalAlignment="Left" Height="51" Margin="541,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_username" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="219,275,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="365,279,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_password" Content="Contraseña:" HorizontalAlignment="Left" Margin="221,316,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="365,316,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
+        <TextBox x:Name="txt_deporte" HorizontalAlignment="Left" Height="23" Margin="365,485,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <ComboBox x:Name="cbo_posicion" HorizontalAlignment="Left" Margin="603,202,0,0" VerticalAlignment="Top" Width="151"/>
 
     </Grid>
 </Window>
