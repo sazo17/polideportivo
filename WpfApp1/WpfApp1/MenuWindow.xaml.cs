@@ -120,10 +120,14 @@ namespace WpfApp1
             campos.Show();
         }
 
-        private void btn_balon_Click(object sender, RoutedEventArgs e)
+        private void btn_empledos_Click(object sender, RoutedEventArgs e)
         {
-            RegistroWindow registro = new RegistroWindow();
-            registro.Show();
+
+        }
+
+        private void btn_arbitros_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
