@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AyudaWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None">
+        Title="AyudaWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="polideportivo_images/coach/coach.jpg"/>
     </Window.Background>
@@ -22,5 +22,6 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="363,551,0,0" VerticalAlignment="Top" Width="75" Click="btn_regresar_Click"/>
     </Grid>
 </Window>

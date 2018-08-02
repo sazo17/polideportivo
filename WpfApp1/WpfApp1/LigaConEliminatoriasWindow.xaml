@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="LigaConEliminatoriasWindow" Height="600" Width="800" Background="#FF343434" ResizeMode="CanMinimize" WindowStyle="None">
+        Title="LigaConEliminatoriasWindow" Height="600" Width="800" Background="#FF343434" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_liga_con_eliminatorias">
         <Label x:Name="lbl_liga_con_eliminatorias" Content="Liga con Eliminatorias" HorizontalAlignment="Left" Margin="216,20,0,0" VerticalAlignment="Top" Height="65" Width="396" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Button x:Name="btn_liga_con_eliminatorias" Content="" HorizontalAlignment="Left" Margin="327,149,0,0" VerticalAlignment="Top" Width="158" Height="160" BorderThickness="0">

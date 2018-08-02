@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="TorneosWindow" Height="600.975" Width="800.393" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434">
+        Title="TorneosWindow" Height="600.975" Width="800.393" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_campeonatos">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>

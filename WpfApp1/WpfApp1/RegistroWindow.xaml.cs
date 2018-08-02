@@ -34,64 +34,7 @@ namespace WpfApp1
             this.Close();
         }
 
-        private void txt_nombre_GotFocus(object sender, RoutedEventArgs e)
-        {
-            string watermark = "Nombre";
-            if (txt_nombre.Text == watermark ) {
-                txt_nombre.Foreground = Brushes.Black;
-                txt_nombre.Text = "";
-            }
-        }
-
-        private void txt_nombre_LostFocus(object sender, RoutedEventArgs e)
-        {
-            string watermark = "Nombre";
-            if (txt_nombre.Text == "")
-            {
-                txt_nombre.Foreground = Brushes.Gray;
-                txt_nombre.Text = watermark;
-            }
-        }
-
-        private void txt_apellido_LostFocus(object sender, RoutedEventArgs e)
-        {
-            string watermark = "Apellido";
-            if (txt_apellido.Text == "")
-            {
-                txt_apellido.Foreground = Brushes.Gray;
-                txt_apellido.Text = watermark;
-            }
-        }
-
-        private void txt_apellido_GotFocus(object sender, RoutedEventArgs e)
-        {
-            string watermark = "Apellido";
-            if (txt_apellido.Text == watermark)
-            {
-                txt_apellido.Foreground = Brushes.Black;
-                txt_apellido.Text = "";
-            }
-        }
-
-        private void txt_email_GotFocus(object sender, RoutedEventArgs e)
-        {
-            string watermark = "Correo Electronico";
-            if (txt_email.Text == watermark)
-            {
-                txt_email.Foreground = Brushes.Black;
-                txt_email.Text = "";
-            }
-        }
-
-        private void txt_email_LostFocus(object sender, RoutedEventArgs e)
-        {
-            string watermark = "Correo Electronico";
-            if (txt_email.Text == "")
-            {
-                txt_email.Foreground = Brushes.Gray;
-                txt_email.Text = watermark;
-            }
-        }
+        
 
         private void btn_cerrar_Click(object sender, RoutedEventArgs e)
         {

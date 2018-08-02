@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Gestor de Campeonatos" Height="600.624" Width="800.367" ResizeMode="CanMinimize" WindowStyle="None">
+        Title="Gestor de Campeonatos" Height="600.624" Width="800.367" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="polideportivo_images/menu/menu.png"/>
     </Window.Background>
@@ -41,7 +41,7 @@
                 <ImageBrush ImageSource="polideportivo_images/menu/buscarjugadores.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_ayuda" Content="Ayuda" HorizontalAlignment="Left" Margin="76,397,0,0" VerticalAlignment="Top" Width="166" Height="90" Cursor="Hand" FontSize="20" Click="btn_ayuda_Copy1_Click" Opacity="0.8" Foreground="#FFFDF9F9" FontWeight="Bold">
+        <Button x:Name="btn_ayuda" Content="Ayuda" HorizontalAlignment="Left" Margin="561,398,0,0" VerticalAlignment="Top" Width="154" Height="90" Cursor="Hand" FontSize="20" Click="btn_ayuda_Copy1_Click" Opacity="0.8" Foreground="#FFFDF9F9" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush ImageSource="polideportivo_images/menu/ayuda1.jpg"/>
             </Button.Background>
@@ -66,17 +66,43 @@
                 <ImageBrush ImageSource="polideportivo_images/Equipos/equipo_background1.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_registro" Content="Registro" HorizontalAlignment="Left" Margin="251,396,0,0" VerticalAlignment="Top" Width="465" Height="94" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Foreground="White" FontWeight="Bold" Click="btn_balon_Click">
+        <Button x:Name="btn_registro" Content="Registro" HorizontalAlignment="Left" Margin="398,400,0,0" VerticalAlignment="Top" Width="155" Height="89" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Foreground="White" FontWeight="Bold" Click="btn_balon_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform AngleY="-0.135"/>
+                    <SkewTransform AngleY="-0.146"/>
                     <RotateTransform/>
                     <TranslateTransform Y="-0.553"/>
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Background>
                 <ImageBrush ImageSource="polideportivo_images/jugadores/buscarjugadores.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_empledos" Content="Empleados" HorizontalAlignment="Left" Margin="76,401,0,0" VerticalAlignment="Top" Width="155" Height="89" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Foreground="White" FontWeight="Bold">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.146"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.553"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="polideportivo_images/coach/coach1.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_arbitros" Content="Árbitros" HorizontalAlignment="Left" Margin="236,400,0,0" VerticalAlignment="Top" Width="155" Height="89" Cursor="Hand" FontSize="20" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Foreground="White" FontWeight="Bold">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.146"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.553"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="polideportivo_images/menu/menu_background.jpg"/>
             </Button.Background>
         </Button>
     </Grid>

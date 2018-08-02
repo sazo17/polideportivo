@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="RegistroWindow" Height="320" Width="350" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434">
+        Title="RegistroWindow" Height="281.918" Width="350" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_registro">
         <Grid.Background>
             <ImageBrush/>
@@ -13,13 +13,10 @@
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Label x:Name="lbl_registro" Content="Registro" HorizontalAlignment="Left" Margin="122,22,0,0" VerticalAlignment="Top" Height="35" Width="106" Foreground="#FFFBF8F8" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="29,90,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" VerticalContentAlignment="Center" LostFocus="txt_nombre_LostFocus" GotFocus="txt_nombre_GotFocus"/>
-        <TextBox x:Name="txt_apellido" HorizontalAlignment="Left" Height="23" Margin="194,90,0,0" TextWrapping="Wrap" Text="Apellido" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" VerticalContentAlignment="Center" LostFocus="txt_apellido_LostFocus" GotFocus="txt_apellido_GotFocus"/>
-        <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="23" Margin="29,132,0,0" TextWrapping="Wrap" Text="Correo Electronico" VerticalAlignment="Top" Width="285" TextChanged="TextBox_TextChanged" VerticalContentAlignment="Center" GotFocus="txt_email_GotFocus" LostFocus="txt_email_LostFocus"/>
-        <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="155,172,0,0" VerticalAlignment="Top" Width="159" Height="23" VerticalContentAlignment="Center" PasswordChar="●"/>
-        <PasswordBox x:Name="passbx_confirmar_password" HorizontalAlignment="Left" Margin="155,208,0,0" VerticalAlignment="Top" Width="159" Height="23" VerticalContentAlignment="Center" IsHitTestVisible="True" AllowDrop="True"/>
-        <CheckBox x:Name="chbx_terminos" Content="Acepto los Terminos de Uso y Politicas de Privacidad" HorizontalAlignment="Left" Margin="29,243,0,0" VerticalAlignment="Top" Foreground="#FFF5F0F0" Width="285" FontSize="8" VerticalContentAlignment="Center" Height="14"/>
-        <Button x:Name="btn_registrar" Content="Registrar" HorizontalAlignment="Left" Margin="29,270,0,0" VerticalAlignment="Top" Width="285" Click="btn_registrar_Click"/>
+        <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="154,147,0,0" VerticalAlignment="Top" Width="159" Height="23" VerticalContentAlignment="Center" PasswordChar="●"/>
+        <PasswordBox x:Name="passbx_confirmar_password" HorizontalAlignment="Left" Margin="154,175,0,0" VerticalAlignment="Top" Width="159" Height="23" VerticalContentAlignment="Center" IsHitTestVisible="True" AllowDrop="True"/>
+        <CheckBox x:Name="chbx_terminos" Content="Acepto los Terminos de Uso y Politicas de Privacidad" HorizontalAlignment="Left" Margin="29,209,0,0" VerticalAlignment="Top" Foreground="#FFF5F0F0" Width="285" FontSize="8" VerticalContentAlignment="Center" Height="14"/>
+        <Button x:Name="btn_registrar" Content="Registrar" HorizontalAlignment="Left" Margin="29,236,0,0" VerticalAlignment="Top" Width="285" Click="btn_registrar_Click"/>
         <Label x:Name="lbl_mensaje" Content="Crea tu cuenta. Este proceso solo tardará unos minutos." HorizontalAlignment="Left" Margin="27,54,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="288" RenderTransformOrigin="0.47,1.385" FontSize="9">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -30,7 +27,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lbl_password" Content="Contraseña:" HorizontalAlignment="Left" Margin="29,172,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="115" RenderTransformOrigin="0.47,1.385" FontSize="9">
+        <Label x:Name="lbl_password" Content="Contraseña:" HorizontalAlignment="Left" Margin="28,147,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="115" RenderTransformOrigin="0.47,1.385" FontSize="9">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,7 +37,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lbl_confirmar_password" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="29,208,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="115" RenderTransformOrigin="0.47,1.385" FontSize="9">
+        <Label x:Name="lbl_confirmar_password" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="26,175,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="115" RenderTransformOrigin="0.47,1.385" FontSize="9">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -60,6 +57,28 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
+        <Label x:Name="lbl_username" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="27,89,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="115" RenderTransformOrigin="0.47,1.385" FontSize="9">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.157"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="154,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159"/>
+        <Label x:Name="lbl_tipo_de_usuario" Content="Tipo de usuario:" HorizontalAlignment="Left" Margin="27,117,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="115" RenderTransformOrigin="0.47,1.385" FontSize="9">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.157"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <ComboBox x:Name="cbo_tipo_de_usuario" HorizontalAlignment="Left" Margin="154,119,0,0" VerticalAlignment="Top" Width="159"/>
 
     </Grid>
 </Window>
