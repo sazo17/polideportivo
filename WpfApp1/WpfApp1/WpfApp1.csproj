@@ -58,6 +58,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AgregarArbitroWindow.xaml.cs">
+      <DependentUpon>AgregarArbitroWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEmpleadoWindow.xaml.cs">
+      <DependentUpon>AgregarEmpleadoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEntrenadorWindow.xaml.cs">
+      <DependentUpon>AgregarEntrenadorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AgregarFaltaFutbolWindow.xaml.cs">
       <DependentUpon>AgregarFaltaFutbolWindow.xaml</DependentUpon>
     </Compile>
@@ -72,6 +81,9 @@
     </Compile>
     <Compile Include="AjustesWindow.xaml.cs">
       <DependentUpon>AjustesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ArbitrosWindow.xaml.cs">
+      <DependentUpon>ArbitrosWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="AyudaWindow.xaml.cs">
       <DependentUpon>AyudaWindow.xaml</DependentUpon>
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="EliminatoriasWindow.xaml.cs">
       <DependentUpon>EliminatoriasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadosWindow.xaml.cs">
+      <DependentUpon>EmpleadosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EntrenadorWindow.xaml.cs">
+      <DependentUpon>EntrenadorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="EquiposWindow.xaml.cs">
       <DependentUpon>EquiposWindow.xaml</DependentUpon>
@@ -116,11 +134,26 @@
     <Compile Include="JornadasWindow.xaml.cs">
       <DependentUpon>JornadasWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JugadoresWindow.xaml.cs">
+      <DependentUpon>JugadoresWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LigaConEliminatoriasWindow.xaml.cs">
       <DependentUpon>LigaConEliminatoriasWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="LigaWindow.xaml.cs">
       <DependentUpon>LigaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarArbitrosWindow.xaml.cs">
+      <DependentUpon>MostrarArbitrosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarEmpleadoWindow.xaml.cs">
+      <DependentUpon>MostrarEmpleadoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarEntrenadoresWindow.xaml.cs">
+      <DependentUpon>MostrarEntrenadoresWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarJugadoresWindow.xaml.cs">
+      <DependentUpon>MostrarJugadoresWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="OlvideContraseniaWindow.xaml.cs">
       <DependentUpon>OlvideContraseniaWindow.xaml</DependentUpon>
@@ -130,9 +163,6 @@
     </Compile>
     <Compile Include="QuitarGolFutbolWindow.xaml.cs">
       <DependentUpon>QuitarGolFutbolWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="RegistroWindow.xaml.cs">
-      <DependentUpon>RegistroWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TablaGoleadoresFutbolWindow.xaml.cs">
       <DependentUpon>TablaGoleadoresFutbolWindow.xaml</DependentUpon>
@@ -158,6 +188,18 @@
     <Compile Include="VerJugadorWindow.xaml.cs">
       <DependentUpon>VerJugadorWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AgregarArbitroWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgregarEmpleadoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgregarEntrenadorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AgregarFaltaFutbolWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,6 +217,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AjustesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ArbitrosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,6 +245,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EliminatoriasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmpleadosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntrenadorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,6 +288,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="JugadoresWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LigaConEliminatoriasWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -258,6 +316,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MostrarArbitrosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MostrarEmpleadoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MostrarEntrenadoresWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MostrarJugadoresWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OlvideContraseniaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -267,10 +341,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="QuitarGolFutbolWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="RegistroWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -337,9 +407,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="polideportivo_images\login\login.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="polideportivo_images\campeonatos\eliminatorias.png" />
   </ItemGroup>
   <ItemGroup>
@@ -349,30 +416,12 @@
     <Resource Include="polideportivo_images\campeonatos\ligaeliminatorias.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="polideportivo_images\menu\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="polideportivo_images\campeonatos\trofeo1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="polideportivo_images\campeonatos\trofeo2.png" />
     <Resource Include="polideportivo_images\campeonatos\trofeo3.png" />
     <Resource Include="polideportivo_images\campeonatos\trofeo4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\torneos1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\equipos1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\buscarjugadores.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\ayuda1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\menu\menu_background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="polideportivo_images\Equipos\equipo_background.jpg" />
@@ -386,13 +435,6 @@
     <Resource Include="polideportivo_images\Equipos\equipo_background3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="polideportivo_images\coach\coach.jpg" />
-    <Resource Include="polideportivo_images\coach\coach1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="polideportivo_images\jugadores\buscarjugadores.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="polideportivo_images\login\contrasenia\fondo_contrasenia.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -400,6 +442,39 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="polideportivo_images\login\registro\fondo_registro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\menu\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\login\login-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\jugadores\jugadores-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\empleado\empleado-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\empleado\empleado-background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\coach\entrenador-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\arbitro\arbitro-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\arbitro\arbitro-background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\campeonatos\torneos-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\campos\campos-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="polideportivo_images\ayuda\ayuda-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

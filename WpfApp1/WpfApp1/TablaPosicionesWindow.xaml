@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="TablaPosicionesWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434">
+        Title="TablaPosicionesWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_tabla_de_posiciones">
         <Label x:Name="lbl_tabla_posiciones" Content="Tabla de Posiciones" HorizontalAlignment="Left" Margin="217,28,0,0" VerticalAlignment="Top" Height="65" Width="351" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <DataGrid x:Name="dg_tabla_de_posiciones" HorizontalAlignment="Left" Height="381" Margin="48,158,0,0" VerticalAlignment="Top" Width="707"/>

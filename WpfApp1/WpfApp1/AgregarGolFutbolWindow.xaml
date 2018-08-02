@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AgregarGolFutbolWindow" Height="350" Width="300" Background="#FF343434" WindowStyle="None" ResizeMode="CanMinimize">
+        Title="AgregarGolFutbolWindow" Height="225.555" Width="277.531" Background="#FF343434" WindowStyle="None" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_agregar_gol">
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
@@ -26,15 +26,10 @@
         <TextBox x:Name="txt_minuto" HorizontalAlignment="Left" Height="23" Margin="75,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="27"/>
         <Label x:Name="lbl_separador_minutos" Content=":" HorizontalAlignment="Left" Margin="100,95,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="25" Cursor="Hand" Width="13" RenderTransformOrigin="0.47,1.385" FontWeight="Bold" FontSize="14"/>
         <TextBox x:Name="txt_segundos" HorizontalAlignment="Left" Height="23" Margin="113,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="27" RenderTransformOrigin="1.238,0.894"/>
-        <Label x:Name="lbl_tipo_de_gol" Content="Tipo de gol" HorizontalAlignment="Left" Margin="109,131,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="25" Cursor="Hand" Width="79" RenderTransformOrigin="0.47,1.385"/>
-        <Label x:Name="lbl_descripcion" Content="Descripción" HorizontalAlignment="Left" Margin="109,204,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="25" Cursor="Hand" Width="79" RenderTransformOrigin="0.47,1.385"/>
-        <TextBox x:Name="txt_descripcion" HorizontalAlignment="Left" Height="53" Margin="20,229,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="241"/>
-        <Button x:Name="btn__aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="20,314,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="100,314,0,0" VerticalAlignment="Top" Width="161" Click="btn_regresar_Click"/>
-        <RadioButton x:Name="rdb_pie_derecho" Content="Pie derecho" HorizontalAlignment="Left" Margin="21,161,0,0" VerticalAlignment="Top" Foreground="#FFFFFEFE" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="rdb_pie_izquierdo" Content="Pie izquierdo" HorizontalAlignment="Left" Margin="118,161,0,0" VerticalAlignment="Top" Foreground="#FFFFFEFE" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="rdb_cabeza" Content="Cabeza&#xD;&#xA;" HorizontalAlignment="Left" Margin="21,181,0,0" VerticalAlignment="Top" Foreground="#FFFFFEFE" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="rdb_otro" Content="Otro" HorizontalAlignment="Left" Margin="218,161,0,0" VerticalAlignment="Top" Foreground="#FFFFFEFE" Checked="RadioButton_Checked"/>
+        <Button x:Name="btn__aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="20,175,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="100,175,0,0" VerticalAlignment="Top" Width="161" Click="btn_regresar_Click"/>
+        <Label x:Name="lbl_tipo_anotacion" Content="Tipo anotación:" HorizontalAlignment="Left" Margin="12,125,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="25" Cursor="Hand" Width="90" RenderTransformOrigin="0.47,1.385"/>
+        <ComboBox x:Name="cbo_tipo_anotacion" HorizontalAlignment="Left" Margin="107,128,0,0" VerticalAlignment="Top" Width="154"/>
 
     </Grid>
 </Window>

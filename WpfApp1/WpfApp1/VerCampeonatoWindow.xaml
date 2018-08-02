@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="VerCampeonatoWindow" Height="600" Width="800" Background="#FF343434" ResizeMode="CanMinimize" WindowStyle="None">
+        Title="VerCampeonatoWindow" Height="600" Width="800" Background="#FF343434" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_campeonato">
         <Ellipse x:Name="ellipse_cerrar1" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar1" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>

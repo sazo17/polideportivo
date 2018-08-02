@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="TorneosWindow" Height="600.975" Width="800.393" WindowStyle="None" ResizeMode="CanMinimize" Background="#FF343434">
+        Title="TorneosWindow" Height="600.975" Width="800.393" WindowStyle="None" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="polideportivo_images/campeonatos/torneos-background.jpg"/>
+    </Window.Background>
     <Grid x:Name="grid_campeonatos">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>
@@ -28,9 +31,9 @@
         </Button>
         <Label x:Name="lbl_campeonatos" Content="Campeonatos" Grid.Column="1" HorizontalAlignment="Left" Margin="219,32,0,0" VerticalAlignment="Top" Height="65" Width="287" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="299,548,0,0" VerticalAlignment="Top" Width="146" RenderTransformOrigin="-1.652,8.9" Grid.Column="1" Height="33" Click="btn_regresar_Click"/>
-        <Label x:Name="lbl_ayuda" Content="Liga&#xA;" HorizontalAlignment="Left" Margin="73,303,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="158" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold"/>
-        <Label x:Name="lbl_eliminatorias" Content="Eliminatorias&#xA;" HorizontalAlignment="Left" Margin="502,303,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="158" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold"/>
-        <Label x:Name="lbl_liga_con_eliminatorias" Content="Liga con Eliminatorias&#xA;" HorizontalAlignment="Left" Margin="287,303,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="158" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold"/>
+        <Label x:Name="lbl_ayuda" Content="Liga&#xA;" HorizontalAlignment="Left" Margin="74,192,0,0" VerticalAlignment="Top" Foreground="#FF0C0101" Height="36" Cursor="Hand" Width="158" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold" FontSize="16"/>
+        <Label x:Name="lbl_eliminatorias" Content="Eliminatorias&#xA;" HorizontalAlignment="Left" Margin="502,192,0,0" VerticalAlignment="Top" Foreground="#FF0C0101" Height="36" Cursor="Hand" Width="158" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold" FontSize="16"/>
+        <Label x:Name="lbl_liga_con_eliminatorias" Content="Liga con Eliminatorias&#xA;" HorizontalAlignment="Left" Margin="287,192,0,0" VerticalAlignment="Top" Foreground="#FF0C0101" Height="36" Cursor="Hand" Width="176" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold" FontSize="16"/>
         <ListBox x:Name="lst_ligas_activas" HorizontalAlignment="Left" Height="114" Margin="7,384,0,0" VerticalAlignment="Top" Width="225" Grid.Column="1">
             <ListBoxItem Content="LigaEjemplo1"/>
             <ListBoxItem Content="LigaEjemplo2"/>
@@ -55,9 +58,9 @@
             <ListBoxItem Content="LigaEjemplo5"/>
             <ListBoxItem Content="LigaEjemplo6"/>
         </ListBox>
-        <Label x:Name="lbl_ligas_activas" Content="Ligas Activas" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="221" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1"/>
-        <Label x:Name="lbl_ligas_con_eliminatorias_activas" Content="Ligas con Eliminatorias Activas" HorizontalAlignment="Left" Margin="253,353,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="225" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1"/>
-        <Label x:Name="lbl_eliminatorias_activas" Content="Eliminatorias Activas" HorizontalAlignment="Left" Margin="502,353,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="225" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1"/>
+        <Label x:Name="lbl_ligas_activas" Content="Ligas Activas" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Foreground="Black" Height="26" Cursor="Hand" Width="221" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lbl_ligas_con_eliminatorias_activas" Content="Ligas con Eliminatorias Activas" HorizontalAlignment="Left" Margin="253,353,0,0" VerticalAlignment="Top" Foreground="Black" Height="26" Cursor="Hand" Width="225" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lbl_eliminatorias_activas" Content="Eliminatorias Activas" HorizontalAlignment="Left" Margin="502,353,0,0" VerticalAlignment="Top" Foreground="Black" Height="26" Cursor="Hand" Width="225" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold" FontSize="14"/>
         <Button x:Name="btn_eliminar_liga" Content="Elim." Grid.Column="1" HorizontalAlignment="Left" Margin="181,503,0,0" VerticalAlignment="Top" Width="49"/>
         <Button x:Name="btn_modificar_liga" Content="Mod." Grid.Column="1" HorizontalAlignment="Left" Margin="125,503,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.2,-1.1"/>
         <Button x:Name="btn_ver_liga" Content="Ver" Grid.Column="1" HorizontalAlignment="Left" Margin="6,503,0,0" VerticalAlignment="Top" Width="114" RenderTransformOrigin="1.163,-1" Click="btn_ver_liga_Click"/>
@@ -79,7 +82,7 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Label x:Name="lbl_mensaje" Content="Presiona uno de los trofeos para crear un nuevo campeonato!&#xA;" HorizontalAlignment="Left" Margin="7,97,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="726" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1"/>
+        <Label x:Name="lbl_mensaje" Content="Presiona uno de los trofeos para crear un nuevo campeonato!&#xA;" HorizontalAlignment="Left" Margin="7,97,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="726" HorizontalContentAlignment="Center" RenderTransformOrigin="0.47,1.385" Grid.Column="1" FontWeight="Bold"/>
 
     </Grid>
 </Window>

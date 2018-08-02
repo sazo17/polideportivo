@@ -72,14 +72,20 @@ namespace WpfApp1
 
         private void btn_agregar_jugador_Click(object sender, RoutedEventArgs e)
         {
-            AgregarJugadorWindow agregar_jugador = new AgregarJugadorWindow();
-            agregar_jugador.Show();
+            MostrarJugadoresWindow mostrar_jugadores = new MostrarJugadoresWindow();
+            mostrar_jugadores.Show();
         }
 
         private void btn_ver_jugador_Click(object sender, RoutedEventArgs e)
         {
             VerJugadorWindow ver_jugador = new VerJugadorWindow();
             ver_jugador.Show();
+        }
+
+        private void btn_cambiar_entrenador_Click(object sender, RoutedEventArgs e)
+        {
+            MostrarEntrenadoresWindow mostrar_entrenador = new MostrarEntrenadoresWindow();
+            mostrar_entrenador.Show();
         }
     }
 }

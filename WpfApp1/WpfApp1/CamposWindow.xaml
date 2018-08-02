@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="CamposWindow" Height="600" Width="800" Background="#FF343434" ResizeMode="CanMinimize" WindowStyle="None">
+        Title="CamposWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="polideportivo_images/campos/campos-background.jpg"/>
+    </Window.Background>
     <Grid x:Name="grid_campos">
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
@@ -20,14 +23,10 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_campos" Content="Campos" HorizontalAlignment="Left" Margin="315,19,0,0" VerticalAlignment="Top" Height="65" Width="159" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <Rectangle x:Name="rectangle_campo" HorizontalAlignment="Left" Height="256" Margin="143,89,0,0" Stroke="Black" VerticalAlignment="Top" Width="525" RenderTransformOrigin="0.167,0.22">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="polideportivo_images/Equipos/equipo_background3.jpg"/>
-            </Rectangle.Fill>
-        </Rectangle>
+        <Rectangle x:Name="rectangle_campo" HorizontalAlignment="Left" Height="256" Margin="143,89,0,0" Stroke="Black" VerticalAlignment="Top" Width="525" RenderTransformOrigin="0.167,0.22"/>
         <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="142,408,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <Label x:Name="lbl_siguiente" Content="&gt;&#xA;" HorizontalAlignment="Left" Margin="673,192,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="51" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36"/>
-        <Label x:Name="lbl_anterior" Content="&lt;" HorizontalAlignment="Left" Margin="85,185,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="51" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36"/>
+        <Label x:Name="lbl_siguiente" Content="&gt;&#xA;" HorizontalAlignment="Left" Margin="673,192,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="61" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36" Background="#FFDC5555"/>
+        <Label x:Name="lbl_anterior" Content="&lt;" HorizontalAlignment="Left" Margin="98,192,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="58" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36" Background="#FFDC5555"/>
         <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="242,412,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="132"/>
         <Label x:Name="lbl_deporte" Content="Deporte:" HorizontalAlignment="Left" Margin="436,408,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
         <ComboBox x:Name="cbo_deporte" HorizontalAlignment="Left" Margin="536,408,0,0" VerticalAlignment="Top" Width="132">

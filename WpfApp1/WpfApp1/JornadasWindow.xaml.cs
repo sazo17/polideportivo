@@ -59,5 +59,10 @@ namespace WpfApp1
             EstadisticasFutbolWindow estadisticas_partido = new EstadisticasFutbolWindow();
             estadisticas_partido.Show();
         }
+
+        private void btn_regresar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

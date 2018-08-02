@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="VerEquipoWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434">
+        Title="VerEquipoWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_equipo">
         <Rectangle x:Name="rectangle_equipo" HorizontalAlignment="Left" Height="123" Margin="81,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22">
             <Rectangle.Fill>
@@ -43,10 +43,10 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_ver_entrenador" Content="Ver" HorizontalAlignment="Left" Margin="377,170,0,0" VerticalAlignment="Top" Width="75" Click="btn_ver_entrenador_Click"/>
         <Button x:Name="btn_agregar_jugador" Content="Agregar Jugador" HorizontalAlignment="Left" Margin="549,270,0,0" VerticalAlignment="Top" Width="106" Height="24" RenderTransformOrigin="2.311,2" Click="btn_agregar_jugador_Click"/>
         <Button x:Name="btn_eliminar_jugador" Content="Eliminar jugador" HorizontalAlignment="Left" Margin="660,270,0,0" VerticalAlignment="Top" Width="93" Height="24" RenderTransformOrigin="0.538,1.667"/>
         <Button x:Name="btn_ver_jugador" Content="Ver jugador" HorizontalAlignment="Left" Margin="438,270,0,0" VerticalAlignment="Top" Width="106" Height="24" RenderTransformOrigin="2.311,2" Click="btn_ver_jugador_Click"/>
         <Button x:Name="btn_guardar" Content="Guardar" HorizontalAlignment="Left" Margin="275,552,0,0" VerticalAlignment="Top" Width="189" Height="19"/>
+        <Button x:Name="btn_cambiar_entrenador" Content="Cambiar Dt." HorizontalAlignment="Left" Margin="359,170,0,0" VerticalAlignment="Top" Width="93" Click="btn_cambiar_entrenador_Click"/>
     </Grid>
 </Window>
