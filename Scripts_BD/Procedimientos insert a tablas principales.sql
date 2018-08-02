@@ -20,7 +20,7 @@ delimiter $
 CREATE PROCEDURE `ingresar_entrenador`(in nome varchar(45),in apee varchar(45),in edadde int, in direcce varchar(45),
  in tele varchar(12), in correoe varchar(45), in iddepor int , in user int)
 begin
-	insert into entrenadores (nombre_entrenadores,apellido_entrenadores,edad_entrenadores,dirección_entrenadores,telefono_entrenadores,email_entrenadores,iddeporte) 
+	insert into entrenadores (nombre_entrenadores,apellido_entrenadores,edad_entrenadores,dirección_entrenadores,telefono_entrenadores,email_entrenadores,iddeporte,USUARIOS_idUsuarios) 
     values (nome,apee,edadde,direcce,tele,correoe,iddepor,user);
 end$
 -- EQUIPOS --
