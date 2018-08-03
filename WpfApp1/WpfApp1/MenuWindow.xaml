@@ -77,5 +77,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button x:Name="btn_deportes" Content="Deportes" HorizontalAlignment="Left" Margin="155,362,0,0" VerticalAlignment="Top" Width="154" Height="70" Cursor="Hand" FontSize="20" Foreground="#FFFDF9F9" FontWeight="Bold" RenderTransformOrigin="-0.279,0.522" Background="{x:Null}" Click="btn_deportes_Click"/>
     </Grid>
 </Window>

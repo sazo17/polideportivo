@@ -29,10 +29,8 @@
         <Button x:Name="btn_cambiar_entrenador" Content="Agregar Dt." HorizontalAlignment="Left" Margin="435,135,0,0" VerticalAlignment="Top" Width="154" Click="btn_cambiar_entrenador_Click"/>
         <Label x:Name="lbl_cantidad_jugadores" Content="Cantidad Jugadores:" HorizontalAlignment="Left" Margin="70,131,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="114" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
         <TextBox x:Name="txt_cantidad_jugadores" HorizontalAlignment="Left" Height="23" Margin="189,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
-        <Label x:Name="lbl_color_uniforme_local" Content="Uniforme local:" HorizontalAlignment="Left" Margin="70,162,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="101" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_color_uniforme_visita" Content="Uniforme visita:" HorizontalAlignment="Left" Margin="70,188,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="101" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_color_uniforme_local" Content="Uniforme" HorizontalAlignment="Left" Margin="70,162,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="101" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
         <ComboBox x:Name="cbo_color_uniforme_local" HorizontalAlignment="Left" Margin="189,166,0,0" VerticalAlignment="Top" Width="154"/>
-        <ComboBox x:Name="cbo_color_uniforme_visita" HorizontalAlignment="Left" Margin="189,193,0,0" VerticalAlignment="Top" Width="154"/>
 
     </Grid>
 </Window>

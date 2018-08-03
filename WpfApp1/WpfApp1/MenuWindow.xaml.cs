@@ -143,5 +143,11 @@ namespace WpfApp1
             EntrenadorWindow entrenadores = new EntrenadorWindow();
             entrenadores.Show();
         }
+
+        private void btn_deportes_Click(object sender, RoutedEventArgs e)
+        {
+            DeportesWindow deportes = new DeportesWindow();
+            deportes.Show();
+        }
     }
 }

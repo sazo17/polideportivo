@@ -146,6 +146,9 @@
     <Compile Include="LigaWindow.xaml.cs">
       <DependentUpon>LigaWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModificarReglaWindow.xaml.cs">
+      <DependentUpon>ModificarReglaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MostrarArbitrosWindow.xaml.cs">
       <DependentUpon>MostrarArbitrosWindow.xaml</DependentUpon>
     </Compile>
@@ -196,6 +199,9 @@
     </Compile>
     <Compile Include="VerJugadorWindow.xaml.cs">
       <DependentUpon>VerJugadorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerReglasWindow.xaml.cs">
+      <DependentUpon>VerReglasWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AgregarArbitroWindow.xaml">
       <SubType>Designer</SubType>
@@ -329,6 +335,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ModificarReglaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MostrarArbitrosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -394,6 +404,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VerJugadorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerReglasWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

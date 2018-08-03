@@ -53,5 +53,35 @@ namespace WpfApp1
         {
             btn_minimizar.Content = "";
         }
+
+        private void btn_regresar_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Close();
+        }
+
+        private void btn_ver_reglas_futbol_Click(object sender, RoutedEventArgs e)
+        {
+            VerReglasWindow ver_reglas = new VerReglasWindow();
+            ver_reglas.Show();
+        }
+
+        private void btn_ver_reglas_basketball_Click(object sender, RoutedEventArgs e)
+        {
+            VerReglasWindow ver_reglas = new VerReglasWindow();
+            ver_reglas.Show();
+        }
+
+        private void btn_ver_reglas_baseball_Click(object sender, RoutedEventArgs e)
+        {
+            VerReglasWindow ver_reglas = new VerReglasWindow();
+            ver_reglas.Show();
+        }
+
+        private void btn_ver_reglas_volleyball_Click(object sender, RoutedEventArgs e)
+        {
+            VerReglasWindow ver_reglas = new VerReglasWindow();
+            ver_reglas.Show();
+        }
     }
 }
