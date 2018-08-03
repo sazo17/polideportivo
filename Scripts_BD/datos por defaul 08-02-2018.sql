@@ -165,75 +165,17 @@ call ingresartipodeporte ('Beisbol');
 -- COLORES UNIFORME --
 
 delimiter $
-create PROCEDURE `ingresarcoloruniforme`(in localcolor varchar(15),in visitacolor varchar(15))
+create PROCEDURE `ingresarcoloruniforme`(in localcolor varchar(15))
 begin
-	insert into  UNIFORME (local_color_uniforme,visita_color_uniforme)  values (localcolor,visitacolor);
+	insert into  UNIFORME (local_color_uniforme)  values (localcolor);
 end$
 
-call ingresarcoloruniforme('rojo','azul');
-call ingresarcoloruniforme('azul','rojo');
-call ingresarcoloruniforme('blanco','negro');
-call ingresarcoloruniforme('negro','blanco');
-call ingresarcoloruniforme('verde','amarillo');
-call ingresarcoloruniforme('amarillo','verde');
-call ingresarcoloruniforme('Anaranjado','Azul');
+call ingresarcoloruniforme('rojo');
+call ingresarcoloruniforme('azul');
+call ingresarcoloruniforme('blanco');
+call ingresarcoloruniforme('negro');
+call ingresarcoloruniforme('verde');
+call ingresarcoloruniforme('amarillo');
+call ingresarcoloruniforme('Anaranjado');
+call ingresarcoloruniforme('Morado');
 
-
-
-
-
--- PROCEDIMIENTOS A TABLAS PRINCIPALES --
--- DEPORTE--
-delimiter $
-create procedure ingresar_deporte (in num_jugadores int, tdeporte int)
-begin
-	insert into deporte (cantidad_jugadores_deporte,idTipo_Deporte) values (num_jugadores,tdeporte);
-end$
-
--- EQUIPOS --
-select * from equipos;
-delimiter $
-create procedure ingresar_equipo(in nomeq varchar(35), in num_juga int , in idEntre int, in unifor int)
-begin
-	insert into equipos (nombre_equipo,cantidad_jugadores_equipo,identrenador,UNIFORME_idUniforme)
-    values (nomeq,num_juga,identre,unifor);
-end$ 
-
--- CAMPOS-- 
-delimiter $
-create procedure ingresar_campo(in campo varchar(20), in estado varchar(20),in tipodeport int)
-begin
-	insert into campos (campo_campos,estado_campos,idTipos_Deporte) values (campo,estado,tipodeport);
-end$
-
--- REGLAS DE FUTBOL -- 
-delimiter $
-create procedure ingresar_reglas_futbol(in nombre varchar(45), in descripcion varchar(1000),in deporte int)
-begin
-	insert into reglas_futbol (nombre_reglas_futbol,descripcion_reglas_futbol,DEPORTE_idDeporte)
-    values (nombre,descripcion,deporte);
-end$
-
--- REGLAS DE basket -- 
-delimiter $
-create procedure ingresar_reglas_basket(in nombreb varchar(45), in descripcionb varchar(1000),in deporteb int)
-begin
-	insert into reglas_basket (nombre_reglas_basket,descripcion_reglas_basket,DEPORTE_idDeporte)
-    values (nombreb,descripcionb,deporteb);
-end$
-
--- REGLAS DE VOLI-- 
-delimiter $
-create procedure ingresar_reglas_voli(in nombrev varchar(45), in descripcionv varchar(1000),in deportev int)
-begin
-	insert into reglas_voleibol (nombre_reglas_voleibol,descipcion_reglas_voleibol,DEPORTE_idDeporte)
-    values (nombrev,descripcionv,deportev);
-end$
-
--- REGLAS BEISBOL --
-delimiter $
-create procedure ingresar_reglas_beisbol(in nombrebe varchar(45), in descripcionbe varchar(1000),in deportebe int)
-begin
-	insert into reglas_beisbol(nombre_reglas_beisbol,descripcion_reglas_beisbol,DEPORTE_idDeporte)
-    values (nombrebe,descripcionbe,deportebe);
-end$
