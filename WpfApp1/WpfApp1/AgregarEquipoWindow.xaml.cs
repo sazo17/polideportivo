@@ -58,5 +58,11 @@ namespace WpfApp1
         {
             this.Close();
         }
+
+        private void btn_cambiar_entrenador_Click(object sender, RoutedEventArgs e)
+        {
+            MostrarEntrenadoresWindow mostrar_entrenador = new MostrarEntrenadoresWindow();
+            mostrar_entrenador.Show();
+        }
     }
 }
