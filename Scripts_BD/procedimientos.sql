@@ -395,11 +395,324 @@ DELIMITER ;
 -- SELECT @a;
 
 
+-- ----------------------------------------------------------------------------------------------
+-- Procedimiento jornadas
+-- Dependencia de `p_jornada` y `p_campeonatos`
+ALTER TABLE CAMPEONATO ADD CONSTRAINT cu_nombre UNIQUE(nombre_campeonato);
+
+DELIMITER //
+-- Definicion de parametros en `p_jornada`
+CREATE PROCEDURE p_jornada(
+IN i_fechaJorn DATE,		IN i_campos VARCHAR(20),
+IN i_golesL	INT, 			IN i_golesV INT,
+IN i_horaJorn TIME,			IN i_equipoL INT,
+IN i_equipoV INT,			IN i_campeonato VARCHAR(50),
+IN i_deporte INT,	 		IN i_tipoCampeo	VARCHAR(30),
+IN i_estadoJorn VARCHAR(20), OUT o_bit INT(1))
+BEGIN
+	-- Declaracion de variables
+	DECLARE t_campos, t_tipoDeporte, t_tipoCampeo, t_campeonato INT;
+    DECLARE t_estadoJorn INT;
+    --
+    -- Asignacion de valores encontrados
+    SELECT idCampos INTO t_campos
+    FROM CAMPOS
+    WHERE campo_campos = i_campos;
+    -- 
+	SELECT idEstado_partido INTO t_estadoJorn
+	FROM ESTADO_PARTIDO
+    WHERE Estado_estado_partido = i_estadoJorn;
+    -- 
+	SELECT idTipo_Deporte INTO t_tipoDeporte
+	FROM DEPORTE
+	WHERE idDeporte = i_deporte;
+    
+	SELECT idTipo_campeonato INTO t_tipoCampeo
+	FROM TIPO_CAMPEONATO
+	WHERE Tipo_Tipo_campeonato = i_tipoCampeo;
+     
+    SELECT idCampeonato INTO t_campeonato
+    FROM CAMPEONATO
+    WHERE 
+	 	idTipo_campeonato = t_tipoCampeo AND
+		idDeporte = i_deporte AND
+		idTipo_Deporte = t_tipoDeporte AND
+        nombre_campeonato = i_campeonato;
+	-- Validacion de variables != NULL 
+    -- Validacion de `equipoV` != `equipoL`
+	IF i_equipoL <> i_equipoV AND 
+	   t_campeonato IS NOT NULL AND
+	   t_estadoJorn IS NOT NULL AND 
+       t_campos IS NOT NULL 
+    THEN
+       INSERT INTO JORNADAS (fecha_jornadas, idCampos, 
+		goles_local_jornadas, goles_visita_jornadas, 
+		hora_jornadas, idEquipos_local, 
+		idEquipos_visita, idCampeonato, 
+		idTipo_Deporte, idDeporte, 
+		idTipo_campeonato, idEstado_partido)
+		VALUES (i_fechaJorn, t_campos, 
+			i_golesL, i_golesV, 
+			i_horaJorn, i_equipoL, 
+			i_equipoV, t_campeonato, 
+			t_tipoDeporte, i_deporte,
+			t_tipoCampeo, t_estadoJorn);
+       SET o_bit = 1;
+       COMMIT;
+	ELSEIF i_equipoL = i_equipoV THEN
+		-- Si el los equipos son iguales =>
+    	SET o_bit = 3;
+	ELSE
+		SET o_bit = 0;
+        ROLLBACK;
+	END IF;
+END//
+DELIMITER ;
+
+-- Ejecutando PL/MySQL para pruebas
+-- CALL p_jornada('2018-08-09', 'campo1', 5, 2, '18:29:34', 3,3, 'campeonato1', 2, 'tipoc_1', 'estado1',@a); -- 'campeonato1', 2, 'tipoc_2', 
+-- SELECT @a;
+
+-- ---------------------------------------------------------------------------------------------
+-- Procedimiento tabla soccer
+DELIMITER //
+CREATE PROCEDURE p_tabla_soccer(
+IN i_lugar INT, 		IN i_fechaIni DATE, 
+IN i_fechaFin DATE, 		IN i_equipo INT,
+IN i_campeonato VARCHAR(50),	IN i_deporte INT,
+IN i_tipoCampeo	VARCHAR(30), 	OUT o_bit INT(1)) 
+BEGIN
+	-- Declaracion de variables
+	DECLARE t_tipoDeporte, t_tipoCampeo, t_campeonato INT;
+    --
+	SELECT idTipo_Deporte INTO t_tipoDeporte
+	FROM DEPORTE
+	WHERE idDeporte = i_deporte;
+    
+	SELECT idTipo_campeonato INTO t_tipoCampeo
+	FROM TIPO_CAMPEONATO
+	WHERE Tipo_Tipo_campeonato = i_tipoCampeo;
+     
+    SELECT idCampeonato INTO t_campeonato
+    FROM CAMPEONATO
+    WHERE 
+	 	idTipo_campeonato = t_tipoCampeo AND
+		idDeporte = i_deporte AND
+		idTipo_Deporte = t_tipoDeporte AND
+        nombre_campeonato = i_campeonato;
+	IF t_campeonato IS NOT NULL THEN
+		INSERT INTO TABLA_POSICIONES_FUTBOL (
+			Lugar_tabla_posiciones_futbol, Fecha_inicio_tabla_posiciones_futbol,
+            Fecha_finalizacion_tabla_posiciones_futbol, idEquipos,
+            idCampeonato, idTipo_Deporte, idDeporte, idTipo_campeonato
+        ) VALUE(i_lugar, i_fechaIni, i_fechaFin, i_equipo,
+			t_campeonato, t_tipoDeporte, i_deporte, t_tipoCampeo);
+		SET o_bit = 1;
+        COMMIT;
+	ELSE
+		SET o_bit = 0;
+		ROLLBACK;
+    END IF;
+END//
+DELIMITER ;
+-- ----------------------------------------------------------
+-- Procedimiento basket
+-- -------------------------------------------------------
+-- Dependencias
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+	MODIFY partidos_jugados_tablas_posiciones_basket INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+    MODIFY partidos_ganados_tablas_posiciones_basket INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+    MODIFY partidos_perdidos_tablas_posiciones_basket INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+    MODIFY partidos_empatados_tablas_posiciones_basket INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+    MODIFY puntos_a_favor_tablas_posiciones_basket INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+	MODIFY puntos_en_contra_tablas_posiciones_basket INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+    MODIFY Diferencia_tablas_posiciones_basket INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+    MODIFY puntos_tablas_posiciones_basket INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_BASKET 
+    MODIFY puntos_tablas_posiciones_basket INT DEFAULT 0;
+-- ------------------------------------------------------
+-- CALL p_tabla_basket(1, '2018-08-09', '2018-10-05', 5, 'campeonato1', 2, 'tipoc_1', @a); 
+-- SELECT @a;
+
+DROP PROCEDURE p_tabla_basket;
+DELIMITER //
+CREATE PROCEDURE p_tabla_basket(
+IN i_lugar INT, 				IN i_fechaIni DATE, 
+IN i_fechaFin DATE, 			IN i_equipo INT,
+IN i_campeonato VARCHAR(50),	IN i_deporte INT,
+IN i_tipoCampeo	VARCHAR(30), 	OUT o_bit INT(1))
+BEGIN
+	-- Declaracion de variables
+	DECLARE t_tipoDeporte, t_tipoCampeo, t_campeonato INT;
+    --
+	SELECT idTipo_Deporte INTO t_tipoDeporte
+	FROM DEPORTE
+	WHERE idDeporte = i_deporte;
+    
+	SELECT idTipo_campeonato INTO t_tipoCampeo
+	FROM TIPO_CAMPEONATO
+	WHERE Tipo_Tipo_campeonato = i_tipoCampeo;
+     
+    SELECT idCampeonato INTO t_campeonato
+    FROM CAMPEONATO
+    WHERE 
+	 	idTipo_campeonato = t_tipoCampeo AND
+		idDeporte = i_deporte AND
+		idTipo_Deporte = t_tipoDeporte AND
+        nombre_campeonato = i_campeonato;
+        
+	IF t_campeonato IS NOT NULL THEN
+		INSERT INTO TABLAS_POSICIONES_BASKET (
+        lugar_tabla_posiciones_basket, Fecha_inicio_tablas_posiciones_basket,
+        Fecha_fin_tablas_posiciones_basket, idEquipos,
+        idCampeonato, idTipo_Deporte,
+        idDeporte, idTipo_campeonato)
+        VALUES (i_lugar, i_fechaIni, i_fechaFin, i_equipo,
+			t_campeonato, t_tipoDeporte, i_deporte, t_tipoCampeo);
+		SET o_bit = 1;
+        COMMIT;
+	ELSE
+		SET o_bit = 0;
+    END IF;
+END//
+DELIMITER ;
 
 
+-- ----------------------------------------------------------------------------------
+-- Procedimiento voleibol
+-- -----------------------------------------------------
+-- Dependencias
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+	MODIFY partidos_jugados_tabla_posiciones_voleibol INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+		MODIFY partidos_ganados_tabla_posiciones_voleibol INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+	    MODIFY partidos_perdidos_tabla_posiciones_voleibol INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+	    MODIFY set_perdidos_tabla_posiciones_voleibol  INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+	    MODIFY set_ganados_tabla_posiciones_voleibol INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+	    MODIFY puntos_afavor_tabla_posiciones_voleibol INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+	    MODIFY puntos_encontra_tabla_posiciones_voleibol INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+	    MODIFY diferencia_puntos_tabla_posiciones_volibol INT DEFAULT 0;
+ALTER TABLE TABLAS_POSICIONES_VOLEIBOL 
+	    MODIFY puntos_tabla_posiciones_voleibol INT DEFAULT 0;
+-- -----------------------------------------------------
+-- CALL p_tabla_voleibol(1, 5, 'campeonato1', 2, 'tipoc_1', @a); -- 'campeonato1', 2, 'tipoc_2', 
+-- SELECT @a;
+
+DELIMITER //
+CREATE PROCEDURE p_tabla_voleibol(
+IN i_lugar INT,					IN i_equipo INT,
+IN i_campeonato VARCHAR(50),	IN i_deporte INT,
+IN i_tipoCampeo	VARCHAR(30), 	OUT o_bit INT(1))
+BEGIN
+	-- Declaracion de variables
+	DECLARE t_tipoDeporte, t_tipoCampeo, t_campeonato INT;
+    --
+	SELECT idTipo_Deporte INTO t_tipoDeporte
+	FROM DEPORTE
+	WHERE idDeporte = i_deporte;
+    
+	SELECT idTipo_campeonato INTO t_tipoCampeo
+	FROM TIPO_CAMPEONATO
+	WHERE Tipo_Tipo_campeonato = i_tipoCampeo;
+     
+    SELECT idCampeonato INTO t_campeonato
+    FROM CAMPEONATO
+    WHERE 
+	 	idTipo_campeonato = t_tipoCampeo AND
+		idDeporte = i_deporte AND
+		idTipo_Deporte = t_tipoDeporte AND
+        nombre_campeonato = i_campeonato;
+    
+    IF t_campeonato IS NOT NULL THEN
+		INSERT INTO TABLAS_POSICIONES_VOLEIBOL (
+        lugar_tabla_posiciones_voleibol, idEquipos, idCampeonato,
+        idTipo_Deporte, idDeporte, idTipo_campeonato)
+			VALUES (i_lugar, i_equipo, t_campeonato, 
+			t_tipoDeporte, i_deporte, t_tipoCampeo);
+		SET o_bit = 1;
+        COMMIT;
+	ELSE
+		SET o_bit = 0;
+    END IF;
+END//
+DELIMITER ;
 
 
+-- ----------------------------------------------------------------
+-- Procedimientos Beisbol
+-- ------------------------------------------------------
+-- Dependencias
+ALTER TABLE TABLA_POSICIONES_BEISBOL
+	MODIFY juegos_jugados_tabla_posiciones_beisbol INT DEFAULT 0;
+ALTER TABLE TABLA_POSICIONES_BEISBOL
+	    MODIFY juegos_ganados_tabla_posiciones_beisbol INT DEFAULT 0;
+ALTER TABLE TABLA_POSICIONES_BEISBOL
+	    MODIFY juegos_perdidos_tabla_posiciones_beisbol INT DEFAULT 0;
+ALTER TABLE TABLA_POSICIONES_BEISBOL
+	    MODIFY pct_tabla_posiciones_beisbol DECIMAL(10,0) DEFAULT 0;
+ALTER TABLE TABLA_POSICIONES_BEISBOL
+	    MODIFY puntos_tabla_posiciones_beisbol INT DEFAULT 0;
+ALTER TABLE TABLA_POSICIONES_BEISBOL
+	MODIFY racha_tabla_posiciones_beisbol VARCHAR(16) DEFAULT 'NO DEFINE';
+ALTER TABLE TABLA_POSICIONES_BEISBOL
+	MODIFY casa_tabla_posiciones_beisbol VARCHAR(16) DEFAULT 'NO DEFINE';
+ALTER TABLE TABLA_POSICIONES_BEISBOL
+	MODIFY ruta_tabla_posiciones_beisbol VARCHAR(16) DEFAULT 'NO DEFINE';
+-- ------------------------------------------------------
+CALL p_tabla_beisbol(1, 5, 'campeonato1', 2, 'tipoc_1', @a); -- 'campeonato1', 2, 'tipoc_2', 
+SELECT @a;
 
+DELIMITER //
+CREATE PROCEDURE p_tabla_beisbol(
+IN i_lugar INT,					IN i_equipo INT,
+IN i_campeonato VARCHAR(50),	IN i_deporte INT,
+IN i_tipoCampeo	VARCHAR(30), 	OUT o_bit INT(1))
+BEGIN
+	-- Declaracion de variables
+	DECLARE t_tipoDeporte, t_tipoCampeo, t_campeonato INT;
+    --
+	SELECT idTipo_Deporte INTO t_tipoDeporte
+	FROM DEPORTE
+	WHERE idDeporte = i_deporte;
+    
+	SELECT idTipo_campeonato INTO t_tipoCampeo
+	FROM TIPO_CAMPEONATO
+	WHERE Tipo_Tipo_campeonato = i_tipoCampeo;
+     
+    SELECT idCampeonato INTO t_campeonato
+    FROM CAMPEONATO
+    WHERE 
+	 	idTipo_campeonato = t_tipoCampeo AND
+		idDeporte = i_deporte AND
+		idTipo_Deporte = t_tipoDeporte AND
+        nombre_campeonato = i_campeonato;
+    
+    IF t_campeonato IS NOT NULL THEN
+		INSERT INTO TABLA_POSICIONES_BEISBOL(
+        lugar_tabla_posiciones_beisbol, idEquipos, idCampeonato,
+        idTipo_Deporte, idDeporte, idTipo_campeonato) 
+        VALUES (i_lugar, i_equipo, t_campeonato, 
+			t_tipoDeporte, i_deporte, t_tipoCampeo);
+		SET o_bit = 1;
+        COMMIT;
+	ELSE
+		SET o_bit = 0;
+	END IF; 
+END//
+DELIMITER ;
 
 
 
@@ -416,172 +729,6 @@ DELIMITER ;
 
 
 -- AUN EN DESARROLLO Y PRUEBAS 
-DROP PROCEDURE p_jornada;
-USE p_polideportivo;
-SELECT * FROM JORNADAS;
-DELIMITER //
-CREATE PROCEDURE p_jornada(IN fecha_j DATE, 
-IN goles_l INT, IN equipo_l VARCHAR(35),
-IN goles_v INT, IN equipo_v VARCHAR(35),
-IN hora_j TIME, IN  arbitroId INT, 
-IN campos_n VARCHAR(20), IN campeonato_n VARCHAR(50),
-IN c_tipoDepor_n VARCHAR(35), IN c_tipoCampe_n VARCHAR(30),
-IN estado_n VARCHAR(20), IN c_deporte INT,
-OUT o_bit INT(1))
-BEGIN
-	DECLARE equipo_lid, equipo_vid, campo_id, campeonato_id INT;
-	DECLARE tipoDepor_id, tipoCampe_id, estado_id, tipoArb_id INT;
-	DECLARE deporte_id INT;
-	--
-    IF equipo_l <> equipo_v THEN
-		SELECT idTipo_Arbitro INTO tipoArb_id
-		FROM ARBITRO
-		WHERE idArbitro = arbitroId;
-		--
-		SELECT idCampos INTO campo_id
-		FROM CAMPOS
-		WHERE campo_campos = campos_n;
-		--
-		SELECT idEquipos INTO equipo_lid
-		FROM EQUIPOS
-		WHERE nombre_equipo = equipo_l;
-	
-		SELECT idEquipos INTO equipo_vid
-		FROM EQUIPOS
-		WHERE nombre_equipo = equipo_v;
-		--
-		SELECT idEstado_partido INTO estado_id
-		FROM ESTADO_PARTIDO
-		WHERE Estado_estado_partido = estado_n;
-		--
-		SELECT idTipo_Deporte INTO tipoDepor_id
-		FROM TIPOS_DEPORTE
-		WHERE tipo_Tipo_Deporte = c_tipoDepor_n;
-	
-		-- SELECT idDeporte INTO deporte_id
-		-- FROM DEPORTE
-		-- WHERE idTipo_Deporte = tipoDepor_id;
-
-		SELECT idTipo_campeonato INTO tipoCampe_id
-		FROM TIPO_CAMPEONATO
-		WHERE Tipo_Tipo_campeonato = c_tipoCampe_n;
-
-		SELECT idCampeonato INTO campeonato_id
-		FROM CAMPEONATO
-		WHERE nombre_campeonato = campeonato_n AND idTipo_Deporte = tipoDepor_id AND idTipo_campeonato = tipoCampe_id;
-        -- AND C_idDeporte = c_deporte;	
-        
-        IF tipoArb_id IS NOT NULL AND campo_id IS NOT NULL AND equipo_lid IS NOT NULL AND equipo_vid IS NOT NULL 
-		AND estado_id IS NOT NULL AND campeonato_id IS NOT NULL THEN
-        
-			INSERT INTO JORNADAS (fecha_hora_jornadas, 
-			idArbitro, idTipo_Arbitro, A_idDeporte,
-			idCampos, idTipos_Deporte, goles_local_jornadas, 
-			goles_visita_jornadas, hora_jornadas, 
-			idEquipos_local, idEquipos_visita, 
-			idCampeonato, idTipo_Deporte, 
-			C_idDeporte, idTipo_campeonato,
-			idEstado_partido)
-			VALUES (fecha_j, arbitroId, 
-			tipoArb_id, 1, 1,1, goles_l,
-			goles_v, hora_j, equipo_lid, 
-			equipo_vid, campeonato_id, tipoDepor_id, c_deporte, tipoCampe_id, estado_id);
-			SET o_bit = 1;
-		ELSE	
-			SET o_bit = 3;
-		END IF;
-	ELSE 
-		SET o_bit = 5;
-	END IF;
-END//
-DELIMITER ;
-
-DESC JORNADAS;
-CALL p_jornada('2018-01-12', 2,'Oyoyo', 1, 'Rhynoodle', '09:12:01',1, 'campo1','systemic', 'tipo6', 'tipo_c10', 'estado1', 11,@a);
-SELECT @a;
-
-
-SELECT *
-FROM DEPORTE
-WHERE idTipo_Deporte = 6;
-
-
-
-
-DELIMITER //
-CREATE PROCEDURE p_jornada(IN fecha_j DATE, 
-IN goles_l INT, IN equipo_l VARCHAR(35),
-IN goles_v INT, IN equipo_v VARCHAR(35),
-IN hora_j TIME, IN  arbitroId INT, 
-IN campos_n VARCHAR(20), IN campeonato_n VARCHAR(50),
-IN c_tipoDepor_n VARCHAR(35), IN c_tipoCampe_n VARCHAR(30),
-IN estado_n VARCHAR(20),
-OUT bit INT(1))
-BEGIN
-	DECLARE equipo_lid, equipo_vid, campo_id, campeonato_id INT;
-	DECLARE tipoDepor_id, tipoCampe_id, estado_id, tipoArb_id INT;
-	DECLARE deporte_id INT;
-	--
-    IF equipo_l <> equipo_v THEN
-		SELECT idTipo_Arbitro INTO tipoArb_id
-		FROM ARBITRO
-		WHERE idArbitro = arbitroId;
-		--
-		SELECT idCampos INTO campo_id
-		FROM CAMPOS
-		WHERE campo_campos = campos_n;
-		--
-		SELECT idEquipos INTO equipo_lid
-		FROM EQUIPOS
-		WHERE nombre_equipo = equipo_l;
-	
-		SELECT idEquipos INTO equipo_vid
-		FROM EQUIPOS
-		WHERE nombre_equipo = equipo_v;
-		--
-		SELECT idEstado_partido INTO estado_id
-		FROM ESTADO_PARTIDO
-		WHERE Estado_estado_partido = estado_n;
-		--
-		SELECT idTipo_Deporte INTO tipoDepor_id
-		FROM TIPOS_DEPORTE
-		WHERE tipo_Tipo_Deporte = c_tipoDepor_n;
-	
-		SELECT idDeporte INTO deporte_id
-		FROM DEPORTE
-		WHERE idTipo_Deporte = tipoDepor_id;
-
-		SELECT idTipo_campeonato INTO tipoCampe_id
-		FROM TIPO_CAMPEONATO
-		WHERE Tipo_Tipo_campeonato = c_tipoCampe_n;
-
-		SELECT idCampeonato INTO campeonato_id
-		FROM CAMPEONATO
-		WHERE nombre_campeonato = campeonato_n;	
-		IF tipoArb_id IS NOT NULL AND campo_id IS NOT NULL AND
-		equipo_lid IS NOT NULL AND equipo_vid IS NOT NULL AND
-		estado_id IS NOT NULL AND campeonato_id IS NOT NULL THEN
-			INSERT INTO JORNADAS (fecha_jornadas, 
-			idArbitro, idTipo_Arbitro,
-			idCampos, goles_local_jornadas, 
-			goles_visita_jornadas, hora_jornadas, 
-			idEquipos_local, idEquipos_visita, 
-			idCampeonato, idTipo_Deporte, 
-			idDeporte, idTipo_campeonato,
-			idEstado_partido)
-			VALUES (fecha_j, arbitroId, 
-			tipoArb_id, campo_id, goles_l,
-			goles_v, hora_j, equipo_l, 
-			equipo_v, campeonato_n, 
-			c_tipoDepor_n, c_deporte_n, 
-			c_tipoCampe_n, estado_n);
-			SET bit = 1;
-		ELSE	
-			SET bit = 0;
-		END IF;
-	END IF;
-END//
-DELIMITER ;
 
 
 
