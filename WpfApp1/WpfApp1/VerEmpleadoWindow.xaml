@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="VerEmpleadoWindow" Height="437" Width="765" Background="#FF343434" WindowStyle="None" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="VerEmpleadoWindow" Height="437" Width="613" Background="#FF343434" WindowStyle="None" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_ver_empleado">
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
@@ -19,33 +19,31 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Label x:Name="lbl_empleado" Content="Empleado" HorizontalAlignment="Left" Margin="280,20,0,0" VerticalAlignment="Top" Height="65" Width="228" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="172,117,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <Rectangle x:Name="rectangle_foto_empleado" HorizontalAlignment="Left" Height="123" Margin="29,117,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22"/>
-        <Label x:Name="lbl_foto_empleado" Content="Foto empleado" HorizontalAlignment="Left" Margin="29,245,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="252,118,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_apellido" Content="Apellido:" HorizontalAlignment="Left" Margin="172,148,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_apellido" HorizontalAlignment="Left" Height="23" Margin="252,152,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_edad" Content="Edad:" HorizontalAlignment="Left" Margin="184,180,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_edad" HorizontalAlignment="Left" Height="23" Margin="252,187,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_telefono" Content="Tel 1:" HorizontalAlignment="Left" Margin="185,219,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_telefono1" HorizontalAlignment="Left" Height="23" Margin="252,221,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_direccion" Content="Dirección" HorizontalAlignment="Left" Margin="460,242,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="237" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_direccion" HorizontalAlignment="Left" Height="60" Margin="426,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_username" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="430,117,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="576,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_password" Content="Contraseña:" HorizontalAlignment="Left" Margin="430,177,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_username1" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="430,211,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="128" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="576,176,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
-        <PasswordBox x:Name="passbx_confirmar_password" HorizontalAlignment="Left" Margin="576,211,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
+        <Label x:Name="lbl_empleado" Content="Empleado" HorizontalAlignment="Left" Margin="192,21,0,0" VerticalAlignment="Top" Height="65" Width="228" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="23,126,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="103,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_apellido" Content="Apellido:" HorizontalAlignment="Left" Margin="23,157,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_apellido" HorizontalAlignment="Left" Height="23" Margin="103,161,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_edad" Content="Edad:" HorizontalAlignment="Left" Margin="35,189,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_edad" HorizontalAlignment="Left" Height="23" Margin="103,196,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_telefono" Content="Tel 1:" HorizontalAlignment="Left" Margin="36,228,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_telefono1" HorizontalAlignment="Left" Height="23" Margin="103,230,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_direccion" Content="Dirección" HorizontalAlignment="Left" Margin="311,251,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="237" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_direccion" HorizontalAlignment="Left" Height="60" Margin="277,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_username" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="281,126,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="427,126,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_password" Content="Contraseña:" HorizontalAlignment="Left" Margin="281,186,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_username1" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="281,220,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="128" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="427,185,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
+        <PasswordBox x:Name="passbx_confirmar_password" HorizontalAlignment="Left" Margin="427,220,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
         <Button x:Name="btn_guardar_empleado" Content="Guardar" HorizontalAlignment="Left" Margin="28,379,0,0" VerticalAlignment="Top" Width="206"/>
-        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="239,379,0,0" VerticalAlignment="Top" Width="489" Click="btn_regresar_Click"/>
-        <Label x:Name="lbl_area" Content="Area" HorizontalAlignment="Left" Margin="185,255,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
-        <ComboBox x:Name="cbo_area" HorizontalAlignment="Left" Margin="252,255,0,0" VerticalAlignment="Top" Width="152"/>
-        <Label x:Name="lbl_puesto" Content="Puesto" HorizontalAlignment="Left" Margin="185,292,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
-        <ComboBox x:Name="cbo_puesto" HorizontalAlignment="Left" Margin="252,292,0,0" VerticalAlignment="Top" Width="152"/>
-        <Label x:Name="lbl_tipo_de_usuario" Content="Tipo d eusuario:" HorizontalAlignment="Left" Margin="430,144,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="102" RenderTransformOrigin="-1.886,-6.115"/>
-        <ComboBox x:Name="cbo_tipo_de_usuario" HorizontalAlignment="Left" Margin="576,148,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="239,379,0,0" VerticalAlignment="Top" Width="338" Click="btn_regresar_Click"/>
+        <Label x:Name="lbl_area" Content="Area" HorizontalAlignment="Left" Margin="36,264,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
+        <ComboBox x:Name="cbo_area" HorizontalAlignment="Left" Margin="103,264,0,0" VerticalAlignment="Top" Width="152"/>
+        <Label x:Name="lbl_puesto" Content="Puesto" HorizontalAlignment="Left" Margin="36,301,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
+        <ComboBox x:Name="cbo_puesto" HorizontalAlignment="Left" Margin="103,301,0,0" VerticalAlignment="Top" Width="152"/>
+        <Label x:Name="lbl_tipo_de_usuario" Content="Tipo d eusuario:" HorizontalAlignment="Left" Margin="281,153,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="102" RenderTransformOrigin="-1.886,-6.115"/>
+        <ComboBox x:Name="cbo_tipo_de_usuario" HorizontalAlignment="Left" Margin="427,157,0,0" VerticalAlignment="Top" Width="152"/>
 
     </Grid>
 </Window>

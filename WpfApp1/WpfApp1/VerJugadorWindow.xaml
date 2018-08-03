@@ -34,18 +34,13 @@
             <ListBoxItem Content="Equipo2"/>
             <ListBoxItem Content="Equipo3"/>
         </ListBox>
-        <Label x:Name="lbl_equipo_actual" Content="Equipo actual:" HorizontalAlignment="Left" Margin="241,388,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
-        <Rectangle x:Name="rectangle_equipo_Copy" HorizontalAlignment="Left" Height="123" Margin="35,384,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="polideportivo_images/Equipos/ejemplo1.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <TextBox x:Name="txt_equipo_actual" HorizontalAlignment="Left" Height="23" Margin="365,392,0,0" TextWrapping="Wrap" Text="FC Barcelona" VerticalAlignment="Top" Width="154"/>
-        <Label x:Name="lbl_fecha_inicio" Content="Fecha inicio:" HorizontalAlignment="Left" Margin="241,419,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_fecha_inicio" HorizontalAlignment="Left" Height="23" Margin="365,422,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_fecha_final" Content="Fecha final:" HorizontalAlignment="Left" Margin="241,450,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_fecha_final" HorizontalAlignment="Left" Height="23" Margin="365,453,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_deporte" Content="Deporte" HorizontalAlignment="Left" Margin="241,481,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
+        <Label x:Name="lbl_equipo_actual" Content="Equipo actual:" HorizontalAlignment="Left" Margin="39,388,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_equipo_actual" HorizontalAlignment="Left" Height="23" Margin="163,392,0,0" TextWrapping="Wrap" Text="FC Barcelona" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="lbl_fecha_inicio" Content="Fecha inicio:" HorizontalAlignment="Left" Margin="39,419,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_fecha_inicio" HorizontalAlignment="Left" Height="23" Margin="163,422,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_fecha_final" Content="Fecha final:" HorizontalAlignment="Left" Margin="39,450,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_fecha_final" HorizontalAlignment="Left" Height="23" Margin="163,453,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_deporte" Content="Deporte" HorizontalAlignment="Left" Margin="39,481,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="87" RenderTransformOrigin="-1.886,-6.115"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="267,546,0,0" VerticalAlignment="Top" Width="488" Height="31" Click="btn_regresar_Click_1"/>
         <Button x:Name="btn_guardar" Content="Guardar" HorizontalAlignment="Left" Margin="35,546,0,0" VerticalAlignment="Top" Width="217" Height="31"/>
         <Label x:Name="lbl_sexo" Content="Sexo:" HorizontalAlignment="Left" Margin="221,242,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
@@ -61,7 +56,7 @@
         <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="365,279,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.474,2.217"/>
         <Label x:Name="lbl_password" Content="Contraseña:" HorizontalAlignment="Left" Margin="221,316,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
         <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="365,316,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
-        <TextBox x:Name="txt_deporte" HorizontalAlignment="Left" Height="23" Margin="365,485,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <TextBox x:Name="txt_deporte" HorizontalAlignment="Left" Height="23" Margin="163,485,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
         <ComboBox x:Name="cbo_posicion" HorizontalAlignment="Left" Margin="603,202,0,0" VerticalAlignment="Top" Width="151"/>
 
     </Grid>

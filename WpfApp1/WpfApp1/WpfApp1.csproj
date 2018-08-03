@@ -67,6 +67,9 @@
     <Compile Include="AgregarEntrenadorWindow.xaml.cs">
       <DependentUpon>AgregarEntrenadorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AgregarEquipoWindow.xaml.cs">
+      <DependentUpon>AgregarEquipoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AgregarFaltaFutbolWindow.xaml.cs">
       <DependentUpon>AgregarFaltaFutbolWindow.xaml</DependentUpon>
     </Compile>
@@ -203,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AgregarEntrenadorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgregarEquipoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

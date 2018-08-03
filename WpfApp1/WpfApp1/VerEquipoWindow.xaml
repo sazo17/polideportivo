@@ -7,30 +7,15 @@
         mc:Ignorable="d"
         Title="VerEquipoWindow" Height="600" Width="800" ResizeMode="CanMinimize" WindowStyle="None" Background="#FF343434" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid_equipo">
-        <Rectangle x:Name="rectangle_equipo" HorizontalAlignment="Left" Height="123" Margin="81,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="polideportivo_images/Equipos/ejemplo1.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Label x:Name="lbl_nombre_equipo" Content="FC Barcelona" HorizontalAlignment="Left" Margin="81,237,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="212,107,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="298,110,0,0" TextWrapping="Wrap" Text="FC Barcelona" VerticalAlignment="Top" Width="154"/>
-        <Label x:Name="lbl_entrenador" Content="Entrenador:" HorizontalAlignment="Left" Margin="221,138,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_entrenador" HorizontalAlignment="Left" Height="23" Margin="298,142,0,0" TextWrapping="Wrap" Text="Esduardo Del Aguila" VerticalAlignment="Top" Width="154"/>
-        <Label x:Name="lbl_plantilla" Content="Plantilla&#xD;&#xA;" HorizontalAlignment="Left" Margin="81,273,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="54" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <DataGrid x:Name="dg_plantilla" HorizontalAlignment="Left" Height="238" Margin="81,299,0,0" VerticalAlignment="Top" Width="672"/>
-        <Rectangle x:Name="rectangle_pantaloneta" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="73" Margin="588,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.167,0.22"/>
-        <Rectangle x:Name="rectangle_jersey" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="73" Margin="496,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.167,0.22"/>
-        <Rectangle x:Name="rectangle_medias" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="73" Margin="679,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.167,0.22"/>
-        <Label x:Name="lbl_uniforme" Content="Uniforme (local/visitante/alternativo)" HorizontalAlignment="Left" Margin="496,97,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="257" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <Label x:Name="lbl_jersey" Content="Jersey" HorizontalAlignment="Left" Margin="496,156,0,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" Height="26" Cursor="Hand" Width="74" HorizontalContentAlignment="Center"/>
-        <Label x:Name="lbl_pantaloneta" Content="Pantaloneta" HorizontalAlignment="Left" Margin="588,156,0,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" Height="26" Cursor="Hand" Width="74" HorizontalContentAlignment="Center"/>
-        <Label x:Name="lbl_ayuda_Copy8" Content="Medias" HorizontalAlignment="Left" Margin="679,156,0,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" Height="26" Cursor="Hand" Width="74" HorizontalContentAlignment="Center"/>
-        <Button x:Name="btn_anterior" Content="&lt;" HorizontalAlignment="Left" Margin="496,213,0,0" VerticalAlignment="Top" Width="127"/>
-        <Button x:Name="btn_siguiente" Content="&gt;" HorizontalAlignment="Left" Margin="627,213,0,0" VerticalAlignment="Top" Width="126" RenderTransformOrigin="1.743,0.6"/>
+        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="76,103,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="153,107,0,0" TextWrapping="Wrap" Text="FC Barcelona" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="lbl_entrenador" Content="Entrenador:" HorizontalAlignment="Left" Margin="331,106,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txt_entrenador" HorizontalAlignment="Left" Height="23" Margin="408,110,0,0" TextWrapping="Wrap" Text="Esduardo Del Aguila" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="lbl_plantilla" Content="Plantilla&#xD;&#xA;" HorizontalAlignment="Left" Margin="82,236,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="54" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <DataGrid x:Name="dg_plantilla" HorizontalAlignment="Left" Height="238" Margin="82,262,0,0" VerticalAlignment="Top" Width="672"/>
         <Label x:Name="lbl_equipo" Content="Equipo" HorizontalAlignment="Left" Margin="321,10,0,0" VerticalAlignment="Top" Height="65" Width="159" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="469,552,0,0" VerticalAlignment="Top" Width="284" Height="19" RenderTransformOrigin="0.53,-0.053" Click="btn_regresar_Click"/>
-        <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="81,552,0,0" VerticalAlignment="Top" Width="189" Height="19"/>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="470,515,0,0" VerticalAlignment="Top" Width="284" Height="19" RenderTransformOrigin="0.53,-0.053" Click="btn_regresar_Click"/>
+        <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="82,515,0,0" VerticalAlignment="Top" Width="189" Height="19"/>
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Button x:Name="btn_cerrar" Content="" Margin="10,10,776,0" VerticalAlignment="Top" Height="14" BorderThickness="0" Click="btn_cerrar_Click" MouseEnter="btn_cerrar_MouseEnter" MouseLeave="btn_cerrar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold">
@@ -43,10 +28,14 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_agregar_jugador" Content="Agregar Jugador" HorizontalAlignment="Left" Margin="549,270,0,0" VerticalAlignment="Top" Width="106" Height="24" RenderTransformOrigin="2.311,2" Click="btn_agregar_jugador_Click"/>
-        <Button x:Name="btn_eliminar_jugador" Content="Eliminar jugador" HorizontalAlignment="Left" Margin="660,270,0,0" VerticalAlignment="Top" Width="93" Height="24" RenderTransformOrigin="0.538,1.667"/>
-        <Button x:Name="btn_ver_jugador" Content="Ver jugador" HorizontalAlignment="Left" Margin="438,270,0,0" VerticalAlignment="Top" Width="106" Height="24" RenderTransformOrigin="2.311,2" Click="btn_ver_jugador_Click"/>
-        <Button x:Name="btn_guardar" Content="Guardar" HorizontalAlignment="Left" Margin="275,552,0,0" VerticalAlignment="Top" Width="189" Height="19"/>
-        <Button x:Name="btn_cambiar_entrenador" Content="Cambiar Dt." HorizontalAlignment="Left" Margin="359,170,0,0" VerticalAlignment="Top" Width="93" Click="btn_cambiar_entrenador_Click"/>
+        <Button x:Name="btn_agregar_jugador" Content="Agregar Jugador" HorizontalAlignment="Left" Margin="550,233,0,0" VerticalAlignment="Top" Width="106" Height="24" RenderTransformOrigin="2.311,2" Click="btn_agregar_jugador_Click"/>
+        <Button x:Name="btn_eliminar_jugador" Content="Eliminar jugador" HorizontalAlignment="Left" Margin="661,233,0,0" VerticalAlignment="Top" Width="93" Height="24" RenderTransformOrigin="0.538,1.667"/>
+        <Button x:Name="btn_ver_jugador" Content="Ver jugador" HorizontalAlignment="Left" Margin="439,233,0,0" VerticalAlignment="Top" Width="106" Height="24" RenderTransformOrigin="2.311,2" Click="btn_ver_jugador_Click"/>
+        <Button x:Name="btn_guardar" Content="Guardar" HorizontalAlignment="Left" Margin="276,515,0,0" VerticalAlignment="Top" Width="189" Height="19"/>
+        <Button x:Name="btn_cambiar_entrenador" Content="Cambiar Dt." HorizontalAlignment="Left" Margin="469,138,0,0" VerticalAlignment="Top" Width="93" Click="btn_cambiar_entrenador_Click"/>
+        <Rectangle x:Name="rectangle_color" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="73" Margin="638,104,0,0" Stroke="Black" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.167,0.22"/>
+        <Label x:Name="lbl_uniforme" Content="Uniforme (Local/Visita)" HorizontalAlignment="Left" Margin="566,72,-23,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="257" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
+        <Button x:Name="btn_anterior" Content="&lt;" HorizontalAlignment="Left" Margin="638,188,0,0" VerticalAlignment="Top" Width="55"/>
+        <Button x:Name="btn_siguiente" Content="&gt;" HorizontalAlignment="Left" Margin="698,188,0,0" VerticalAlignment="Top" Width="55" RenderTransformOrigin="1.743,0.6"/>
     </Grid>
 </Window>

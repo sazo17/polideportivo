@@ -15,24 +15,13 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for EquiposWindow.xaml
+    /// Interaction logic for AgregarEquipoWindow.xaml
     /// </summary>
-    public partial class EquiposWindow : Window
+    public partial class AgregarEquipoWindow : Window
     {
-        public EquiposWindow()
+        public AgregarEquipoWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            VerEquipoWindow verequipo = new VerEquipoWindow();
-            verequipo.Show();
-        }
-
-        private void btn_regresar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
 
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
@@ -65,10 +54,9 @@ namespace WpfApp1
             btn_minimizar.Content = "";
         }
 
-        private void btn_agregar_equipo_Click(object sender, RoutedEventArgs e)
+        private void btn_regresar_Click(object sender, RoutedEventArgs e)
         {
-            AgregarEquipoWindow agregar_equipo = new AgregarEquipoWindow();
-            agregar_equipo.Show();
+            this.Close();
         }
     }
 }
