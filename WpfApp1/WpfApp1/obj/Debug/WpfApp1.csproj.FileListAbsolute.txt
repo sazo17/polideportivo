@@ -340,3 +340,7 @@ C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarArbitroWin
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEmpleadoWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarArbitroWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEmpleadoWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerArbitroWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEmpleadoWindow.g.cs
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerArbitroWindow.baml
+C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEmpleadoWindow.baml

@@ -66,6 +66,12 @@ namespace WpfApp1
             AgregarArbitroWindow agregar_arbitro = new AgregarArbitroWindow();
             agregar_arbitro.Show();
         }
+
+        private void btn_modificar_arbitro_Click(object sender, RoutedEventArgs e)
+        {
+            VerArbitroWindow ver_arbitro = new VerArbitroWindow();
+            ver_arbitro.Show();
+        }
     }
 }
 

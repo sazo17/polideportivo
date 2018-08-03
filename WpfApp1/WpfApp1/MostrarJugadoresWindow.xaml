@@ -22,7 +22,7 @@
         <Label x:Name="lbl_equipo" Content="Jugadores Disponibles" HorizontalAlignment="Left" Margin="197,25,0,0" VerticalAlignment="Top" Height="65" Width="395" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <DataGrid x:Name="dg_mostrar_jugadores" HorizontalAlignment="Left" Height="418" Margin="53,122,0,0" VerticalAlignment="Top" Width="687"/>
         <Button x:Name="btn_agregar_a_mi_equipo" Content="Agregar a mi equipo" HorizontalAlignment="Left" Margin="53,556,0,0" VerticalAlignment="Top" Width="221"/>
-        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="279,556,0,0" VerticalAlignment="Top" Width="461"/>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="279,556,0,0" VerticalAlignment="Top" Width="461" Click="btn_regresar_Click"/>
 
     </Grid>
 </Window>

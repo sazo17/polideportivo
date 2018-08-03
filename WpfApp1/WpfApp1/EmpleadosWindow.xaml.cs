@@ -65,6 +65,12 @@ namespace WpfApp1
             AgregarEmpleadoWindow agregar_empleado = new AgregarEmpleadoWindow();
             agregar_empleado.Show();
         }
+
+        private void btn_modificar_empleados_Click(object sender, RoutedEventArgs e)
+        {
+            VerEmpleadoWindow ver_empleado = new VerEmpleadoWindow();
+            ver_empleado.Show();
+        }
     }
 }
 
