@@ -1,4 +1,7 @@
 
+WpfApp1/WpfApp1/conexion_mysql.cs
+**/conexion_mysql.cs
+
 # Created by https://www.gitignore.io/api/macos,windows,sublimetext
 
 ### macOS ###
@@ -87,4 +90,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/macos,windows,sublimetext
-WpfApp1/WpfApp1/conexion_mysql.cs
+
