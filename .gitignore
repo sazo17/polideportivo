@@ -86,6 +86,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-conexion_mysql.cs
-
 # End of https://www.gitignore.io/api/macos,windows,sublimetext
+WpfApp1/WpfApp1/conexion_mysql.cs
