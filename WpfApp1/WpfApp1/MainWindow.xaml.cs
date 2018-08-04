@@ -72,7 +72,9 @@ namespace WpfApp1
             String user = txt_username.Text;
             String pass = passbx_password.Password.ToString();
 
-            //String tipo, estado, id = "";
+            String tipo = "";
+            String estado = "";
+            String id = "";
 
             MenuWindow MenuPrincipal = new MenuWindow();
 
@@ -111,16 +113,29 @@ namespace WpfApp1
 
                         //ejecutando
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show(cmd.Parameters["o_tipo_usuarios"].Value.ToString());
+                        tipo = cmd.Parameters["o_tipo_usuarios"].Value.ToString();
+                        estado = cmd.Parameters["o_estado_usuarios"].Value.ToString();
+                        id = cmd.Parameters["o_idUsuarios"].Value.ToString();
 
                     }catch(Exception ex)
                     {
                         MessageBox.Show(ex.ToString());
                     }
 
-                    MenuPrincipal.Show();
-                    this.Close();
-
+                   
+                    if (tipo.Equals("N") && estado.Equals("0"))
+                    {
+                        MessageBox.Show("Usuario y contraseña inconrrectos!", "Error");
+                    }else{
+                        if (estado.Equals("1"))
+                        {
+                            MessageBox.Show("tiene una sesion abierta!");
+                        }else
+                        {
+                            MenuPrincipal.Show();
+                            this.Close();
+                        }
+                    }
                 }
             }
 
