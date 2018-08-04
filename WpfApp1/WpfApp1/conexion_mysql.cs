@@ -14,7 +14,7 @@ namespace WpfApp1
     class conexion_mysql
     {
         public static MySqlConnection con_mysql = null;       // variable de conexion
-        public const String servidor = "localhost";    // ubicacion|ip del servidor
+        public const String servidor = "";    // ubicacion|ip del servidor
         public const String base_datos = "p_polideportivo";     // id|nombre de la base de datos
         public const String usuario = "usuario";              // usuario dentro de la base de datos
         public const String pass = "1234";                 // contrasenia del usuario
