@@ -98,7 +98,7 @@ namespace WpfApp1
 
                         //parametro pass
                         cmd.Parameters.Add(new MySqlParameter("pass", MySqlDbType.VarChar));
-                        cmd.Parameters["pass"].Value = user;
+                        cmd.Parameters["pass"].Value = pass;
                         cmd.Parameters["pass"].Direction = System.Data.ParameterDirection.Input;
 
                         //parametros de salida
@@ -122,20 +122,22 @@ namespace WpfApp1
                         MessageBox.Show(ex.ToString());
                     }
 
-                   
-                    if (tipo.Equals("N") && estado.Equals("0"))
+                    if (tipo == "N")
                     {
-                        MessageBox.Show("Usuario y contraseña inconrrectos!", "Error");
-                    }else{
-                        if (estado.Equals("1"))
+                        MessageBox.Show("Usuario o contraseña incorrectos!", "ERROR");
+                    }else
+                    {
+                        if (estado == "1")
                         {
-                            MessageBox.Show("tiene una sesion abierta!");
+                            MessageBox.Show("Ya ha iniciado sesion!", "ERROR");
                         }else
                         {
                             MenuPrincipal.Show();
                             this.Close();
+                            conexion_mysql.terminal_bd();
                         }
                     }
+
                 }
             }
 
