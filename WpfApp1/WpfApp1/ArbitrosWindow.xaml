@@ -8,7 +8,15 @@
     <Window.Background>
         <ImageBrush ImageSource="polideportivo_images/arbitro/arbitro-background1.jpg"/>
     </Window.Background>
-    <Grid x:Name="grid_arbitros">
+    <Grid x:Name="grid_arbitros" RenderTransformOrigin="0.5,0.5" Margin="0,0.003,-1.497,-0.003" HorizontalAlignment="Left" Width="801.497">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.184"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
         <Ellipse x:Name="ellipse_cerrar" Fill="#FFE62310" HorizontalAlignment="Left" Height="14" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Ellipse x:Name="ellipse_maximizar" Fill="#FF3FB911" HorizontalAlignment="Left" Height="14" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" RenderTransformOrigin="1.01,1.058" Cursor="Hand"/>
         <Button x:Name="btn_cerrar" Content="" Margin="10,10,768,0" VerticalAlignment="Top" Height="14" BorderThickness="0" Click="btn_cerrar_Click" MouseEnter="btn_cerrar_MouseEnter" MouseLeave="btn_cerrar_MouseLeave" FontSize="9" IsHitTestVisible="True" FontWeight="Bold">
@@ -22,7 +30,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_arbitros" Content="Árbitros" HorizontalAlignment="Left" Margin="280,21,0,0" VerticalAlignment="Top" Height="65" Width="207" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <DataGrid x:Name="dg_arbitros" HorizontalAlignment="Left" Height="383" Margin="48,155,0,0" VerticalAlignment="Top" Width="692" Opacity="0.7"/>
+        <DataGrid x:Name="dg_arbitros" HorizontalAlignment="Left" Height="383" Margin="10,155,0,0" VerticalAlignment="Top" Width="781.497" Opacity="0.7"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="48,552,0,0" VerticalAlignment="Top" Width="692" Click="btn_regresar_Click"/>
         <Button x:Name="btn_agregar_arbitro" Content="Agregar árbitro" HorizontalAlignment="Left" Margin="45,120,0,0" VerticalAlignment="Top" Width="108" Click="btn_agregar_arbitro_Click"/>
         <Button x:Name="btn_modificar_arbitro" Content="Modificar árbitro" HorizontalAlignment="Left" Margin="158,120,0,0" VerticalAlignment="Top" Width="108" Click="btn_modificar_arbitro_Click"/>

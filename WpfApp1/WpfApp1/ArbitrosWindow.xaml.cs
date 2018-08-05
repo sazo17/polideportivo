@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using System.Data;
+
 
 namespace WpfApp1
 {
@@ -22,6 +25,16 @@ namespace WpfApp1
         public ArbitrosWindow()
         {
             InitializeComponent();
+            conexion_mysql.inicia_bd();
+
+            String query_datagrid= "SELECT * FROM arbitro";
+
+            MySqlCommand cmd = new MySqlCommand(query_datagrid, conexion_mysql.con_mysql);
+            DataTable tabla = new DataTable();
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            data.Fill(tabla);
+            dg_arbitros.ItemsSource = tabla.DefaultView;
+                     
         }
         private void btn_cerrar_Click(object sender, RoutedEventArgs e)
         {
@@ -65,6 +78,7 @@ namespace WpfApp1
         {
             AgregarArbitroWindow agregar_arbitro = new AgregarArbitroWindow();
             agregar_arbitro.Show();
+            this.Close();
         }
 
         private void btn_modificar_arbitro_Click(object sender, RoutedEventArgs e)
