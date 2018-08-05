@@ -1319,4 +1319,167 @@ begin
     values (nombrebe,descripcionbe,deportebe);
 end$
 
--- JEFFERSON AGREGRARA UN TRIRGGER  (PENDIENTE) --
+-- JEFFERSON AGREGRARA UN TRIRGGER  (EN DESAROLLO, `BEISBOL, VOLEIBOL`) --
+
+delimiter //
+CREATE TRIGGER upd_tables_pos
+AFTER INSERT ON JORNADAS
+FOR EACH ROW
+BEGIN
+	DECLARE t_partidos, t_golesL, t_golesV, t_deporte INT;
+    DECLARE t_parJug, t_parGan, t_parEmpate, t_parPerdi INT;
+    DECLARE t_equipoL, t_equipoV, t_puntos INT;
+	DECLARE t_anotaGana, t_anotaPerdi, t_difA INT;
+    -- 
+	SELECT idTipo_Deporte, idEquipos_local, idEquipos_visita, 
+    goles_local_jornadas, goles_visita_jornadas
+    INTO t_deporte, t_equipoL, t_equipoV, t_golesL, t_golesV
+    FROM JORNADAS
+    WHERE idJornadas = (SELECT MAX(idJornadas) FROM JORNADAS);
+	--
+    CASE t_deporte
+	 	WHEN '1' THEN
+			SELECT partidos_jugados_tabla_posiciones_futbol, partidos_ganados_tabla_posiciones_futbol,
+            partidos_empatados_tabla_posiciones_futbol, goles_a_favor_tabla_posiciones_futbol, 
+            partidos_perdidos_tabla_posiciones_futbol, goles_en_contra_tabla_posiciones_futbol,
+            Puntos_tabla_posiciones_futbol
+            INTO t_parJug, t_parGan, t_parEmpate, t_anotaGana, t_parPerdi, t_anotaPerdi, t_puntos
+            FROM TABLA_POSICIONES_FUTBOL
+            WHERE idEquipos = t_equipoL;
+            SET t_parJug = t_parJug + 1;
+            -- 
+            IF t_golesL = t_golesV THEN
+				SET t_parEmpate = t_parEmpate + 1;
+                SET t_anotaGana = t_anotaGana + t_golesL;
+			ELSEIF t_golesL < t_golesV THEN
+				SET t_parPerdi = t_parPerdi + 1;
+                SET t_anotaPerdi = t_anotaPerdi + t_golesV;
+			ELSEIF t_golesL > t_golesV THEN
+				SET t_parGan = t_parGan + 1;
+                SET t_anotaGana = t_anotaGana + t_golesL;
+            END IF;
+            SET t_difA = t_anotaGana - t_anotaPerdi;
+            SET t_puntos = (t_parGan * 3) + t_parEmpate;
+			-- 
+			UPDATE TABLA_POSICIONES_FUTBOL
+	 		SET partidos_jugados_tabla_posiciones_futbol = t_parJug, 
+            partidos_ganados_tabla_posiciones_futbol = t_parGan, 
+            partidos_empatados_tabla_posiciones_futbol = t_parEmpate, 
+            goles_a_favor_tabla_posiciones_futbol = t_anotaGana,
+            partidos_perdidos_tabla_posiciones_futbol = t_parPerdi,
+            goles_en_contra_tabla_posiciones_futbol = t_anotaPerdi,
+            Diferencia_goles_tabla_posiciones_futbol = t_difA,
+            Puntos_tabla_posiciones_futbol = t_puntos
+			WHERE idEquipos = t_equipoL;
+			-- ------------------------------------------------
+			SELECT partidos_jugados_tabla_posiciones_futbol, partidos_ganados_tabla_posiciones_futbol,
+            partidos_empatados_tabla_posiciones_futbol, goles_a_favor_tabla_posiciones_futbol, 
+            partidos_perdidos_tabla_posiciones_futbol, goles_en_contra_tabla_posiciones_futbol,
+            Puntos_tabla_posiciones_futbol
+            INTO t_parJug, t_parGan, t_parEmpate, t_anotaGana, t_parPerdi, t_anotaPerdi, t_puntos
+            FROM TABLA_POSICIONES_FUTBOL
+            WHERE idEquipos = t_equipoV;
+            SET t_parJug = t_parJug + 1;
+            -- 
+            IF t_golesL = t_golesV THEN
+				SET t_parEmpate = t_parEmpate + 1;
+                SET t_anotaGana = t_anotaGana + t_golesV;
+			ELSEIF t_golesV < t_golesL THEN
+				SET t_parPerdi = t_parPerdi + 1;
+                SET t_anotaPerdi = t_anotaPerdi + t_golesL;
+			ELSEIF t_golesV > t_golesL THEN
+				SET t_parGan = t_parGan + 1;
+                SET t_anotaGana = t_anotaGana + t_golesV;
+            END IF;
+            SET t_difA = t_anotaGana - t_anotaPerdi;
+            SET t_puntos = (t_parGan * 3) + t_parEmpate;
+			-- 
+			UPDATE TABLA_POSICIONES_FUTBOL
+	 		SET partidos_jugados_tabla_posiciones_futbol = t_parJug, 
+            partidos_ganados_tabla_posiciones_futbol = t_parGan, 
+            partidos_empatados_tabla_posiciones_futbol = t_parEmpate, 
+            goles_a_favor_tabla_posiciones_futbol = t_anotaGana,
+            partidos_perdidos_tabla_posiciones_futbol = t_parPerdi,
+            goles_en_contra_tabla_posiciones_futbol = t_anotaPerdi,
+            Diferencia_goles_tabla_posiciones_futbol = t_difA,
+            Puntos_tabla_posiciones_futbol = t_puntos
+			WHERE idEquipos = t_equipoV;
+            
+		WHEN 2 THEN
+		 	SELECT partidos_jugados_tablas_posiciones_basket, partidos_ganados_tablas_posiciones_basket,
+            partidos_empatados_tablas_posiciones_basket, puntos_a_favor_tablas_posiciones_basket, 
+            partidos_perdidos_tablas_posiciones_basket, puntos_en_contra_tablas_posiciones_basket,
+			puntos_tablas_posiciones_basket
+			INTO t_parJug, t_parGan, t_parEmpate, t_anotaGana, t_parPerdi, t_anotaPerdi, t_puntos
+            FROM TABLAS_POSICIONES_BASKET
+		 	WHERE idEquipos = t_equipoV;
+            SET t_parJug = t_parJug + 1;
+            -- 
+			IF t_golesL = t_golesV THEN
+			 	SET t_parEmpate = t_parEmpate + 1;
+				SET t_anotaGana = t_anotaGana + t_golesV;
+			ELSEIF t_golesV < t_golesL THEN
+			 	SET t_parPerdi = t_parPerdi + 1;
+				SET t_anotaPerdi = t_anotaPerdi + t_golesL;
+			ELSEIF t_golesV > t_golesL THEN
+			 	SET t_parGan = t_parGan + 1;
+				SET t_anotaGana = t_anotaGana + t_golesV;
+			END IF;
+			SET t_difA = t_anotaGana - t_anotaPerdi;
+			SET t_puntos = (t_parGan * 2); -- + t_parEmpate;
+			UPDATE TABLAS_POSICIONES_BASKET
+			SET partidos_jugados_tablas_posiciones_basket = t_parJug,
+			partidos_ganados_tablas_posiciones_basket = t_parGan, 
+            partidos_empatados_tablas_posiciones_basket = t_parEmpate,
+			partidos_perdidos_tablas_posiciones_basket = t_parPerdi,
+			puntos_a_favor_tablas_posiciones_basket = t_anotaGana,
+			puntos_en_contra_tablas_posiciones_basket = t_anotaPerdi,
+			Diferencia_tablas_posiciones_basket = t_difA, 
+            puntos_tablas_posiciones_basket = t_puntos
+			WHERE idEquipos = t_equipoV;
+            -- ----------------------------------------------------------------------
+			SELECT partidos_jugados_tablas_posiciones_basket, partidos_ganados_tablas_posiciones_basket,
+            partidos_empatados_tablas_posiciones_basket, puntos_a_favor_tablas_posiciones_basket, 
+            partidos_perdidos_tablas_posiciones_basket, puntos_en_contra_tablas_posiciones_basket,
+			puntos_tablas_posiciones_basket
+			INTO t_parJug, t_parGan, t_parEmpate, t_anotaGana, t_parPerdi, t_anotaPerdi, t_puntos
+            FROM TABLAS_POSICIONES_BASKET
+		 	WHERE idEquipos = t_equipoL;
+            SET t_parJug = t_parJug + 1;
+            -- 
+			IF t_golesL = t_golesV THEN
+			 	SET t_parEmpate = t_parEmpate + 1;
+				SET t_anotaGana = t_anotaGana + t_golesL;
+			ELSEIF t_golesL < t_golesV THEN
+			 	SET t_parPerdi = t_parPerdi + 1;
+				SET t_anotaPerdi = t_anotaPerdi + t_golesV;
+			ELSEIF t_golesL > t_golesV THEN
+			 	SET t_parGan = t_parGan + 1;
+				SET t_anotaGana = t_anotaGana + t_golesL;
+			END IF;
+			SET t_difA = t_anotaGana - t_anotaPerdi;
+            SET t_puntos = (t_parGan * 2); -- + t_parEmpate;
+			UPDATE TABLAS_POSICIONES_BASKET
+			SET partidos_jugados_tablas_posiciones_basket = t_parJug,
+			partidos_ganados_tablas_posiciones_basket = t_parGan, 
+            partidos_empatados_tablas_posiciones_basket = t_parEmpate,
+			partidos_perdidos_tablas_posiciones_basket = t_parPerdi,
+			puntos_a_favor_tablas_posiciones_basket = t_anotaGana,
+			puntos_en_contra_tablas_posiciones_basket = t_anotaPerdi,
+			Diferencia_tablas_posiciones_basket = t_difA, 
+            puntos_tablas_posiciones_basket = t_puntos
+			WHERE idEquipos = t_equipoL;
+            -- 
+            
+        -- WHEN 3 THEN
+		-- 	SELECT SYSDATE();
+		-- WHEN 4 THEN
+		-- 	SELECT SYSDATE();
+	END CASE;
+     -- IF NEW.amount < 0 THEN
+     --    SET NEW.amount = 0;
+     -- ELSEIF NEW.amount > 100 THEN
+     --    SET NEW.amount = 100;
+	-- END IF;
+END;//
+delimiter ;
