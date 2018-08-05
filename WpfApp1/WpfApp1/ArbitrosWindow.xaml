@@ -30,11 +30,11 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_arbitros" Content="Árbitros" HorizontalAlignment="Left" Margin="280,21,0,0" VerticalAlignment="Top" Height="65" Width="207" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <DataGrid x:Name="dg_arbitros" HorizontalAlignment="Left" Height="383" Margin="10,155,0,0" VerticalAlignment="Top" Width="781.497" Opacity="0.7"/>
+        <DataGrid x:Name="dg_arbitros" HorizontalAlignment="Left" Height="383" Margin="10,155,0,0" VerticalAlignment="Top" Width="781.497" Opacity="0.7" SelectedCellsChanged="dg_arbitros_SelectedCellsChanged" IsReadOnly="True"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="48,552,0,0" VerticalAlignment="Top" Width="692" Click="btn_regresar_Click"/>
         <Button x:Name="btn_agregar_arbitro" Content="Agregar árbitro" HorizontalAlignment="Left" Margin="45,120,0,0" VerticalAlignment="Top" Width="108" Click="btn_agregar_arbitro_Click"/>
         <Button x:Name="btn_modificar_arbitro" Content="Modificar árbitro" HorizontalAlignment="Left" Margin="158,120,0,0" VerticalAlignment="Top" Width="108" Click="btn_modificar_arbitro_Click"/>
-        <Button x:Name="btn_eliminar_arbitro" Content="Eliminar árbitro" HorizontalAlignment="Left" Margin="271,120,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button x:Name="btn_eliminar_arbitro" Content="Eliminar árbitro" HorizontalAlignment="Left" Margin="271,120,0,0" VerticalAlignment="Top" Width="108" Click="btn_eliminar_arbitro_Click"/>
 
     </Grid>
 </Window>

@@ -170,10 +170,9 @@ namespace WpfApp1
 
                             cmd.ExecuteNonQuery();
                             bit = cmd.Parameters["o_bit"].Value.ToString();
-                            MessageBox.Show(bit);
                             if (bit.Equals("1"))
                             {
-                                MessageBox.Show("Arbitro registrado exitosamente", "Registro");
+                                MessageBox.Show("Arbitro registrado exitosamente", "Registro", MessageBoxButton.OK);
                                 this.Close();
                                 conexion_mysql.terminal_bd();
                                 ArbitrosWindow a = new ArbitrosWindow();
