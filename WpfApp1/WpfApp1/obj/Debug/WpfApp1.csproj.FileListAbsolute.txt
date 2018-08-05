@@ -266,7 +266,6 @@ C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-De
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\OlvideContraseniaWindow.g.cs
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\QuitarFaltaWindow.g.cs
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\QuitarGolFutbolWindow.g.cs
-C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\RegistroWindow.g.cs
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaGoleadoresFutbolWindow.g.cs
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPorteroMenosVencidoFutbolWindow.g.cs
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPosicionesWindow.g.cs
@@ -304,7 +303,6 @@ C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-De
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\OlvideContraseniaWindow.baml
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\QuitarFaltaWindow.baml
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\QuitarGolFutbolWindow.baml
-C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\RegistroWindow.baml
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaGoleadoresFutbolWindow.baml
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPorteroMenosVencidoFutbolWindow.baml
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\TablaPosicionesWindow.baml
@@ -350,3 +348,35 @@ C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\ModificarReglaWin
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerReglasWindow.g.cs
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\ModificarReglaWindow.baml
 C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerReglasWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarArbitroWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEmpleadoWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEntrenadorWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEquipoWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\ArbitrosWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\EmpleadosWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\EntrenadorWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\JugadoresWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\ModificarReglaWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarArbitrosWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarEmpleadoWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarEntrenadoresWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarJugadoresWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerArbitroWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEmpleadoWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerReglasWindow.g.cs
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarArbitroWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEmpleadoWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEntrenadorWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\AgregarEquipoWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\ArbitrosWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\EmpleadosWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\EntrenadorWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\JugadoresWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\ModificarReglaWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarArbitrosWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarEmpleadoWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarEntrenadoresWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\MostrarJugadoresWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerArbitroWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerEmpleadoWindow.baml
+C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\VerReglasWindow.baml

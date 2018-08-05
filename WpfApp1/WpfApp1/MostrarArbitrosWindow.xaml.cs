@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace WpfApp1
 {
     /// <summary>
@@ -22,6 +25,15 @@ namespace WpfApp1
         public MostrarArbitrosWindow()
         {
             InitializeComponent();
+            conexion_mysql.inicia_bd();
+
+            String query_datagrid = "SELECT nombre_arbitro, apellido_arbitro, telefono_arbitro FROM arbitro";
+
+            MySqlCommand cmd = new MySqlCommand(query_datagrid, conexion_mysql.con_mysql);
+            DataTable tabla = new DataTable();
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            data.Fill(tabla);
+            dg_mostrar_arbitros.ItemsSource = tabla.DefaultView;
         }
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
         {

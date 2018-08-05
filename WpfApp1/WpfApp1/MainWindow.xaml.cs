@@ -71,17 +71,72 @@ namespace WpfApp1
         {
             String user = txt_username.Text;
             String pass = passbx_password.Password.ToString();
+
+            String tipo = "";
+            String estado = "";
+            String id = "";
+
             MenuWindow MenuPrincipal = new MenuWindow();
 
             if (user=="" || user == "Username"){
                 MessageBox.Show("Usuario o contraseña incorrectos", "Error");
             }else{
-                if (pass == ""){
+                if (pass == "") {
                     MessageBox.Show("Usuario o contraseña incorrectos", "Error");
-                }else{
-                    /*HACER AQUI LA VALIDACION DE USUARIOS CON LA BD*/
-                    MenuPrincipal.Show();
-                    this.Close();
+                } else {
+                    try
+                    {
+                        MySqlCommand cmd = new MySqlCommand();
+                        cmd.Connection = conexion_mysql.con_mysql;
+                        cmd.CommandText = "p_login";
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        //parametro user
+                        cmd.Parameters.Add(new MySqlParameter("user", MySqlDbType.VarChar));
+                        cmd.Parameters["user"].Value = user;
+                        cmd.Parameters["user"].Direction = System.Data.ParameterDirection.Input;
+
+                        //parametro pass
+                        cmd.Parameters.Add(new MySqlParameter("pass", MySqlDbType.VarChar));
+                        cmd.Parameters["pass"].Value = pass;
+                        cmd.Parameters["pass"].Direction = System.Data.ParameterDirection.Input;
+
+                        //parametros de salida
+                        cmd.Parameters.Add(new MySqlParameter("o_tipo_usuarios", MySqlDbType.VarChar));
+                        cmd.Parameters["o_tipo_usuarios"].Direction = System.Data.ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_estado_usuarios", MySqlDbType.VarChar));
+                        cmd.Parameters["o_estado_usuarios"].Direction = System.Data.ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_idUsuarios", MySqlDbType.Int32));
+                        cmd.Parameters["o_idUsuarios"].Direction = System.Data.ParameterDirection.Output;
+
+                        //ejecutando
+                        cmd.ExecuteNonQuery();
+                        tipo = cmd.Parameters["o_tipo_usuarios"].Value.ToString();
+                        estado = cmd.Parameters["o_estado_usuarios"].Value.ToString();
+                        id = cmd.Parameters["o_idUsuarios"].Value.ToString();
+
+                    }catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+
+                    if (tipo == "N")
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos!", "ERROR");
+                    }else
+                    {
+                        if (estado == "1")
+                        {
+                            MessageBox.Show("Ya ha iniciado sesion!", "ERROR");
+                        }else
+                        {
+                            MenuPrincipal.Show();
+                            this.Close();
+                            conexion_mysql.terminal_bd();
+                        }
+                    }
 
                 }
             }

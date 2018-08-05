@@ -23,25 +23,29 @@
         <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="172,117,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
         <Rectangle x:Name="rectangle_foto_arbitro" HorizontalAlignment="Left" Height="123" Margin="29,117,0,0" Stroke="Black" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.167,0.22"/>
         <Label x:Name="lbl_foto_arbitro" Content="Foto arbitro" HorizontalAlignment="Left" Margin="29,245,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="132" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="252,118,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="252,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
         <Label x:Name="lbl_apellido" Content="Apellido:" HorizontalAlignment="Left" Margin="172,148,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_apellido" HorizontalAlignment="Left" Height="23" Margin="252,152,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <TextBox x:Name="txt_apellido" HorizontalAlignment="Left" Height="23" Margin="252,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
         <Label x:Name="lbl_edad" Content="Edad:" HorizontalAlignment="Left" Margin="184,180,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_edad" HorizontalAlignment="Left" Height="23" Margin="252,187,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <TextBox x:Name="txt_edad" HorizontalAlignment="Left" Height="23" Margin="252,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
         <Label x:Name="lbl_telefono" Content="Tel 1:" HorizontalAlignment="Left" Margin="185,219,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_telefono1" HorizontalAlignment="Left" Height="23" Margin="252,221,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_direccion" Content="Dirección" HorizontalAlignment="Left" Margin="453,260,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="237" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_direccion" HorizontalAlignment="Left" Height="60" Margin="430,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" RenderTransformOrigin="0.474,2.217"/>
+        <TextBox x:Name="txt_telefono1" HorizontalAlignment="Left" Height="23" Margin="252,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_direccion" Content="Dirección" HorizontalAlignment="Left" Margin="179.735,295.759,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="69.265" HorizontalContentAlignment="Center" RenderTransformOrigin="-1.886,-6.115" d:LayoutOverrides="HorizontalAlignment"/>
+        <TextBox x:Name="txt_direccion" HorizontalAlignment="Left" Height="60" Margin="254,295.759,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="469" RenderTransformOrigin="0.474,2.217"/>
         <Label x:Name="lbl_username" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="430,117,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="571,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
-        <Label x:Name="lbl_password" Content="Contraseña:" HorizontalAlignment="Left" Margin="430,180,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_username1" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="430,214,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="128" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="571,179,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
-        <PasswordBox x:Name="passbx_confirmar_password" HorizontalAlignment="Left" Margin="571,214,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
-        <Button x:Name="Guardar" Content="Agregar arbitro" HorizontalAlignment="Left" Margin="23,400,0,0" VerticalAlignment="Top" Width="206"/>
+        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="571,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_password" Content="Contraseña:" HorizontalAlignment="Left" Margin="430,219.62,0,212.38" Foreground="#FFFDEFEF" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_username1" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="430,254.05,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="128" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="passbx_password" HorizontalAlignment="Left" Margin="571,219,0,213" Width="152"/>
+        <PasswordBox x:Name="passbx_confirmar_password" HorizontalAlignment="Left" Margin="571,253.43,0,0" VerticalAlignment="Top" Width="152" Height="26"/>
+        <Button x:Name="Guardar" Content="Agregar arbitro" HorizontalAlignment="Left" Margin="23,400,0,0" VerticalAlignment="Top" Width="206" Click="Guardar_Click"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="234,400,0,0" VerticalAlignment="Top" Width="489" Click="btn_regresar_Click"/>
-        <Label x:Name="lbl_tipo_de_usuario" Content="Tipo de usuario:" HorizontalAlignment="Left" Margin="430,144,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="102" RenderTransformOrigin="-1.886,-6.115"/>
+        <Label x:Name="lbl_tipo_de_usuario" Content="Tipo Arbitro:" HorizontalAlignment="Left" Margin="430,144,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="102" RenderTransformOrigin="-1.886,-6.115"/>
         <ComboBox x:Name="cbo_tipo_de_usuario" HorizontalAlignment="Left" Margin="571,148,0,0" VerticalAlignment="Top" Width="152"/>
+        <TextBox x:Name="txt_correo" HorizontalAlignment="Left" Height="23" Margin="252,256.43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217"/>
+        <Label x:Name="lbl_telefono_Copy" Content="Correo:" HorizontalAlignment="Left" Margin="185,254.05,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="50" RenderTransformOrigin="-1.886,-6.115"/>
+        <Label x:Name="lbl_tipo_de_usuario_Copy" Content="Tipo Deporte:" HorizontalAlignment="Left" Margin="430,184,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="102" RenderTransformOrigin="-1.886,-6.115"/>
+        <ComboBox x:Name="cbo_tipo_deporte" HorizontalAlignment="Left" Margin="571,184.04,0,0" VerticalAlignment="Top" Width="152"/>
 
     </Grid>
 </Window>
