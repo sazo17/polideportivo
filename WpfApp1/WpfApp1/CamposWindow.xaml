@@ -23,26 +23,21 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_campos" Content="Campos" HorizontalAlignment="Left" Margin="315,19,0,0" VerticalAlignment="Top" Height="65" Width="159" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <Rectangle x:Name="rectangle_campo" HorizontalAlignment="Left" Height="256" Margin="143,89,0,0" Stroke="Black" VerticalAlignment="Top" Width="525" RenderTransformOrigin="0.167,0.22"/>
-        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="142,408,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <Label x:Name="lbl_siguiente" Content="&gt;&#xA;" HorizontalAlignment="Left" Margin="673,192,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="61" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36" Background="#FFDC5555"/>
-        <Label x:Name="lbl_anterior" Content="&lt;" HorizontalAlignment="Left" Margin="98,192,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="58" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36" Background="#FFDC5555"/>
-        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="242,412,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="132"/>
-        <Label x:Name="lbl_deporte" Content="Deporte:" HorizontalAlignment="Left" Margin="436,408,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <ComboBox x:Name="cbo_deporte" HorizontalAlignment="Left" Margin="536,408,0,0" VerticalAlignment="Top" Width="132">
-            <ComboBoxItem Content="Futbol"/>
-            <ComboBoxItem Content="Baloncesto"/>
-            <ComboBoxItem Content="Voleibol"/>
-            <ComboBoxItem Content="Beisbol"/>
-        </ComboBox>
+        <Rectangle x:Name="rectangle_campo" HorizontalAlignment="Left" Height="256" Margin="143,89,0,0" Stroke="Black" VerticalAlignment="Top" Width="525" RenderTransformOrigin="0.167,0.22">
+            <Rectangle.Fill>
+                <ImageBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="172,408,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <Label x:Name="lbl_siguiente" Content="&gt;&#xA;" HorizontalAlignment="Left" Margin="673,192,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="61" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36" Background="#FFDC5555" MouseLeftButtonUp="lbl_siguiente_MouseLeftButtonUp"/>
+        <Label x:Name="lbl_anterior" Content="&lt;" HorizontalAlignment="Left" Margin="98,192,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="58" Cursor="Hand" Width="40" HorizontalContentAlignment="Center" FontSize="36" Background="#FFDC5555" MouseLeftButtonUp="lbl_anterior_MouseLeftButtonUp"/>
+        <TextBox x:Name="txt_nombre" Height="23" Margin="287,411,240,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" IsReadOnly="true"/>
         <Label x:Name="lbl_informacion_campo" Content="-----------------------Información Campo-------------------" HorizontalAlignment="Left" Margin="143,361,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="525" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold"/>
-        <Label x:Name="lbl_ancho" Content="Ancho:" HorizontalAlignment="Left" Margin="142,446,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_ancho" HorizontalAlignment="Left" Height="23" Margin="242,450,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="132"/>
-        <Label x:Name="lbl_largo" Content="Largo" HorizontalAlignment="Left" Margin="142,484,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
-        <TextBox x:Name="txt_largo" HorizontalAlignment="Left" Height="23" Margin="242,488,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="132"/>
-        <Button x:Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="144,543,0,0" VerticalAlignment="Top" Width="106" Height="31"/>
-        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="366,543,0,0" VerticalAlignment="Top" Width="302" Height="31" Click="Button_Click"/>
-        <Button x:Name="btn_guardar" Content="Guardar" HorizontalAlignment="Left" Margin="255,543,0,0" VerticalAlignment="Top" Width="106" Height="31"/>
+        <Label x:Name="lbl_ancho" Content="Ancho:" HorizontalAlignment="Left" Margin="172,446,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_ancho" Height="23" Margin="287,449,240,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" IsReadOnly="true"/>
+        <Label x:Name="lbl_largo" Content="Largo" HorizontalAlignment="Left" Margin="172,484,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115"/>
+        <TextBox x:Name="txt_largo" Height="23" Margin="287,487,240,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" IsReadOnly="true"/>
+        <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="201.5,541.5,0,0" VerticalAlignment="Top" Width="381" Height="31" Click="Button_Click"/>
 
     </Grid>
 </Window>
