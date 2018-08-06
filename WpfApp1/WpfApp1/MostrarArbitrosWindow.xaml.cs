@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using MySql.Data.MySqlClient;
+using System.Data;
 namespace WpfApp1
 {
     /// <summary>
@@ -22,6 +23,7 @@ namespace WpfApp1
         public MostrarArbitrosWindow()
         {
             InitializeComponent();
+
         }
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
         {

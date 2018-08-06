@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\obj\Debug\
+C:\Users\Richie\Desktop\WpfApp1\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\vic\Documents\polideportivo\WpfApp1\WpfApp1\App.xaml
+C:\Users\Richie\Desktop\WpfApp1\WpfApp1\App.xaml
 50-734348760
 
-59-1118347811
-14594615103
+59-1052808766
+141144554072
 AgregarArbitroWindow.xaml;AgregarEmpleadoWindow.xaml;AgregarEntrenadorWindow.xaml;AgregarEquipoWindow.xaml;AgregarFaltaFutbolWindow.xaml;AgregarFaltaWindow.xaml;AgregarGolFutbolWindow.xaml;AgregarJugadorWindow.xaml;AjustesWindow.xaml;ArbitrosWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;CamposWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EmpleadosWindow.xaml;EntrenadorWindow.xaml;EquiposWindow.xaml;EstadisticasBaseballWindow.xaml;EstadisticasBasketballWindow.xaml;EstadisticasFutbolWindow.xaml;EstadisticasVolleyballWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;JornadasWindow.xaml;JugadoresWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;ModificarReglaWindow.xaml;MostrarArbitrosWindow.xaml;MostrarEmpleadoWindow.xaml;MostrarEntrenadoresWindow.xaml;MostrarJugadoresWindow.xaml;OlvideContraseniaWindow.xaml;QuitarFaltaWindow.xaml;QuitarGolFutbolWindow.xaml;TablaGoleadoresFutbolWindow.xaml;TablaPorteroMenosVencidoFutbolWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerArbitroWindow.xaml;VerCampeonatoWindow.xaml;VerEmpleadoWindow.xaml;VerEntrenadorWindow.xaml;VerEquipoWindow.xaml;VerJugadorWindow.xaml;VerReglasWindow.xaml;
 
-True
+False
 

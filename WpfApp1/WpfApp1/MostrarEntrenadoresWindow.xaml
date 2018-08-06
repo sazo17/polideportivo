@@ -20,7 +20,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_entrenadores" Content="Entrenadores Disponibles" HorizontalAlignment="Left" Margin="181,25,0,0" VerticalAlignment="Top" Height="65" Width="449" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <DataGrid x:Name="dg_mostrar_entrenadores" HorizontalAlignment="Left" Height="416" Margin="53,124,0,0" VerticalAlignment="Top" Width="687"/>
+        <DataGrid x:Name="dg_mostrar_entrenadores" HorizontalAlignment="Left" Height="416" Margin="10,124,0,0" VerticalAlignment="Top" Width="780"/>
         <Button x:Name="btn_agregar_a_mi_equipo" Content="Agregar a mi equipo" HorizontalAlignment="Left" Margin="53,556,0,0" VerticalAlignment="Top" Width="221"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="279,556,0,0" VerticalAlignment="Top" Width="461" Click="btn_regresar_Click"/>
 
