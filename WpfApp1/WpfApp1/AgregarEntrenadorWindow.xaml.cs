@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace WpfApp1
 {
@@ -22,6 +23,20 @@ namespace WpfApp1
         public AgregarEntrenadorWindow()
         {
             InitializeComponent();
+
+            conexion_mysql.inicia_bd();
+
+            //cantidad jugadores
+            MySqlCommand cmd = conexion_mysql.con_mysql.CreateCommand();
+            cmd.CommandText = "SELECT cantidad_jugadores_deporte from deporte";
+            MySqlDataReader r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                cbo_cjugadores.Items.Add(r.GetString(0));
+            }
+            conexion_mysql.terminal_bd();
+            conexion_mysql.inicia_bd();
+           
         }
 
         private void btn_modificar_Click(object sender, RoutedEventArgs e)
@@ -64,6 +79,93 @@ namespace WpfApp1
             this.Close();
         }
 
-  
+        private void btn_agregar_entrenador_Click(object sender, RoutedEventArgs e)
+        {
+            String nomentre = txt_nombre.Text;
+            String apeentre = txt_apellido.Text;
+            String edadentre = txt_edad.Text;
+            String telefonoentre = txt_tel.Text;
+            String cjugadorentre = cbo_cjugadores.SelectedItem.ToString();
+            String usuarioentre = txt_username.Text;
+            String contraseñaentre = passbx_password.Password.ToString();
+            String confirmacionentre = passbx_confirmar_password.Password.ToString();
+            String direccionentre = txt_direccion.Text;
+            String correoentre = txt_email.Text;
+
+
+            if (nomentre == "" || apeentre == "" || edadentre == "" || telefonoentre == "" || usuarioentre == "" ||
+                cjugadorentre == "" || contraseñaentre == "" || direccionentre == "" || correoentre == "" || confirmacionentre == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+            }   
+
+            else
+            {
+                if (contraseñaentre != confirmacionentre)
+                {
+                    MessageBox.Show("Contraseñas no coinciden!", "ERROR");
+                }
+                else
+                {
+                    if (chk_aceptar_terminos.IsEnabled == false)
+                    {
+                        MessageBox.Show("Acepte los terminos y condiciones", "ERROR");
+                    }
+                    else
+                    {
+                        try
+                        {
+                            MySqlCommand cmd = new MySqlCommand();
+                            cmd.Connection = conexion_mysql.con_mysql;
+                            cmd.CommandText = "p_entrenadores";
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            //nombre
+                            cmd.Parameters.AddWithValue("i_nombre", nomentre).Direction = System.Data.ParameterDirection.Input;
+                            //apellido
+                            cmd.Parameters.AddWithValue("i_apellidos", apeentre).Direction = System.Data.ParameterDirection.Input;
+                            //edad
+                            cmd.Parameters.AddWithValue("i_edad", edadentre).Direction = System.Data.ParameterDirection.Input;
+                            //direccion
+                            cmd.Parameters.AddWithValue("i_direccion", direccionentre).Direction = System.Data.ParameterDirection.Input;
+                            //telefono
+                            cmd.Parameters.AddWithValue("i_telefono", telefonoentre).Direction = System.Data.ParameterDirection.Input;
+                            //mail
+                            cmd.Parameters.AddWithValue("i_mail", correoentre).Direction = System.Data.ParameterDirection.Input;
+                            int cj = 0;
+                            cj = cbo_cjugadores.SelectedIndex;
+                            cj++;
+                            cmd.Parameters.AddWithValue("i_deporte", cj).Direction = System.Data.ParameterDirection.Input;
+                            //usuario
+                            cmd.Parameters.AddWithValue("i_user", usuarioentre).Direction = System.Data.ParameterDirection.Input;
+                            //contraseña
+                            cmd.Parameters.AddWithValue("i_pass", contraseñaentre).Direction = System.Data.ParameterDirection.Input;
+                            //estado (PREDEFINIDO 0)
+                            cmd.Parameters.AddWithValue("i_estado", "0").Direction = System.Data.ParameterDirection.Input;
+                            //tipo de usuario (PREDEFINIDO I)
+                            cmd.Parameters.AddWithValue("i_tipo", "I").Direction = System.Data.ParameterDirection.Input;
+                            //PARAMETROS DE SALIDA
+                            //bit
+                            String bit = "";
+                            cmd.Parameters.AddWithValue("o_bit", 0).Direction = System.Data.ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+                            bit = cmd.Parameters["o_bit"].Value.ToString();
+                            // MessageBox.Show(bit);
+                            if (bit.Equals("1"))
+                            {
+                                MessageBox.Show("Entrenador registrado");
+                             
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                    }
+                }
+            }
+        }
+
+   
     }
 }
+    
