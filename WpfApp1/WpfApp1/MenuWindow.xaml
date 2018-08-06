@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <Button x:Name="btn_torneos" Content="Torneos" HorizontalAlignment="Left" Margin="245,274,0,0" VerticalAlignment="Top" Width="235" Height="83" Foreground="#FFFDF6F6" FontSize="20" Cursor="Hand" Click="btn_torneos_Click" FontWeight="Bold" Background="{x:Null}"/>
         <Button x:Name="btn_equipos" Content="Equipos" HorizontalAlignment="Left" Margin="76,191,0,0" VerticalAlignment="Top" Width="163" Height="78" Foreground="#FFFDF6F6" FontWeight="Bold" FontSize="20" Cursor="Hand" Click="btn_equipos_Click" Background="{x:Null}"/>
-        <Button x:Name="btn_ayuda" Content="Ayuda" HorizontalAlignment="Left" Margin="326,362,0,0" VerticalAlignment="Top" Width="154" Height="70" Cursor="Hand" FontSize="20" Click="btn_ayuda_Copy1_Click" Foreground="#FFFDF9F9" FontWeight="Bold" RenderTransformOrigin="-0.279,0.522" Background="{x:Null}"/>
+        <Button x:Name="btn_ayuda" Content="Ayuda" HorizontalAlignment="Left" Margin="326,442,0,0" VerticalAlignment="Top" Width="154" Height="70" Cursor="Hand" FontSize="20" Click="btn_ayuda_Copy1_Click" Foreground="#FFFDF9F9" FontWeight="Bold" RenderTransformOrigin="-0.279,0.522" Background="{x:Null}"/>
         <Label x:Name="lbl_polideportivo" Content="Polideportivo" HorizontalAlignment="Left" Margin="166,59,0,0" VerticalAlignment="Top" Height="39" Width="143" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FFF3EDED"/>
         <Label x:Name="lbl_logo" Content="Logo" HorizontalAlignment="Left" Margin="76,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.145,0.783" Height="62" Width="103" Foreground="#FFF1E4E4" FontSize="36"/>
         <Button x:Name="btn_log_out" Content="Log out" HorizontalAlignment="Left" Margin="713,5,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.213,-0.628" Height="27" Background="{x:Null}" Foreground="#FFF7F4F4" BorderBrush="{x:Null}" Cursor="Hand" Click="Button_Click"/>
@@ -77,6 +77,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btn_deportes" Content="Deportes" HorizontalAlignment="Left" Margin="155,362,0,0" VerticalAlignment="Top" Width="154" Height="70" Cursor="Hand" FontSize="20" Foreground="#FFFDF9F9" FontWeight="Bold" RenderTransformOrigin="-0.279,0.522" Background="{x:Null}" Click="btn_deportes_Click"/>
+        <Button x:Name="btn_deportes" Content="Reglas de Deportes" HorizontalAlignment="Left" Margin="297,367,0,0" VerticalAlignment="Top" Width="206" Height="70" Cursor="Hand" FontSize="20" Foreground="#FFFDF9F9" FontWeight="Bold" RenderTransformOrigin="-0.279,0.522" Background="{x:Null}" Click="btn_deportes_Click"/>
     </Grid>
 </Window>

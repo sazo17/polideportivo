@@ -92,3 +92,4 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/macos,windows,sublimetext
 
 WpfApp1/WpfApp1/conexion_mysql.cs
+WpfApp1/.vs/WpfApp1/v14/.suo
