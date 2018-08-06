@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace WpfApp1
 {
@@ -22,6 +23,7 @@ namespace WpfApp1
         public DeportesWindow()
         {
             InitializeComponent();
+            
         }
 
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
@@ -82,6 +84,38 @@ namespace WpfApp1
         {
             VerReglasWindow ver_reglas = new VerReglasWindow();
             ver_reglas.Show();
+        }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_agregar_regla_Click(object sender, RoutedEventArgs e)
+        {
+            String nombre = txt_nombre.ToString();
+            String regla = txt_regla.ToString();
+            int id_deporte;
+
+            conexion_mysql.inicia_bd();
+            MySqlCommand cmd = conexion_mysql.con_mysql.CreateCommand();
+            cmd.CommandText = "r_basket";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+            if (basket.IsSelected == true)
+            {
+                cmd.Parameters.AddWithValue("idreglas_basket", "0").Direction = System.Data.ParameterDirection.Input;
+                cmd.Parameters.AddWithValue("idreglas_basket", "0").Direction = System.Data.ParameterDirection.Input;
+                cmd.Parameters.AddWithValue("idreglas_basket", "0").Direction = System.Data.ParameterDirection.Input;
+                cmd.Parameters.AddWithValue("idreglas_basket", "0").Direction = System.Data.ParameterDirection.Input;
+            }
+            
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

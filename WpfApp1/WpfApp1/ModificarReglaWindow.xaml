@@ -26,10 +26,15 @@
         <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="48,108,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
         <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="128,109,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217" Grid.ColumnSpan="2"/>
         <Label x:Name="lbl_regla" Content="Regla" HorizontalAlignment="Left" Margin="48,139,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txt_regla" HorizontalAlignment="Left" Height="124" Margin="128,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="627" RenderTransformOrigin="0.474,2.217" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txt_regla" HorizontalAlignment="Left" Height="124" Margin="48,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="627" RenderTransformOrigin="0.474,2.217" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_guardar_regla" Content="Guardar Regla" HorizontalAlignment="Left" Margin="128,284,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_regresar" Content="Regresar" Grid.Column="1" HorizontalAlignment="Left" Margin="123,284,0,0" VerticalAlignment="Top" Width="470" Click="btn_regresar_Click"/>
-        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="191,108,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="191,108,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Basket" Selected="ComboBoxItem_Selected" IsSelected="True"/>
+            <ComboBoxItem Content="Beisbol" HorizontalAlignment="Left" Width="118" IsSelected="True"/>
+            <ComboBoxItem Content="ComboBoxItem" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="ComboBoxItem" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
         <Label x:Name="lbl_nombre_Copy" Content="Deporte:" HorizontalAlignment="Left" Margin="132,108,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" Grid.Column="1" VerticalContentAlignment="Center"/>
         <Label x:Name="lbl_modificar_regla" Content="Modificar Regla" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Height="65" Width="323" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1"/>
 

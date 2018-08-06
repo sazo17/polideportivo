@@ -27,13 +27,18 @@
         </Button>
         <Label x:Name="lbl_arbitro" Content="Deportes" HorizontalAlignment="Left" Margin="192,10,0,0" VerticalAlignment="Top" Height="65" Width="228" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="2"/>
         <Label x:Name="lbl_nombre" Content="Nombre:" HorizontalAlignment="Left" Margin="9,375,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" Grid.ColumnSpan="2" Grid.Column="1" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="36,376,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217" Grid.Column="2"/>
+        <TextBox x:Name="txt_nombre" HorizontalAlignment="Left" Height="23" Margin="36,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.474,2.217" Grid.Column="2"/>
         <Label x:Name="lbl_regla" Content="Regla" HorizontalAlignment="Left" Margin="9,406,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" Grid.ColumnSpan="2" Grid.Column="1" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txt_regla" HorizontalAlignment="Left" Height="124" Margin="36,410,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="627" RenderTransformOrigin="0.474,2.217" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txt_regla" HorizontalAlignment="Left" Height="124" Margin="36,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="627" RenderTransformOrigin="0.474,2.217" Grid.Column="2" Grid.ColumnSpan="2"/>
         <Label x:Name="lbl_agregar_regla" Content="------------------------------------------Nueva Regla----------------------------------------" HorizontalAlignment="Left" Margin="0,318,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="716" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Column="1"/>
-        <Button x:Name="btn_agregar_regla" Content="Agregar Regla" Grid.Column="2" HorizontalAlignment="Left" Margin="36,559,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button x:Name="btn_agregar_regla" Content="Agregar Regla" Grid.Column="2" HorizontalAlignment="Left" Margin="36,559,0,0" VerticalAlignment="Top" Width="152" Click="btn_agregar_regla_Click"/>
         <Button x:Name="btn_regresar" Content="Regresar" Grid.Column="2" HorizontalAlignment="Left" Margin="193,559,0,0" VerticalAlignment="Top" Width="470" Grid.ColumnSpan="2" Click="btn_regresar_Click"/>
-        <ComboBox Grid.Column="3" HorizontalAlignment="Left" Margin="38,375,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Grid.Column="3" HorizontalAlignment="Left" Margin="38,375,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem x:Name="basket" Content="BASKET" HorizontalAlignment="Left" Width="118" Selected="ComboBoxItem_Selected" IsSelected="True"/>
+            <ComboBoxItem x:Name="beibol" Content="BEISBOL" HorizontalAlignment="Left" Width="118" IsSelected="True"/>
+            <ComboBoxItem x:Name="futbol" Content="FUTBOL" HorizontalAlignment="Left" Width="118" IsSelected="True"/>
+            <ComboBoxItem Content="VOLEIBOL" HorizontalAlignment="Left" Width="118" IsSelected="True"/>
+        </ComboBox>
         <Label x:Name="lbl_nombre_Copy" Content="Deporte:" HorizontalAlignment="Left" Margin="202,375,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" Grid.ColumnSpan="2" Grid.Column="2" VerticalContentAlignment="Center"/>
         <Rectangle x:Name="rectangle_futbol" Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="159" Margin="9,99,0,0" Stroke="Black" VerticalAlignment="Top" Width="172" Grid.ColumnSpan="2"/>
         <Rectangle x:Name="rectangle_basketball" Grid.Column="2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="159" Margin="133,99,0,0" Stroke="Black" VerticalAlignment="Top" Width="172" Grid.ColumnSpan="2"/>

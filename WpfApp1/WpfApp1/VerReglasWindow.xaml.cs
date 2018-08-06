@@ -64,5 +64,10 @@ namespace WpfApp1
             ModificarReglaWindow modificar_regla = new ModificarReglaWindow();
             modificar_regla.Show();
         }
+
+        private void txt_deporte_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

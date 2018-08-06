@@ -21,7 +21,7 @@
         </Button>
         <Label x:Name="lbl_reglas" Content="Reglas" HorizontalAlignment="Left" Margin="281,10,0,0" VerticalAlignment="Top" Height="65" Width="228" Foreground="#FFFBF8F8" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_nombre_Copy" Content="Deporte:" HorizontalAlignment="Left" Margin="54,81,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="77" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txt_deporte" HorizontalAlignment="Left" Height="23" Margin="121,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt_deporte" HorizontalAlignment="Left" Height="23" Margin="121,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="txt_deporte_TextChanged"/>
         <DataGrid x:Name="dg_mostrar_arbitros" HorizontalAlignment="Left" Height="418" Margin="53,122,0,0" VerticalAlignment="Top" Width="687"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="279,556,0,0" VerticalAlignment="Top" Width="461" Click="btn_regresar_Click"/>
         <Button Content="Modificar" HorizontalAlignment="Left" Margin="53,556,0,0" VerticalAlignment="Top" Width="221" Click="Button_Click"/>
