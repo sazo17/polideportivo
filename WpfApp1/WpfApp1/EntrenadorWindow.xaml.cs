@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace WpfApp1
 {
@@ -22,6 +24,13 @@ namespace WpfApp1
         public EntrenadorWindow()
         {
             InitializeComponent();
+            conexion_mysql.inicia_bd();
+            String insertardatagrid = "select * from entrenadores";
+            MySqlCommand cmd = new MySqlCommand(insertardatagrid, conexion_mysql.con_mysql);
+            DataTable tabla = new DataTable();
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            data.Fill(tabla);
+            dg_entrenadores.ItemsSource = tabla.DefaultView;
         }
 
 
