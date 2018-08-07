@@ -74,5 +74,10 @@ namespace WpfApp1
         {
 
         }
+
+        private void txt_regla_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

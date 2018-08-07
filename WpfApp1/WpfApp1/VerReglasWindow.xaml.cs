@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace WpfApp1
 {
@@ -61,8 +63,36 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            String txt;
+            String nom=txt_deporte.Text.ToString();
+            
+            if (nom== "FUTBOL")
+            {
+               
+                    conexion_mysql.start_bd();
+                }
+            }
+           
+            /*if (txt=="FUTBOL") {
+             * txt = txt_deporte.ToString();
             ModificarReglaWindow modificar_regla = new ModificarReglaWindow();
-            modificar_regla.Show();
+                MessageBox.Show("HOLA");
+                nom = "FUTBOL";
+                modificar_regla.txt_nombre.Text = nom.ToString();
+                conexion_mysql.inicia_bd();
+
+                String query_fut = "SELECT idreglas_futbol as ID,nombre_reglas_futbol AS REGLAS ,descripcion_reglas_futbol AS DESCRIPCION,DEPORTE_idDeporte AS ID_DEPORTE from REGLAS_FUTBOL";
+                MySqlCommand cm = new MySqlCommand(query_fut, conexion_mysql.con_mysql);
+                MySqlDataAdapter datos = new MySqlDataAdapter(cm);
+                DataTable tabla = new DataTable();
+                datos.Fill(tabla);
+                modificar_regla.txt_regla.ItemsSource = tabla.DefaultView;
+                modificar_regla.Show();
+                conexion_mysql.terminal_bd();
+            }*/
+
+
         }
 
         private void txt_deporte_TextChanged(object sender, TextChangedEventArgs e)
