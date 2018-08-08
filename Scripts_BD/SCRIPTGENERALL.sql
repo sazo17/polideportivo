@@ -1,4 +1,4 @@
--- MySQL Workbench Forward Engineering
+﻿-- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
@@ -1268,6 +1268,12 @@ create procedure ingresar_deporte (in num_jugadores int, tdeporte int)
 begin
 	insert into deporte (cantidad_jugadores_deporte,idTipo_Deporte) values (num_jugadores,tdeporte);
 end$
+
+call ingresar_deporte(5,1); -- futbol 5
+call ingresar_deporte(11,1); -- futbol 11
+call ingresar_deporte(5,2); -- basket 5
+call ingresar_deporte(6,3); -- voli 6 
+call ingresar_deporte(9,4); -- beisbol 9
 
 -- EQUIPOS --
 select * from equipos;
