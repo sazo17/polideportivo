@@ -76,7 +76,7 @@ namespace WpfApp1
             String estado = "";
             String id = "";
 
-            MenuWindow MenuPrincipal = new MenuWindow();
+           
 
             if (user=="" || user == "Username"){
                 MessageBox.Show("Usuario o contraseña incorrectos", "Error");
@@ -127,11 +127,16 @@ namespace WpfApp1
                         MessageBox.Show("Usuario o contraseña incorrectos!", "ERROR");
                     }else
                     {
-                        if (estado == "1")
+                        if (estado == "2")
                         {
                             MessageBox.Show("Ya ha iniciado sesion!", "ERROR");
-                        }else
+                        } else
                         {
+                            MySqlCommand cmd = new MySqlCommand();
+                            cmd.Connection = conexion_mysql.con_mysql;
+                            cmd.CommandText = "UPDATE usuarios SET estado_usuarios=2 WHERE idUsuarios=" + id;
+                            cmd.ExecuteNonQuery();
+                            MenuWindow MenuPrincipal = new MenuWindow(id);
                             MenuPrincipal.Show();
                             this.Close();
                             conexion_mysql.terminal_bd();

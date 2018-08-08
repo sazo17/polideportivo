@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace WpfApp1
 {
@@ -19,9 +20,11 @@ namespace WpfApp1
     /// </summary>
     public partial class MenuWindow : Window
     {
-        public MenuWindow()
+        private String idUser = "";
+        public MenuWindow(String idUsuario)
         {
             InitializeComponent();
+            idUser = idUsuario;
         }
 
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
@@ -56,6 +59,11 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            conexion_mysql.inicia_bd();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conexion_mysql.con_mysql;
+            cmd.CommandText = "UPDATE usuarios SET estado_usuarios=1 WHERE idUsuarios=" + idUser;
+            cmd.ExecuteNonQuery();
             MainWindow login = new MainWindow();
             login.Show();
             this.Close();
