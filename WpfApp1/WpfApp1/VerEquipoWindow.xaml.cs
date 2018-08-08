@@ -138,10 +138,12 @@ namespace WpfApp1
             {
                 String nombre = txt_nombre.Text;
                 String cjugadores = text_cjugadores.Text;
-                String uniforme = cbo_uniforme.SelectedItem.ToString();
-                String entrenador = cbo_entrenador.SelectedItem.ToString();
+                int uniforme = cbo_uniforme.SelectedIndex;
+                uniforme++;
+                int entrenador = cbo_entrenador.SelectedIndex;
+                entrenador++;
 
-                if (nombre == "" || cjugadores == "" || uniforme == "" || entrenador == "")
+                if (nombre == "" || cjugadores == "")
                 {
                     MessageBox.Show("Debe llenar todos los campos");
                 }
@@ -155,12 +157,14 @@ namespace WpfApp1
                         conexion_mysql.start_bd();
                         MySqlCommand EQUIPO = conexion_mysql.con_mysql.CreateCommand();
                         EQUIPO.Connection = conexion_mysql.con_mysql;
-                        EQUIPO.CommandText = /*"UPDATE equipos SET idequipos= "+idint+", nombre_equipo = '"+nombre+"', cantidad_jugadores_equipo="+cjugadores+", identrenador ="+entrenador+", local_color_uniforme = " + uniforme + ", WHERE idequipos= "+ idint + " ";
-                        EQUIPO.Parameters.AddWithValue("idequipos", idint);
-                        EQUIPO.Parameters.AddWithValue("nombre_equipo", nombre);
-                        EQUIPO.Parameters.AddWithValue("cantidad_jugadores_equipo", cjugadores);
-                        EQUIPO.Parameters.AddWithValue("identrenador", entrenador);
-                        EQUIPO.Parameters.AddWithValue("local_color_uniforme", uniforme);
+                        EQUIPO.CommandText = "UPDATE equipos SET idequipos= @idEquipos, nombre_equipo=@nombre, cantidad_jugadores_equipo=@cantJ, identrenador =@idEnt,"+
+                            "uniforme_idUniforme=@uniforme WHERE idequipos= @idWhere";
+                        EQUIPO.Parameters.AddWithValue("@idEquipos", idint);
+                        EQUIPO.Parameters.AddWithValue("@nombre", nombre);
+                        EQUIPO.Parameters.AddWithValue("@cantJ", cjugadores);
+                        EQUIPO.Parameters.AddWithValue("@idEnt", entrenador);
+                        EQUIPO.Parameters.AddWithValue("@uniforme", uniforme);
+                        EQUIPO.Parameters.AddWithValue("@idWhere", idint);
                         int revisar = EQUIPO.ExecuteNonQuery();
 
                         if (revisar >=1)
@@ -170,22 +174,9 @@ namespace WpfApp1
                         else
                         {
                             MessageBox.Show("ERROR", "Equipo", MessageBoxButton.OK); 
-                        }*/
+                        }
                        
-
-                  "UPDATE equipos SET idequipos=@idequipo, nombre_equipo=@nombre, " +
-                        "cantidad_jugadores_Equipo=@cjugadores, identrenador=@entrenador, UNIFORME_idUniforme=@uniforme, " +
-                        " WHERE idequipos = @idequipo";
-
-                    EQUIPO.Parameters.AddWithValue("@idequipo", idint);
-                    EQUIPO.Parameters.AddWithValue("@nombre", nombre);
-                    EQUIPO.Parameters.AddWithValue("@cjugadores", cjugadores);
-                    EQUIPO.Parameters.AddWithValue("@entrenador", entrenador);
-                    EQUIPO.Parameters.AddWithValue("@uniforme", uniforme);
-                    EQUIPO.ExecuteNonQuery();
-                        MessageBox.Show("Equipo modificado exitosamente", "Equipo", MessageBoxButton.OK);
-
-                        this.Close();
+                        
                          }
                     catch (Exception ex)
                     {
