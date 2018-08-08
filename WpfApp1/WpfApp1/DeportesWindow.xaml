@@ -33,7 +33,7 @@
         <Label x:Name="lbl_agregar_regla" Content="------------------------------------------Nueva Regla----------------------------------------" HorizontalAlignment="Left" Margin="0,318,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="716" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Column="1"/>
         <Button x:Name="btn_agregar_regla" Content="Agregar Regla" Grid.Column="2" HorizontalAlignment="Left" Margin="36,559,0,0" VerticalAlignment="Top" Width="152" Click="btn_agregar_regla_Click"/>
         <Button x:Name="btn_regresar" Content="Regresar" Grid.Column="2" HorizontalAlignment="Left" Margin="193,559,0,0" VerticalAlignment="Top" Width="470" Grid.ColumnSpan="2" Click="btn_regresar_Click"/>
-        <ComboBox Grid.Column="3" HorizontalAlignment="Left" Margin="43,375,0,0" VerticalAlignment="Top" Width="154" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0" IsSynchronizedWithCurrentItem="True">
+        <ComboBox Grid.Column="3" HorizontalAlignment="Left" Margin="43,375,0,0" VerticalAlignment="Top" Width="154" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="1" IsSynchronizedWithCurrentItem="True">
             <ComboBoxItem Content="Seleccione un deporte" HorizontalAlignment="Left" Width="144" IsEnabled="False" IsSelected="True"/>
             <ComboBoxItem x:Name="basket" Content="BASKET" HorizontalAlignment="Left" Width="118" Selected="ComboBoxItem_Selected" IsSelected="True"/>
             <ComboBoxItem x:Name="beibol" Content="BEISBOL" HorizontalAlignment="Left" Width="118" IsSelected="True"/>

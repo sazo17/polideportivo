@@ -21,6 +21,10 @@ namespace WpfApp1
     /// </summary>
     public partial class VerReglasWindow : Window
     {
+        public String id;
+        public String nombreR;
+        public String Desc;
+        public String idd;
         public VerReglasWindow()
         {
             InitializeComponent();
@@ -60,17 +64,200 @@ namespace WpfApp1
         {
             this.Close();
         }
-
+        private void dg_mostrar_arbitros_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            DataRowView dv = (DataRowView)dg_mostrar_arbitros.SelectedItem;
+            if (dv != null)
+            {
+                id = dv.Row.ItemArray[0].ToString();
+                nombreR = dv.Row.ItemArray[1].ToString();
+                Desc = dv.Row.ItemArray[2].ToString();
+                idd = dv.Row.ItemArray[3].ToString();
+            }
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            String txt;
-            String nom=txt_deporte.Text.ToString();
             
-            if (nom== "FUTBOL")
+    
+            String nom=txt_deporte.Text.ToString();
+            if (nom=="FUTBOL")
             {
-               
-                    conexion_mysql.start_bd();
+                DataRowView dv = (DataRowView)dg_mostrar_arbitros.SelectedItem;
+                if (dv != null)
+                {
+                    id = dv.Row.ItemArray[0].ToString();
+                    nombreR = dv.Row.ItemArray[1].ToString();
+                    Desc = dv.Row.ItemArray[2].ToString();
+                    idd = dv.Row.ItemArray[3].ToString();
+                    try
+                    {
+
+                        conexion_mysql.start_bd();
+                        MySqlCommand DropR = conexion_mysql.con_mysql.CreateCommand();
+                        DropR.Connection = conexion_mysql.con_mysql;
+                        DropR.CommandText = "UPDATE REGLAS_FUTBOL SET idreglas_futbol=@idregla, nombre_reglas_futbol=@nomregla, descripcion_reglas_futbol=@des ," +
+                            "DEPORTE_idDeporte=@deporte" +
+                            " WHERE (idreglas_futbol=@idregla)";
+
+                        DropR.Parameters.AddWithValue("@idregla", id);
+                        DropR.Parameters.AddWithValue("@nomregla", nombreR);
+                        DropR.Parameters.AddWithValue("@des", Desc);
+                        DropR.Parameters.AddWithValue("@deporte", idd);
+
+                        DropR.ExecuteNonQuery();
+
+
+
+
+                        MessageBox.Show("regla modificado exitosamente", "regla", MessageBoxButton.OK);
+                        this.Close();
+                        conexion_mysql.terminal_bd();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SELECCIONE EL DATO A MODIFICAR Y CAMBIELO");
+                }
+            }
+            
+            
+            if (nom== "BASKETBALL")
+            {
+                DataRowView dv = (DataRowView)dg_mostrar_arbitros.SelectedItem;
+                if (dv != null)
+                {
+                    id = dv.Row.ItemArray[0].ToString();
+                    nombreR = dv.Row.ItemArray[1].ToString();
+                    Desc = dv.Row.ItemArray[2].ToString();
+                    idd = dv.Row.ItemArray[3].ToString();
+                    try
+                    {
+
+                        conexion_mysql.start_bd();
+                        MySqlCommand DropR = conexion_mysql.con_mysql.CreateCommand();
+                        DropR.Connection = conexion_mysql.con_mysql;
+                        DropR.CommandText = "UPDATE REGLAS_BASKET SET idreglas_basket=@idregla, nombre_reglas_basket=@nomregla, descripcion_reglas_basket=@des," +
+                            "DEPORTE_idDeporte=@deporte" +
+                            " WHERE (idreglas_basket=@idregla)";
+
+                        DropR.Parameters.AddWithValue("@idregla", id);
+                        DropR.Parameters.AddWithValue("@nomregla", nombreR);
+                        DropR.Parameters.AddWithValue("@des", Desc);
+                        DropR.Parameters.AddWithValue("@deporte", idd);
+
+                        DropR.ExecuteNonQuery();
+
+
+
+
+                        MessageBox.Show("regla modificado exitosamente", "regla", MessageBoxButton.OK);
+                        this.Close();
+                        conexion_mysql.terminal_bd();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SELECCIONE EL DATO A MODIFICAR Y CAMBIELO");
+                }
+                
+            }
+
+          if(nom== "BASEBALL")
+            {
+                DataRowView dv = (DataRowView)dg_mostrar_arbitros.SelectedItem;
+                if (dv != null)
+                {
+                    id = dv.Row.ItemArray[0].ToString();
+                    nombreR = dv.Row.ItemArray[1].ToString();
+                    Desc = dv.Row.ItemArray[2].ToString();
+                    idd = dv.Row.ItemArray[3].ToString();
+                    try
+                    {
+
+                        conexion_mysql.start_bd();
+                        MySqlCommand DropR = conexion_mysql.con_mysql.CreateCommand();
+                        DropR.Connection = conexion_mysql.con_mysql;
+                        DropR.CommandText = "UPDATE REGLAS_BEISBOL SET idreglas_beisbol=@idregla, nombre_reglas_beisbol=@nomregla, descripcion_reglas_beisbol=@des ," +
+                            "DEPORTE_idDeporte=@deporte" +
+                            " WHERE (idreglas_beisbol=@idregla)";
+
+                        DropR.Parameters.AddWithValue("@idregla", id);
+                        DropR.Parameters.AddWithValue("@nomregla", nombreR);
+                        DropR.Parameters.AddWithValue("@des", Desc);
+                        DropR.Parameters.AddWithValue("@deporte", idd);
+
+                        DropR.ExecuteNonQuery();
+
+
+
+
+                        MessageBox.Show("regla modificado exitosamente", "regla", MessageBoxButton.OK);
+                        this.Close();
+                        conexion_mysql.terminal_bd();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SELECCIONE EL DATO A MODIFICAR Y CAMBIELO");
+                }
+            }
+            if (nom== "VOLLEYBALL")
+            {
+                DataRowView dv = (DataRowView)dg_mostrar_arbitros.SelectedItem;
+                if (dv != null)
+                {
+                    id = dv.Row.ItemArray[0].ToString();
+                    nombreR = dv.Row.ItemArray[1].ToString();
+                    Desc = dv.Row.ItemArray[2].ToString();
+                    idd = dv.Row.ItemArray[3].ToString();
+                    try
+                    {
+
+                        conexion_mysql.start_bd();
+                        MySqlCommand DropR = conexion_mysql.con_mysql.CreateCommand();
+                        DropR.Connection = conexion_mysql.con_mysql;
+                        DropR.CommandText = "UPDATE REGLAS_VOLEIBOL SET idreglas_voleibol=@idregla, nombre_reglas_voleibol=@nomregla, descipcion_reglas_voleibol=@des ," +
+                            "DEPORTE_idDeporte=@deporte" +
+                            " WHERE (idreglas_voleibol=@idregla)";
+
+                        DropR.Parameters.AddWithValue("@idregla", id);
+                        DropR.Parameters.AddWithValue("@nomregla", nombreR);
+                        DropR.Parameters.AddWithValue("@des", Desc);
+                        DropR.Parameters.AddWithValue("@deporte", idd);
+
+                        DropR.ExecuteNonQuery();
+
+
+
+
+                        MessageBox.Show("regla modificado exitosamente", "regla", MessageBoxButton.OK);
+                        this.Close();
+                        conexion_mysql.terminal_bd();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SELECCIONE EL DATO A MODIFICAR Y CAMBIELO");
                 }
             }
            
@@ -94,7 +281,7 @@ namespace WpfApp1
 
 
         }
-
+      
         private void txt_deporte_TextChanged(object sender, TextChangedEventArgs e)
         {
 
