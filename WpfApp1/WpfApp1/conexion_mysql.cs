@@ -15,7 +15,7 @@ namespace WpfApp1
         public const String servidor = "localhost";    // ubicacion|ip del servidor
         public const String base_datos = "p_polideportivo";     // id|nombre de la base de datos
         public const String usuario = "root";              // usuario dentro de la base de datos
-        public const String pass = "159515";                 // contrasenia del usuario
+        public const String pass = "081195";                 // contrasenia del usuario
         public static string resultado = "";
 
 

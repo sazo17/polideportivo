@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using MySql.Data.MySqlClient;
 namespace WpfApp1
 {
     /// <summary>
@@ -19,15 +19,62 @@ namespace WpfApp1
     /// </summary>
     public partial class VerEquipoWindow : Window
     {
-        public VerEquipoWindow()
+
+        public String idequipo;
+        public int idint;
+        public VerEquipoWindow( String idqu)
         {
             InitializeComponent();
+            idequipo = idqu;
+           
+            try
+            {
+                //COMBOBOX ENTRENADOR
+                conexion_mysql.terminal_bd();
+                conexion_mysql.start_bd();
+                MySqlCommand nombrearbitro = conexion_mysql.con_mysql.CreateCommand();
+                nombrearbitro.Connection = conexion_mysql.con_mysql;
+                nombrearbitro.CommandText = "SELECT nombre_entrenadores FROM entrenadores;";
+                MySqlDataReader r1 = nombrearbitro.ExecuteReader();
+                while (r1.Read())
+                {
+                    cbo_entrenador.Items.Add(r1.GetString(0));
+                }
+                //COMBOBOX UNIFORME
+                conexion_mysql.terminal_bd();
+                conexion_mysql.start_bd();
+                MySqlCommand coloruniforme = conexion_mysql.con_mysql.CreateCommand();
+                coloruniforme.Connection = conexion_mysql.con_mysql;
+                coloruniforme.CommandText = "SELECT local_color_uniforme FROM uniforme;";
+                MySqlDataReader r3 = coloruniforme.ExecuteReader();
+                while (r3.Read())
+                {
+                    cbo_uniforme.Items.Add(r3.GetString(0));
+                }
+                conexion_mysql.terminal_bd();
+                conexion_mysql.start_bd();
+                MySqlCommand Entrenador = conexion_mysql.con_mysql.CreateCommand();
+                Entrenador.Connection = conexion_mysql.con_mysql;
+                Entrenador.CommandText = "Select * from equipos where idequipos = @idequipo";
+                Entrenador.Parameters.AddWithValue("@idequipo", idequipo);
+                MySqlDataReader r2 = Entrenador.ExecuteReader();
+
+                r2.Read();
+                txt_nombre.Text = r2.GetString(1);
+                text_cjugadores.Text = r2.GetString(2);
+                cbo_entrenador.SelectedIndex = r2.GetInt32(3) - 1;                
+                cbo_uniforme.SelectedIndex = r2.GetInt32(4) - 1;
+  
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
 
-        private void btn_modificar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
 
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -64,11 +111,7 @@ namespace WpfApp1
             this.Close();
         }
 
-        private void btn_ver_entrenador_Click(object sender, RoutedEventArgs e)
-        {
-            VerEntrenadorWindow ver_entrenador = new VerEntrenadorWindow();
-            ver_entrenador.Show();
-        }
+      
 
         private void btn_agregar_jugador_Click(object sender, RoutedEventArgs e)
         {
@@ -87,5 +130,77 @@ namespace WpfApp1
             MostrarEntrenadoresWindow mostrar_entrenador = new MostrarEntrenadoresWindow();
             mostrar_entrenador.Show();
         }
+
+        private void btn_modificar_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult aceptar = MessageBox.Show("Esta seguro de Modificar el Equipo?", "Modificar Equipo", MessageBoxButton.YesNo);
+            if (aceptar == MessageBoxResult.Yes)
+            {
+                String nombre = txt_nombre.Text;
+                String cjugadores = text_cjugadores.Text;
+                String uniforme = cbo_uniforme.SelectedItem.ToString();
+                String entrenador = cbo_entrenador.SelectedItem.ToString();
+
+                if (nombre == "" || cjugadores == "" || uniforme == "" || entrenador == "")
+                {
+                    MessageBox.Show("Debe llenar todos los campos");
+                }
+                else
+                {
+                    try
+                    {
+                        idint = Int32.Parse(idequipo);
+                        //ACTUALIZANDO EQUIPO
+                        conexion_mysql.terminal_bd();
+                        conexion_mysql.start_bd();
+                        MySqlCommand EQUIPO = conexion_mysql.con_mysql.CreateCommand();
+                        EQUIPO.Connection = conexion_mysql.con_mysql;
+                        EQUIPO.CommandText = /*"UPDATE equipos SET idequipos= "+idint+", nombre_equipo = '"+nombre+"', cantidad_jugadores_equipo="+cjugadores+", identrenador ="+entrenador+", local_color_uniforme = " + uniforme + ", WHERE idequipos= "+ idint + " ";
+                        EQUIPO.Parameters.AddWithValue("idequipos", idint);
+                        EQUIPO.Parameters.AddWithValue("nombre_equipo", nombre);
+                        EQUIPO.Parameters.AddWithValue("cantidad_jugadores_equipo", cjugadores);
+                        EQUIPO.Parameters.AddWithValue("identrenador", entrenador);
+                        EQUIPO.Parameters.AddWithValue("local_color_uniforme", uniforme);
+                        int revisar = EQUIPO.ExecuteNonQuery();
+
+                        if (revisar >=1)
+                        {
+                            MessageBox.Show("Equipo modificado exitosamente", "Equipo", MessageBoxButton.OK);
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERROR", "Equipo", MessageBoxButton.OK); 
+                        }*/
+                       
+
+                  "UPDATE equipos SET idequipos=@idequipo, nombre_equipo=@nombre, " +
+                        "cantidad_jugadores_Equipo=@cjugadores, identrenador=@entrenador, UNIFORME_idUniforme=@uniforme, " +
+                        " WHERE idequipos = @idequipo";
+
+                    EQUIPO.Parameters.AddWithValue("@idequipo", idint);
+                    EQUIPO.Parameters.AddWithValue("@nombre", nombre);
+                    EQUIPO.Parameters.AddWithValue("@cjugadores", cjugadores);
+                    EQUIPO.Parameters.AddWithValue("@entrenador", entrenador);
+                    EQUIPO.Parameters.AddWithValue("@uniforme", uniforme);
+                    EQUIPO.ExecuteNonQuery();
+                        MessageBox.Show("Equipo modificado exitosamente", "Equipo", MessageBoxButton.OK);
+
+                        this.Close();
+                         }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+
+                }
+
+            }
+            else
+            {
+                this.Close();
+            }
+
+        }
     }
 }
+

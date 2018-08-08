@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\
+C:\Users\Richie\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\App.xaml
+C:\Users\Richie\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\App.xaml
 50-734348760
 
 551146923093
-14936724836
+141987103815
 AgregarArbitroWindow.xaml;AgregarEmpleadoWindow.xaml;AgregarEntrenadorWindow.xaml;AgregarEquipoWindow.xaml;AgregarFaltaFutbolWindow.xaml;AgregarFaltaWindow.xaml;AgregarGolFutbolWindow.xaml;AgregarJugadorWindow.xaml;AjustesWindow.xaml;ArbitrosWindow.xaml;AyudaWindow.xaml;BuscarJugadoresWindow.xaml;CalendariosWindow.xaml;CamposWindow.xaml;DeportesWindow.xaml;EliminatoriasWindow.xaml;EmpleadosWindow.xaml;EntrenadorWindow.xaml;EquiposWindow.xaml;EstadisticasBaseballWindow.xaml;EstadisticasBasketballWindow.xaml;EstadisticasFutbolWindow.xaml;EstadisticasVolleyballWindow.xaml;EstadisticasWindow.xaml;InformacionWindow.xaml;JornadasWindow.xaml;JugadoresWindow.xaml;LigaConEliminatoriasWindow.xaml;LigaWindow.xaml;MainWindow.xaml;MenuWindow.xaml;ModificarReglaWindow.xaml;MostrarArbitrosWindow.xaml;MostrarEmpleadoWindow.xaml;MostrarEntrenadoresWindow.xaml;MostrarJugadoresWindow.xaml;OlvideContraseniaWindow.xaml;QuitarFaltaWindow.xaml;QuitarGolFutbolWindow.xaml;TablaGoleadoresFutbolWindow.xaml;TablaPorteroMenosVencidoFutbolWindow.xaml;TablaPosicionesWindow.xaml;TorneosWindow.xaml;VerArbitroWindow.xaml;VerCampeonatoWindow.xaml;VerEmpleadoWindow.xaml;VerEntrenadorWindow.xaml;VerEquipoWindow.xaml;VerJugadorWindow.xaml;VerReglasWindow.xaml;
 
 False
