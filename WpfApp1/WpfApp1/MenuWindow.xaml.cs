@@ -21,10 +21,12 @@ namespace WpfApp1
     public partial class MenuWindow : Window
     {
         private String idUser = "";
-        public MenuWindow(String idUsuario)
+        private String Usertype = "";
+        public MenuWindow(String idUsuario, String tipoUser)
         {
             InitializeComponent();
             idUser = idUsuario;
+            Usertype = tipoUser;
         }
 
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
@@ -40,6 +42,11 @@ namespace WpfApp1
         private void btn_cerrar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            conexion_mysql.inicia_bd();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conexion_mysql.con_mysql;
+            cmd.CommandText = "UPDATE usuarios SET estado_usuarios=1 WHERE idUsuarios=" + idUser;
+            cmd.ExecuteNonQuery();
         }
 
         private void btn_minimizar_Click(object sender, RoutedEventArgs e)
