@@ -136,7 +136,7 @@ namespace WpfApp1
                             cmd.Connection = conexion_mysql.con_mysql;
                             cmd.CommandText = "UPDATE usuarios SET estado_usuarios=2 WHERE idUsuarios=" + id;
                             cmd.ExecuteNonQuery();
-                            MenuWindow MenuPrincipal = new MenuWindow(id);
+                            MenuWindow MenuPrincipal = new MenuWindow(id, tipo);
                             MenuPrincipal.Show();
                             this.Close();
                             conexion_mysql.terminal_bd();

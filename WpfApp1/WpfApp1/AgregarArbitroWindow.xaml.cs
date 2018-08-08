@@ -158,10 +158,10 @@ namespace WpfApp1
                             cmd.Parameters.AddWithValue("i_pass", contraseña).Direction = System.Data.ParameterDirection.Input;
 
                             //estado (PREDEFINIDO 0)
-                            cmd.Parameters.AddWithValue("i_estado", "0").Direction = System.Data.ParameterDirection.Input;
+                            cmd.Parameters.AddWithValue("i_estado", "1").Direction = System.Data.ParameterDirection.Input;
 
                             //tipo de usuario (PREDEFINIDO I)
-                            cmd.Parameters.AddWithValue("i_tipo", "I").Direction = System.Data.ParameterDirection.Input;
+                            cmd.Parameters.AddWithValue("i_tipo", "2").Direction = System.Data.ParameterDirection.Input;
 
                             //PARAMETROS DE SALIDA
                             //bit
