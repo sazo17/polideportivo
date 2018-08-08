@@ -512,8 +512,5 @@
   <ItemGroup>
     <Resource Include="polideportivo_images\ayuda\ayuda-background.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="basket1.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -187,7 +187,7 @@ namespace WpfApp1
                             DropArbitro.Parameters.AddWithValue("@deporte", tipoDeporte + 1);
                             DropArbitro.Parameters.AddWithValue("@tipoDeporte", tipoDeporte + 1);
                             DropArbitro.Parameters.AddWithValue("@idArb", idArb);
-                            DropArbitro.Parameters.AddWithValue("@tipoArbitro", tipoArb);
+                            
                             DropArbitro.ExecuteNonQuery();
 
 

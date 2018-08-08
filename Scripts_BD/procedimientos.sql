@@ -1,63 +1,3 @@
--- Es necesario realizar esta modificacion en el campo de la tabla
--- Workbench por si solo no permitia definir el tipo de dato `TIMESTAMP`
-ALTER TABLE BITACORA_LOGIN MODIFY fecha_bitacora TIMESTAMP;
-
--- Codigo PL/MySQL 
-DELIMITER //									-- Funciona correctamente
--- Definicion de cada uno de los parametros IN parametros que recibe
--- OUT salidas a la aplicacion.
-CREATE PROCEDURE p_login(IN user VARCHAR(16)
-, IN pass VARCHAR(30)
-, OUT o_tipo_usuarios VARCHAR(1) 
-, OUT o_estado_usuarios VARCHAR(1)
-, OUT o_idUsuarios INT(11)
-) 
-BEGIN
-	-- Declaracion de variables
-	DECLARE s_tipo,  s_estado VARCHAR(1);
-	DECLARE s_id INT(11);
-    	-- Declaracion de Exception
-	DECLARE CONTINUE HANDLER FOR SQLEXCEPTION 
-	SET o_tipo_usuarios = 0, o_estado_usuarios = 0, o_idUsuarios = 0;
-        
-	-- Busqueda de usuario y contrasenia.
-	-- Se asigna en una variable cuando se encuentra.
-	SELECT Tipo_usuarios, estado_usuarios, idUsuarios
-	INTO s_tipo, s_estado, s_id
-	FROM USUARIOS
-	WHERE 
-		user_usuarios = user AND
-		pass_usuarios = pass;
-        
-	-- Validacion de `s_id` si no es NULL puede proceder
-	IF s_id IS NOT NULL THEN
-		-- Asignacion de los valores recibidos en las variables
-		-- de salida.
-		SET o_tipo_usuarios = s_tipo;
-		SET o_estado_usuarios = s_estado;
-		SET o_idUsuarios = s_id;
-        	-- Inserta datos en la `bitacora_login` 
-		-- inserta la fecha actual + hora y el host = hostname@puerto
-		INSERT INTO BITACORA_LOGIN (usuario_bitacora, 
-		fecha_bitacora, host_bitacora) 
-		VALUES (s_id, SYSDATE(), USER());
-		COMMIT;
-	ELSE 
-		-- Retonra valores asignados en variables cuando `s_id`es NULL
-		SET o_tipo_usuarios = 'N';
-		SET o_estado_usuarios = 'N';
-		SET o_idUsuarios = 0;				  
-    END IF;
-END//
-DELIMITER ;
-
--- Ejecutando PL/MySQL para pruebas
-CALL p_login('usuario1', '1234', @a, @b, @c);
--- Salida en pantalla de los parametros de `p_login`
-SELECT @a, @b, @c;
--- Verificando tabla `Bitacora_Login`
-SELECT * FROM BITACORA_LOGIN;
-
 
 -- --------------------------------------------------------------------------------------------
 -- Procedimiento para campeonato
@@ -541,7 +481,6 @@ ALTER TABLE TABLAS_POSICIONES_BASKET
 -- CALL p_tabla_basket(1, '2018-08-09', '2018-10-05', 5, 'campeonato1', 2, 'tipoc_1', @a); 
 -- SELECT @a;
 
-DROP PROCEDURE p_tabla_basket;
 DELIMITER //
 CREATE PROCEDURE p_tabla_basket(
 IN i_lugar INT, 				IN i_fechaIni DATE, 
@@ -672,8 +611,8 @@ ALTER TABLE TABLA_POSICIONES_BEISBOL
 ALTER TABLE TABLA_POSICIONES_BEISBOL
 	MODIFY ruta_tabla_posiciones_beisbol VARCHAR(16) DEFAULT 'NO DEFINE';
 -- ------------------------------------------------------
-CALL p_tabla_beisbol(1, 5, 'campeonato1', 2, 'tipoc_1', @a); -- 'campeonato1', 2, 'tipoc_2', 
-SELECT @a;
+-- CALL p_tabla_beisbol(1, 5, 'campeonato1', 2, 'tipoc_1', @a); -- 'campeonato1', 2, 'tipoc_2', 
+-- SELECT @a;
 
 DELIMITER //
 CREATE PROCEDURE p_tabla_beisbol(
@@ -714,7 +653,182 @@ BEGIN
 END//
 DELIMITER ;
 
+-- ----------------------------------------------------
+-- CORRECTO
+-- CALL p_arbitroJornada(1, 1, '2018-08-09', 1, 2, @a);
+-- SELECT @a;
 
+DELIMITER //
+CREATE PROCEDURE p_arbitroJornada (
+IN i_arbitroID INT, 	IN i_campeonato INT,
+IN i_fechaJorna DATE,	IN i_equipoL INT,
+IN i_equipoV INT, OUT o_bit INT(1))
+BEGIN
+	DECLARE t_jornada, t_tipoArbitro INT;
+	DECLARE t_tipoDeport, t_deporte, t_tipoCamp INT;
+    --
+    SELECT idTipo_Arbitro INTO t_tipoArbitro
+    FROM ARBITRO
+    WHERE 
+		idArbitro = i_arbitroID;
+	--
+    SELECT idJornadas INTO t_jornada
+    FROM JORNADAS
+    WHERE 
+		fecha_jornadas = i_fechaJorna AND
+        idCampeonato = i_campeonato AND
+        idEquipos_local = i_equipoL AND
+        idEquipos_visita = i_equipoV;
+    SELECT idTipo_Deporte, idDeporte, idTipo_campeonato
+    INTO t_tipoDeport, t_deporte, t_tipoCamp 
+    FROM JORNADAS
+    WHERE
+		idJornadas = t_jornada;
+    --
+    IF t_tipoArbitro IS NOT NULL THEN
+		INSERT INTO registro_arbitro_jornada
+        (idArbitro, idTipo_Arbitro, idJornadas, idEquipos_local,idEquipos_visita,
+        idCampeonato,idTipo_Deporte, idDeporte, idTipo_campeonato)
+        VALUES (i_arbitroID, t_tipoArbitro, t_jornada, 
+        i_equipoL, i_equipoV, i_campeonato, 
+        t_tipoDeport, t_deporte, t_tipoCamp);
+        SET o_bit = 1;
+        COMMIT;
+	ELSE
+		SET o_bit = 0;
+        ROLLBACK;
+    END IF;
+END//
+DELIMITER ;
+
+
+
+
+-- Correcto
+-- CALL p_amonestaJug(5, 'tipoA1', 1, 2, '2018-08-09', 1, @a);
+-- select @a;
+DELIMITER //
+CREATE PROCEDURE p_amonestaJug (
+IN i_puntos INT,		IN i_tipoAmonesta VARCHAR(35),
+IN i_equipoid INT, 		IN i_jugador INT,
+IN i_fechaJorn DATE, 	IN i_campeoId INT,
+OUT o_bit INT(1))
+BEGIN
+	DECLARE t_jugReg, t_jornada, t_tipoAmonestaID INT;
+	DECLARE t_equipoL, t_equipoV, t_tipoDeport, t_deporte, t_tipoCameponato INT;
+    --
+    SELECT idtipo_amonestaciones INTO t_tipoAmonestaID 
+    FROM TIPO_AMONESTACIONES
+    WHERE 
+	 	clase_tipo_amonestaciones = i_tipoAmonesta;
+        
+	--
+	SELECT id_jugreg INTO t_jugReg
+	FROM JUGADORES_REGISTRO
+	WHERE 
+	 	idEquipos = i_equipoid AND
+		idJugadores = i_jugador;
+	
+    
+	SELECT idJornadas INTO t_jornada
+	FROM JORNADAS
+	WHERE 
+	 	idCampeonato = i_campeoId AND
+		fecha_jornadas = i_fechaJorn AND
+        (idEquipos_local = i_equipoid OR 
+        idEquipos_visita = i_equipoid);
+	
+    
+	select @t_jugReg, @t_jornada;
+	SELECT idEquipos_local, idEquipos_visita, idTipo_Deporte, idDeporte, idTipo_campeonato
+    INTO t_equipoL, t_equipoV, t_tipoDeport, t_deporte, t_tipoCameponato 
+    FROM JORNADAS
+	WHERE 
+	 	idJornadas = t_jornada;
+    
+	IF t_jornada IS NOT NULL AND 
+	   t_tipoAmonestaID IS NOT NULL AND
+       t_jugReg IS NOT NULL THEN
+		INSERT INTO AMONESTACIONES_REGISTRO_JUGADORES
+        (puntos_amonestaciones_registro_jugadores, idtipo_amonestaciones,
+         id_jugreg, idEquipos, idJornadas, idEquipos_local, idEquipos_visita, 
+        idCampeonato1, idTipo_Deporte, idDeporte, idTipo_campeonato)
+        VALUES (i_puntos, t_tipoAmonestaID, t_jugReg, i_equipoid,  
+	 		t_jornada, t_equipoL, t_equipoV, i_campeoId, t_tipoDeport,
+             t_deporte, t_tipoCameponato
+         ); 
+		SET o_bit = 1;
+		COMMIT;
+     
+	ELSE
+	 	SET o_bit = 0;
+         ROLLBACK;
+	END IF;
+    
+END//
+DELIMITER ; 
+
+
+
+-- CALL p_anotacionJug(5, 'tipoAnota1', 1, 2, '2018-08-09', 1, @a);
+-- SELECT @a;
+-- correcto
+DELIMITER //
+CREATE PROCEDURE p_anotacionJug (
+IN i_puntos INT,		IN i_tipoAnotacion VARCHAR(35),
+IN i_equipoid INT, 		IN i_jugador INT,
+IN i_fechaJorn DATE, 	IN i_campeoId INT,
+OUT o_bit INT(1)
+)
+BEGIN
+	DECLARE t_jugReg, t_jornada, t_tipoAnotacionID INT;
+	DECLARE t_equipoL, t_equipoV, t_tipoDeport, t_deporte, t_tipoCameponato INT;
+    --
+    SELECT idtipo_anotaciones INTO t_tipoAnotacionID 
+    FROM TIPO_ANOTACIONES
+    WHERE 
+		clase_tipo_anotaciones = i_tipoAnotacion;
+	--
+    SELECT id_jugreg INTO t_jugReg
+    FROM JUGADORES_REGISTRO
+    WHERE 
+		idEquipos = i_equipoid AND
+        idJugadores = i_jugador;
+	--
+    SELECT idJornadas INTO t_jornada
+    FROM JORNADAS
+    WHERE 
+		idCampeonato = i_campeoId AND 
+        fecha_jornadas = i_fechaJorn AND
+        (idEquipos_local = i_equipoid OR 
+        idEquipos_visita = i_equipoid);
+	--
+	SELECT idEquipos_local, idEquipos_visita, idTipo_Deporte, idDeporte, idTipo_campeonato
+    INTO t_equipoL, t_equipoV, t_tipoDeport, t_deporte, t_tipoCameponato 
+    FROM JORNADAS
+	WHERE 
+		idJornadas = t_jornada;
+    
+	IF t_jornada IS NOT NULL AND 
+	   t_tipoAnotacionID IS NOT NULL AND
+       t_jugReg IS NOT NULL THEN
+		INSERT INTO ANOTACIONES_REGISTRO_JUGADORES
+        (puntos_anotaciones_registro_jugadores, idtipo_anotaciones,
+        id_jugreg, idEquipos, idJornadas, idEquipos_local, idEquipos_visita, 
+        idCampeonato1, idTipo_Deporte, idDeporte, idTipo_campeonato)
+        VALUES (i_puntos, t_tipoAnotacionID, t_jugReg, i_equipoid,  
+			t_jornada, t_equipoL, t_equipoV, i_campeoId, t_tipoDeport,
+            t_deporte, t_tipoCameponato
+        ); 
+        SET o_bit = 1;
+        COMMIT;
+	ELSE
+		SET o_bit = 0;
+        ROLLBACK;
+    END IF;
+    
+END//
+DELIMITER ; 
 
 
 

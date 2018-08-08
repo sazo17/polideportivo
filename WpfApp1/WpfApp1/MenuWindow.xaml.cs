@@ -115,6 +115,7 @@ namespace WpfApp1
             AyudaWindow ayuda = new AyudaWindow();
             ayuda.Show();
         }
+   
 
         private void btn_buscar_jugadores_Click(object sender, RoutedEventArgs e)
         {
@@ -157,5 +158,7 @@ namespace WpfApp1
             DeportesWindow deportes = new DeportesWindow();
             deportes.Show();
         }
+
+        
     }
 }
