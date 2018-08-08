@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace WpfApp1
 {
@@ -19,15 +21,35 @@ namespace WpfApp1
     /// </summary>
     public partial class EquiposWindow : Window
     {
+        public String iddelequipo;
         public EquiposWindow()
         {
             InitializeComponent();
+
+            InitializeComponent();
+            conexion_mysql.inicia_bd();
+
+            String query_datagrid = "SELECT idequipos, nombre_equipo FROM equipos";
+
+            MySqlCommand cmd = new MySqlCommand(query_datagrid, conexion_mysql.con_mysql);
+            DataTable tabla = new DataTable();
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            data.Fill(tabla);
+            dg_equipos.ItemsSource = tabla.DefaultView;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            VerEquipoWindow verequipo = new VerEquipoWindow();
-            verequipo.Show();
+
+            if (dg_equipos.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un equipo", "equipos");
+            }
+            else
+            {
+                VerEquipoWindow verequipo = new VerEquipoWindow(iddelequipo);
+                verequipo.Show();
+            }
         }
 
         private void btn_regresar_Click(object sender, RoutedEventArgs e)
@@ -69,6 +91,15 @@ namespace WpfApp1
         {
             AgregarEquipoWindow agregar_equipo = new AgregarEquipoWindow();
             agregar_equipo.Show();
+        }
+
+        private void dg_equipos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataRowView dv = (DataRowView)dg_equipos.SelectedItem;
+            if (dv != null)
+            {
+                iddelequipo = dv.Row.ItemArray[0].ToString();
+            }
         }
     }
 }

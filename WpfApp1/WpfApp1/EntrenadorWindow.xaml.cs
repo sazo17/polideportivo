@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace WpfApp1
 {
@@ -19,9 +21,17 @@ namespace WpfApp1
     /// </summary>
     public partial class EntrenadorWindow : Window
     {
+        public String id_entrenadores;
         public EntrenadorWindow()
         {
             InitializeComponent();
+            conexion_mysql.inicia_bd();
+            String insertardatagrid = "select * from entrenadores";
+            MySqlCommand cmd = new MySqlCommand(insertardatagrid, conexion_mysql.con_mysql);
+            DataTable tabla = new DataTable();
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+            data.Fill(tabla);
+            dg_entrenadores.ItemsSource = tabla.DefaultView;
         }
 
 
@@ -68,8 +78,32 @@ namespace WpfApp1
 
         private void btn_modificar_entrenador_Click(object sender, RoutedEventArgs e)
         {
-            VerEntrenadorWindow entrenador = new VerEntrenadorWindow();
-            entrenador.Show();
+            if (dg_entrenadores.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un entrenador", "Entrenadores");
+            }
+            else
+            {
+                VerEntrenadorWindow entrenador = new VerEntrenadorWindow(id_entrenadores);
+                entrenador.Show();
+                this.Close();
+
+
+            }
+            
+        }
+
+        private void dg_entrenadores_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataRowView dv = (DataRowView)dg_entrenadores.SelectedItem;
+            if (dv != null)
+            {
+                id_entrenadores = dv.Row.ItemArray[0].ToString();
+            }
+            
+
+
+            }
         }
     }
-}
+
