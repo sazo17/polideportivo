@@ -44,7 +44,7 @@
             </TextBox.RenderTransform>
         </TextBox>
         <Label x:Name="lbl_informacion_jugador" Content="---------------------------------------Información Jugador-------------------------------------" HorizontalAlignment="Left" Margin="29,82,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="32" Cursor="Hand" Width="710" RenderTransformOrigin="-1.886,-6.115" FontSize="18" FontWeight="Bold"/>
-        <Button x:Name="btn_agregar" Content="Agregar" HorizontalAlignment="Left" Margin="30,363,0,0" VerticalAlignment="Top" Width="132"/>
+        <Button x:Name="btn_agregar" Content="Agregar" HorizontalAlignment="Left" Margin="30,363,0,0" VerticalAlignment="Top" Width="132" Click="btn_agregar_Click"/>
         <Button x:Name="btn_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="167,363,0,0" VerticalAlignment="Top" Width="572" Click="btn_regresar_Click"/>
         <Label x:Name="lbl_username" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="450,215,0,0" VerticalAlignment="Top" Foreground="#FFFDEFEF" Height="26" Cursor="Hand" Width="117" RenderTransformOrigin="-1.886,-6.115" VerticalContentAlignment="Center"/>
         <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="581,218,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="158" RenderTransformOrigin="0.474,2.217"/>

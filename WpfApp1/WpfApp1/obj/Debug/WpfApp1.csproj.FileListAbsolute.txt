@@ -112,3 +112,6 @@ C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-De
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\Pablo\Pablo\UMG\OCTAVO CICLO\Analisis de Sistemas 2\repositorio Poli-Deportivo\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\Richie\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Richie\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Richie\Documents\GitHub\polideportivo\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
