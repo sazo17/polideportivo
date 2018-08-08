@@ -41,7 +41,7 @@ namespace WpfApp1
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             IPWindow ne = new IPWindow();
-            MessageBox.Show(ip);
+            MessageBox.Show(ne.getIp());
             IPWindow a = new IPWindow();
             MessageBox.Show(a.txt_ip.Text);
             String user = txt_username.Text;
@@ -213,7 +213,12 @@ namespace WpfApp1
         private void btn_configurar_ip_Click(object sender, RoutedEventArgs e)
         {
             IPWindow configuracion_ip = new IPWindow();
+            this.Close();
             configuracion_ip.Show();
+            
+            
+           
+
         }
     }
 }

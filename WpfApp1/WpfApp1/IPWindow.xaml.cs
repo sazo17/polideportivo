@@ -69,11 +69,17 @@ namespace WpfApp1
             username = txt_username.Text;
             password = txt_password.Text;
             configuracion_ip = txt_ip.Text;
+
             MainWindow datos = new MainWindow();
-            datos.ip=configuracion_ip;
+            datos.ip = configuracion_ip;
             this.Close();
+            datos.Show();
 
+        }
 
+        public String getIp()
+        {
+            return configuracion_ip;
         }
     }
 }
