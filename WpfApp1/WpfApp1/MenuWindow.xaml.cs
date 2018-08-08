@@ -42,7 +42,7 @@ namespace WpfApp1
         private void btn_cerrar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conexion_mysql.con_mysql;
             cmd.CommandText = "UPDATE usuarios SET estado_usuarios=1 WHERE idUsuarios=" + idUser;
@@ -66,7 +66,7 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conexion_mysql.con_mysql;
             cmd.CommandText = "UPDATE usuarios SET estado_usuarios=1 WHERE idUsuarios=" + idUser;

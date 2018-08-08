@@ -22,7 +22,7 @@ namespace WpfApp1
         public ModificarReglaWindow()
         {
             InitializeComponent();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
         }
         
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)

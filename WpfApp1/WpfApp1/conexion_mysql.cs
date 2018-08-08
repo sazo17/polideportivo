@@ -11,25 +11,27 @@ namespace WpfApp1
 {
     class conexion_mysql
     {
+        
         public static MySqlConnection con_mysql = null;       // variable de conexion
-        public const String servidor = "localhost";    // ubicacion|ip del servidor
-        public const String base_datos = "p_polideportivo";     // id|nombre de la base de datos
-        public const String usuario = "root";              // usuario dentro de la base de datos
-        public const String pass = "159515";                 // contrasenia del usuario
+        
         public static string resultado = "";
 
 
+        public static String ipp, userr, passs;
 
-
-        public static void inicia_bd()
+        public static void inicia_bd(String ip, String user, String pass)
         {
+            ipp = ip;
+            userr = user;
+            passs = pass;
             try
             {
+                IPWindow conf = new IPWindow();
                 MySqlConnectionStringBuilder constructor = new MySqlConnectionStringBuilder();
-                constructor.Server = servidor;
-                constructor.UserID = usuario;
-                constructor.Password = pass;
-                constructor.Database = base_datos;
+                constructor.Server = "10.1.65.31";
+                constructor.UserID = "root";
+                constructor.Password = "159515";
+                constructor.Database = "p_polideportivo";
                 constructor.SslMode = MySqlSslMode.None;                    // evitar la conexion por medio de SSL
                 String conexion_estable = constructor.ToString();           // se obtiene el contenido del constructor a una cadena
                 constructor = null;                                         // se limpia el constructor

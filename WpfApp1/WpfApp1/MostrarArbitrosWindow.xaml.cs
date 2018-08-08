@@ -25,7 +25,7 @@ namespace WpfApp1
         public MostrarArbitrosWindow()
         {
             InitializeComponent();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
             String query_datagrid = "SELECT nombre_arbitro, apellido_arbitro, telefono_arbitro FROM arbitro";
 

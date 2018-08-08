@@ -23,7 +23,7 @@ namespace WpfApp1
         public AgregarEquipoWindow()
         {
             InitializeComponent();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
             //tipo de deporte
             MySqlCommand cmd = conexion_mysql.con_mysql.CreateCommand();
@@ -34,7 +34,7 @@ namespace WpfApp1
                 cbo_entrenador.Items.Add(r.GetString(0));
             }
             conexion_mysql.terminal_bd();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
             //tipo arbitro
             MySqlCommand cmd2 = conexion_mysql.con_mysql.CreateCommand();
             cmd2.CommandText = "SELECT local_color_uniforme FROM uniforme;";
@@ -44,7 +44,7 @@ namespace WpfApp1
                 cbo_color_uniforme_local.Items.Add(r2.GetString(0));
             }
             conexion_mysql.terminal_bd();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd ();
 
         }
 

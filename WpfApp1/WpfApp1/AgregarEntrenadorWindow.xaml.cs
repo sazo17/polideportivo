@@ -24,7 +24,7 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
             //cantidad jugadores
             MySqlCommand cmd = conexion_mysql.con_mysql.CreateCommand();
@@ -35,7 +35,7 @@ namespace WpfApp1
                 cbo_cjugadores.Items.Add(r.GetString(0));
             }
             conexion_mysql.terminal_bd();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
            
         }
 

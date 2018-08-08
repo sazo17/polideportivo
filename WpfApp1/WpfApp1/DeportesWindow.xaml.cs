@@ -27,7 +27,7 @@ namespace WpfApp1
         {
 
             InitializeComponent();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
             String query_fut= "SELECT nombre_reglas_futbol AS REGLAS ,descripcion_reglas_futbol AS DESCRIPCION from REGLAS_FUTBOL";
             MySqlCommand cm = new MySqlCommand(query_fut,conexion_mysql.con_mysql);
             MySqlDataAdapter datos = new MySqlDataAdapter(cm);
@@ -99,7 +99,7 @@ namespace WpfApp1
             variable = "FUTBOL";
             VerReglasWindow ver_reglas = new VerReglasWindow();
             ver_reglas.txt_deporte.Text = variable.ToString();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
             String query_fut = "SELECT idreglas_futbol as ID,nombre_reglas_futbol AS REGLAS ,descripcion_reglas_futbol AS DESCRIPCION from REGLAS_FUTBOL";
             MySqlCommand cm = new MySqlCommand(query_fut, conexion_mysql.con_mysql);
@@ -116,7 +116,7 @@ namespace WpfApp1
             variable = "BASKETBALL";
             VerReglasWindow ver_reglas = new VerReglasWindow();
             ver_reglas.txt_deporte.Text = variable.ToString();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
             String query_bas = "SELECT idreglas_basket as ID,nombre_reglas_basket AS REGLAS ,descripcion_reglas_basket AS DESCRIPCION from REGLAS_BASKET";
             MySqlCommand cmba = new MySqlCommand(query_bas, conexion_mysql.con_mysql);
@@ -133,7 +133,7 @@ namespace WpfApp1
             variable = "BASEBALL";
             VerReglasWindow ver_reglas = new VerReglasWindow();
             ver_reglas.txt_deporte.Text = variable.ToString();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
 
             String query_bei = "SELECT idreglas_beisbol as ID,nombre_reglas_beisbol AS REGLAS ,descripcion_reglas_beisbol AS DESCRIPCION from REGLAS_BEISBOL";
@@ -152,7 +152,7 @@ namespace WpfApp1
             variable = "VOLLEYBALL";
             VerReglasWindow ver_reglas = new VerReglasWindow();
             ver_reglas.txt_deporte.Text = variable.ToString();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
             String query_voi = "SELECT idreglas_voleibol as ID,nombre_reglas_voleibol AS REGLAS ,descipcion_reglas_voleibol AS DESCRIPCION from REGLAS_VOLEIBOL";
             MySqlCommand cmv = new MySqlCommand(query_voi, conexion_mysql.con_mysql);
@@ -180,7 +180,7 @@ namespace WpfApp1
             int id_deporteB = 3;
             int id_deporteV = 4;
 
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
             MySqlCommand cmd = conexion_mysql.con_mysql.CreateCommand();
            
             

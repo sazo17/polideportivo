@@ -27,7 +27,7 @@ namespace WpfApp1
             InitializeComponent();            
             int x=0, y = 0;
 
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conexion_mysql.con_mysql;
             cmd.CommandText = "SELECT campo_campos, fotorafia_campos, ancho_campos, largo_campos FROM campos";

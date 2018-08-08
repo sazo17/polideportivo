@@ -25,7 +25,7 @@ namespace WpfApp1
         public EntrenadorWindow()
         {
             InitializeComponent();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
             String insertardatagrid = "select * from entrenadores";
             MySqlCommand cmd = new MySqlCommand(insertardatagrid, conexion_mysql.con_mysql);
             DataTable tabla = new DataTable();

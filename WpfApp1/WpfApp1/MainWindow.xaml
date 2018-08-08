@@ -47,6 +47,7 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
+        <Button x:Name="btn_configurar_ip" Content="Configurar IP" Grid.Column="4" HorizontalAlignment="Left" Margin="133,152,0,0" Grid.Row="3" VerticalAlignment="Top" Width="76" Grid.ColumnSpan="2" Background="#FFD2DACD" Click="btn_configurar_ip_Click"/>
 
     </Grid>
 </Window>

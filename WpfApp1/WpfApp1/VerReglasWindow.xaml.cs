@@ -88,21 +88,18 @@ namespace WpfApp1
                     id = dv.Row.ItemArray[0].ToString();
                     nombreR = dv.Row.ItemArray[1].ToString();
                     Desc = dv.Row.ItemArray[2].ToString();
-                    idd = dv.Row.ItemArray[3].ToString();
                     try
                     {
 
                         conexion_mysql.start_bd();
                         MySqlCommand DropR = conexion_mysql.con_mysql.CreateCommand();
                         DropR.Connection = conexion_mysql.con_mysql;
-                        DropR.CommandText = "UPDATE REGLAS_FUTBOL SET idreglas_futbol=@idregla, nombre_reglas_futbol=@nomregla, descripcion_reglas_futbol=@des ," +
-                            "DEPORTE_idDeporte=@deporte" +
+                        DropR.CommandText = "UPDATE REGLAS_FUTBOL SET idreglas_futbol=@idregla, nombre_reglas_futbol=@nomregla, descripcion_reglas_futbol=@des " +
                             " WHERE (idreglas_futbol=@idregla)";
 
                         DropR.Parameters.AddWithValue("@idregla", id);
                         DropR.Parameters.AddWithValue("@nomregla", nombreR);
                         DropR.Parameters.AddWithValue("@des", Desc);
-                        DropR.Parameters.AddWithValue("@deporte", idd);
 
                         DropR.ExecuteNonQuery();
 
@@ -134,21 +131,18 @@ namespace WpfApp1
                     id = dv.Row.ItemArray[0].ToString();
                     nombreR = dv.Row.ItemArray[1].ToString();
                     Desc = dv.Row.ItemArray[2].ToString();
-                    idd = dv.Row.ItemArray[3].ToString();
                     try
                     {
 
                         conexion_mysql.start_bd();
                         MySqlCommand DropR = conexion_mysql.con_mysql.CreateCommand();
                         DropR.Connection = conexion_mysql.con_mysql;
-                        DropR.CommandText = "UPDATE REGLAS_BASKET SET idreglas_basket=@idregla, nombre_reglas_basket=@nomregla, descripcion_reglas_basket=@des," +
-                            "DEPORTE_idDeporte=@deporte" +
+                        DropR.CommandText = "UPDATE REGLAS_BASKET SET idreglas_basket=@idregla, nombre_reglas_basket=@nomregla, descripcion_reglas_basket=@des" +
                             " WHERE (idreglas_basket=@idregla)";
 
                         DropR.Parameters.AddWithValue("@idregla", id);
                         DropR.Parameters.AddWithValue("@nomregla", nombreR);
                         DropR.Parameters.AddWithValue("@des", Desc);
-                        DropR.Parameters.AddWithValue("@deporte", idd);
 
                         DropR.ExecuteNonQuery();
 
@@ -180,21 +174,18 @@ namespace WpfApp1
                     id = dv.Row.ItemArray[0].ToString();
                     nombreR = dv.Row.ItemArray[1].ToString();
                     Desc = dv.Row.ItemArray[2].ToString();
-                    idd = dv.Row.ItemArray[3].ToString();
                     try
                     {
 
                         conexion_mysql.start_bd();
                         MySqlCommand DropR = conexion_mysql.con_mysql.CreateCommand();
                         DropR.Connection = conexion_mysql.con_mysql;
-                        DropR.CommandText = "UPDATE REGLAS_BEISBOL SET idreglas_beisbol=@idregla, nombre_reglas_beisbol=@nomregla, descripcion_reglas_beisbol=@des ," +
-                            "DEPORTE_idDeporte=@deporte" +
+                        DropR.CommandText = "UPDATE REGLAS_BEISBOL SET idreglas_beisbol=@idregla, nombre_reglas_beisbol=@nomregla, descripcion_reglas_beisbol=@des " +
                             " WHERE (idreglas_beisbol=@idregla)";
 
                         DropR.Parameters.AddWithValue("@idregla", id);
                         DropR.Parameters.AddWithValue("@nomregla", nombreR);
                         DropR.Parameters.AddWithValue("@des", Desc);
-                        DropR.Parameters.AddWithValue("@deporte", idd);
 
                         DropR.ExecuteNonQuery();
 
@@ -224,21 +215,18 @@ namespace WpfApp1
                     id = dv.Row.ItemArray[0].ToString();
                     nombreR = dv.Row.ItemArray[1].ToString();
                     Desc = dv.Row.ItemArray[2].ToString();
-                    idd = dv.Row.ItemArray[3].ToString();
                     try
                     {
 
                         conexion_mysql.start_bd();
                         MySqlCommand DropR = conexion_mysql.con_mysql.CreateCommand();
                         DropR.Connection = conexion_mysql.con_mysql;
-                        DropR.CommandText = "UPDATE REGLAS_VOLEIBOL SET idreglas_voleibol=@idregla, nombre_reglas_voleibol=@nomregla, descipcion_reglas_voleibol=@des ," +
-                            "DEPORTE_idDeporte=@deporte" +
+                        DropR.CommandText = "UPDATE REGLAS_VOLEIBOL SET idreglas_voleibol=@idregla, nombre_reglas_voleibol=@nomregla, descipcion_reglas_voleibol=@des " +
                             " WHERE (idreglas_voleibol=@idregla)";
 
                         DropR.Parameters.AddWithValue("@idregla", id);
                         DropR.Parameters.AddWithValue("@nomregla", nombreR);
                         DropR.Parameters.AddWithValue("@des", Desc);
-                        DropR.Parameters.AddWithValue("@deporte", idd);
 
                         DropR.ExecuteNonQuery();
 

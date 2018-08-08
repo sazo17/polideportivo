@@ -25,50 +25,25 @@ namespace WpfApp1
     {
 
         conexion_mysql cnm = new conexion_mysql();
-
+        public String ip;
         public MainWindow()
         {
             InitializeComponent();
-            conexion_mysql.inicia_bd();             // importante para iniciar la conexion a base de datos.
-
-        }
-
-        private void lbl_ayuda_MouseEnter(object sender, MouseEventArgs e)
-        {
-            lbl_ayuda.Content = "Ayuda <-";
-
-           
+            conexion_mysql.inicia_bd(conexion_mysql.ipp, conexion_mysql.userr, conexion_mysql.passs);
             
-        }
-
-        private void lbl_ayuda_MouseLeave(object sender, MouseEventArgs e)
-        {
-            lbl_ayuda.Content = "Ayuda";
-        }
-
-        private void lbl_informacion_MouseEnter(object sender, MouseEventArgs e)
-        {
-            lbl_informacion.Content = "Información <-";
+                        // importante para iniciar la conexion a base de datos.
+            
 
         }
 
-        private void lbl_informacion_MouseLeave(object sender, MouseEventArgs e)
-        {
-            lbl_informacion.Content = "Información";
-        }
-
-        private void lbl_contacto_MouseEnter(object sender, MouseEventArgs e)
-        {
-            lbl_contacto.Content = "Contacto <-";
-        }
-
-        private void lbl_contacto_MouseLeave(object sender, MouseEventArgs e)
-        {
-            lbl_contacto.Content = "Contacto";
-        }
+ 
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
+            IPWindow ne = new IPWindow();
+            MessageBox.Show(ip);
+            IPWindow a = new IPWindow();
+            MessageBox.Show(a.txt_ip.Text);
             String user = txt_username.Text;
             String pass = passbx_password.Password.ToString();
 
@@ -233,6 +208,12 @@ namespace WpfApp1
         private void btn_minimizar_MouseLeave(object sender, MouseEventArgs e)
         {
             btn_minimizar.Content = "";
+        }
+
+        private void btn_configurar_ip_Click(object sender, RoutedEventArgs e)
+        {
+            IPWindow configuracion_ip = new IPWindow();
+            configuracion_ip.Show();
         }
     }
 }

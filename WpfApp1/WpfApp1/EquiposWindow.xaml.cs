@@ -27,7 +27,7 @@ namespace WpfApp1
             InitializeComponent();
 
             InitializeComponent();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
             String query_datagrid = "SELECT idequipos, nombre_equipo FROM equipos";
 

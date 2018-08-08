@@ -23,7 +23,7 @@ namespace WpfApp1
         public AgregarArbitroWindow()
         {
             InitializeComponent();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
             
             //tipo de deporte
             MySqlCommand cmd = conexion_mysql.con_mysql.CreateCommand();
@@ -36,7 +36,7 @@ namespace WpfApp1
 
             }
             conexion_mysql.terminal_bd();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
 
             //tipo arbitro
             MySqlCommand cmd2 = conexion_mysql.con_mysql.CreateCommand();
@@ -49,7 +49,7 @@ namespace WpfApp1
 
             }
             conexion_mysql.terminal_bd();
-            conexion_mysql.inicia_bd();
+            conexion_mysql.start_bd();
         }
 
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
