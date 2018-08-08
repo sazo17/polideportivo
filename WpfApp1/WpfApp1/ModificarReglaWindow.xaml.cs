@@ -22,8 +22,9 @@ namespace WpfApp1
         public ModificarReglaWindow()
         {
             InitializeComponent();
+            conexion_mysql.inicia_bd();
         }
-
+        
         private void btn_cerrar_MouseEnter(object sender, MouseEventArgs e)
         {
             btn_cerrar.Content = "x";
@@ -57,6 +58,26 @@ namespace WpfApp1
         private void btn_regresar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_guardar_regla_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void txt_regla_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
